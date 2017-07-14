@@ -1,9 +1,10 @@
 ---
-title: Hexo博客搭建
-date: 2017-06-26
-tags: 
-     - hexo
+title: hexo博客搭建
+date: 2016-08-11 18:08:35
+tags:
+categories: Hexo
 ---
+
 
 # 一、 前言
 灰爷借鉴亚林的，但是我是借鉴灰爷的，版权所有，归灰爷。

@@ -1,5 +1,5 @@
 ---
-title: ios Safari 浏览器的input点击选中时候有高亮边框
+title: 解决iOS浏览器的input点击选中高亮边框 Safari 
 tags: 
      - mobile
 ---

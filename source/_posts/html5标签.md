@@ -1,7 +1,8 @@
 ---
-title: html标签
-tags: 
-     - html
+title: HTML标签学习
+date: 2016-04-27 11:30:40
+tags:
+categories: HTML
 ---
 
 ###  <a href="http://www.w3school.com.cn/tags/tag_a.asp">HTML a 标签的属性</a>

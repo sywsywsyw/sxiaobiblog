@@ -1,8 +1,8 @@
 ---
 title: js截取url参数
-date: 2016-09-27 11:30:40
-tags: 
-     - js
+date: 2016-09-09 18:08:35
+tags:
+categories: js
 ---
 
 有个url如下：
