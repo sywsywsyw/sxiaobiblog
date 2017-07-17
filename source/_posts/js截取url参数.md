@@ -2,7 +2,7 @@
 title: js截取url参数
 date: 2016-09-09 18:08:35
 tags:
-categories: js
+categories: JS
 ---
 
 有个url如下：
