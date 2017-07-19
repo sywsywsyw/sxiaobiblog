@@ -10,14 +10,14 @@ categories: ONE
 ## github
 
 笔者github <https://github.com/sywsywsyw>
-灰爷github <https://github.com/gxhpersonal>
+灰哥github <https://github.com/gxhpersonal>
 林哥github <https://github.com/lin-sun>
 腾讯 <https://github.com/Tencent>
 
 ## 博客
 
 笔者博客 <https://sywsywsyw.github.io/hexo>
-灰爷博客 <https://gxhpersonal.github.io/blog>
+灰哥博客 <https://gxhpersonal.github.io/blog>
 林哥博客 <https://lin-sun.github.io/blog>
 angular 核桃大号 <http://www.angularjsapi.cn/>
 马教头博客 <http://nate-river.github.io/blog/>
