@@ -86,11 +86,11 @@ provide shell access.
 依次执行下面几步
 
 ```bash
-$ git inint  #创建本地仓库
+$ git init  #创建本地仓库
 $ git add index.html
 $ git status (可以查看本地更新了什么，一般不用)
 $ git commit -m "2017072157" 
-$ git remote rm origin
+<!-- $ git remote rm origin -->
 $ git remote add origin git@github.com:username/repository.git #将本地仓库和远程仓库关联，并命名为origin(可以随意修改) (记得将username命名成自己的github的名字)
 $ git push -u origin master
 #使用git push -u origin master第一次推送master分支的所有内容
