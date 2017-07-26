@@ -97,6 +97,29 @@ $ git push -u origin master
 #以后每次本地提交后，就只需敲入命令git push origin master推送最新修改到远程即可。
 ```
 
+可能出现的报错
+
+1. 
+```bash
+$ git push origin master
+To github.com:sywsywsyw/Card-Verify.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'git@github.com:sywsywsyw/Card-Verify.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+原因： 
+GitHub远程仓库中的README.md文件不在本地仓库中。 因为我手动在github创建了一个README.md文件
+
+解决方案：
+
+```bash
+$ git pull --rebase origin master
+```
+
+
 ### 2.4、从远程仓库clone至本地
 
 只需执行一条命令
