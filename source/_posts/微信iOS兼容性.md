@@ -17,7 +17,7 @@ categories: MOBile
 <script>
 $('#appDateTime').focus(function(){
   $('#appDateTime').blur();
-})
+});
 </script>
 
 ```
