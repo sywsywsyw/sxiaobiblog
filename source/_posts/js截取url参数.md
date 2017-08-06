@@ -1,6 +1,6 @@
 ---
 title: js截取url参数
-date: 2016-09-09 18:08:35
+date: 2016-09-09
 tags:
 categories: JS
 ---

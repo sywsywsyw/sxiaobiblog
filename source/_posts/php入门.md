@@ -1,6 +1,6 @@
 ---
 title: php入门
-date: 2016-08-07 17:04:35
+date: 2016-08-07
 tags:
 categories: PHP
 ---

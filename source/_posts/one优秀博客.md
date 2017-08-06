@@ -1,6 +1,6 @@
 ---
 title: 优秀博客
-date: 2088-11-11 00:00:00
+date: 2088-11-11
 tags:
 categories: ONE
 ---

@@ -1,6 +1,6 @@
 ---
 title: CDN和使用过的插件
-date: 2088-11-11 00:00:00
+date: 2088-11-11
 tags:
 categories: ONE
 ---

@@ -1,6 +1,6 @@
 ---
 title: HTML标签学习
-date: 2016-04-27 11:30:40
+date: 2016-04-27
 tags:
 categories: HTML
 ---
