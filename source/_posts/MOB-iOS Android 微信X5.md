@@ -2,7 +2,7 @@
 title: iOS Android 微信X5
 date: 2017-07-20 23:31
 tags:
-categories: MOBile
+categories: MOB
 ---
 ------
 

@@ -2,11 +2,9 @@
 title: 日常笔记
 date: 2016-07-16 18:08:35
 tags:
-categories: SPECS
+categories: HTML
 ---
 ------
-
-### 日常笔记
 
 <!-- more -->
 
