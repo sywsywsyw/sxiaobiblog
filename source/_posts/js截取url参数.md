@@ -4,12 +4,13 @@ date: 2016-09-09
 tags:
 categories: JS
 ---
+------
+
+#### 问题有个url如下："http://www.baidu.com/index.php?app=shangpin&act=goodsindex&id=12",我们该如何获取"id"这个参数的值呢？
+
+> 方法很简单，如下，第一种是通过正则，第二种通过切串放进数组的方式：
 
 <!-- more -->
-
-有个url如下：
-http://www.baidu.com/index.php?app=shangpin&act=goodsindex&id=12
-我们该如何获取from这个参数的值呢？在网上搜了下方法很简单，如下，第一种是通过正则，第二种通过切串放进数组的方式：
 
 ``` js
 // 第一种正则 

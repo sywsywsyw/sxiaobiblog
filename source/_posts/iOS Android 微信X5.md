@@ -4,10 +4,12 @@ date: 2017-07-20 23:31
 tags:
 categories: MOBile
 ---
-
-## 禁止 iOS input标签自动调用输入法
+------
 
 <!-- more -->
+
+### 禁止 iOS input标签自动调用输入法
+
 
 > 今天做了一个关于移动端时间日期的插件，必须使用input为载体，然后设置了 readonly="readonly" 不能输入 但ios微信端出现  ‘确定取消’ 两个输入框按键，经过测试发现当input获得焦点的时候就会触发ios输入法失去焦点就会关闭ios输入法所以做了下面的操作
 
@@ -42,3 +44,13 @@ $('#appDateTime').focus(function(){
 > ios不是腾讯x5
 
 <img src="/hexo/images/txnX5.png" alt="腾讯nx5">
+
+## 问题：ios Safari 浏览器的input点击选中时候有高亮边框 safari
+
+> CSS:-webkit-tap-highlight-color 属性
+
+> 作用：改写iOS Safari中可点击元素的高亮颜色。
+
+> 该属性可以只设置透明度。如果未设置透明度，iOS Safari使用默认的透明度。当透明度设为0，则会禁用此属性；当透明度设为1，元素在点击时不可见。
+
+> 兼容性：除了iOS Safari，大部分android手机也是支持的，只是显示效果有所不同。

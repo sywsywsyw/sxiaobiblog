@@ -1,9 +1,10 @@
 ---
 title: CDN和使用过的插件
-date: 2088-11-11
+date: 2098-11-11
 tags:
 categories: ONE
 ---
+------
 
 ## CDN
 
@@ -17,7 +18,7 @@ BUNOOB.COM 菜鸟教程 <http://www.runoob.com/git/git-tutorial.html>
 MDN <https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects>
 w3c 工具库 <https://123.w3cschool.cn/webtools>
 
-
+<!-- more -->
 
 ## 微信
 

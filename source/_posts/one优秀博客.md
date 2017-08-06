@@ -1,11 +1,10 @@
 ---
 title: 优秀博客
-date: 2088-11-11
+date: 2099-01-01
 tags:
 categories: ONE
 ---
-
-什么都有 http://www.haorooms.com/nav
+------
 
 ## github
 
@@ -21,6 +20,8 @@ categories: ONE
 林哥博客 <https://lin-sun.github.io/blog>
 angular 核桃大号 <http://www.angularjsapi.cn/>
 马教头博客 <http://nate-river.github.io/blog/>
+
+<!-- more -->
 
 ## 优秀文档
 

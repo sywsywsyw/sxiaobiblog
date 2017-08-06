@@ -1,13 +1,10 @@
 ---
 title: 项目优化
-date: 2088-11-11
+date: 2097-11-11
 tags:
 categories: ONE
 ---
-
-什么都有 http://www.haorooms.com/nav
-
-<!-- more -->
+------
 
 ## 请求测试
 
@@ -23,6 +20,8 @@ TinyPng <https://tinypng.com/>
 
 在线代码美化工具 <http://tool.oschina.net/codeformat/js>
 在线JS/CSS/HTML压缩(采用YUI Compressor实现) <http://tool.oschina.net/jscompress>
+
+<!-- more -->
 
 ## PS切图工具
 
