@@ -5,6 +5,8 @@ tags:
 categories: js
 ---
 
+<!-- more -->
+
 parse用于从一个字符串中解析出json对象,如
 
 var str = '{"name":"huangxiaojian","age":"23"}'

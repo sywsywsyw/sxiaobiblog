@@ -5,6 +5,8 @@ tags:
 categories: mobile
 ---
 
+<!-- more -->
+
 问题：ios Safari 浏览器的input点击选中时候有高亮边框
 -webkit-tap-highlight-color 属性
 改写iOS Safari中可点击元素的高亮颜色。

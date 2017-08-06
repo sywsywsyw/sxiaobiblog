@@ -5,6 +5,8 @@ tags:
 categories: html5
 ---
 
+<!-- more -->
+
 把iframe解释成“浏览器中的浏览器“很是恰当
 
 ```html

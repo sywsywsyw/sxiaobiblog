@@ -7,6 +7,8 @@ categories: ONE
 
 什么都有 http://www.haorooms.com/nav
 
+<!-- more -->
+
 ## 图片素材
 
 花瓣网 <http://huaban.com/>

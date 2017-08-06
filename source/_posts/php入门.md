@@ -5,6 +5,8 @@ tags:
 categories: PHP
 ---
 
+<!-- more -->
+
 ### 可以通过memory_get_usage();来获取当前php消耗的内存;
 
 ### 知识点

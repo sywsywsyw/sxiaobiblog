@@ -5,6 +5,7 @@ tags:
 categories: GIT
 ---
 
+<!-- more -->
 ------
 
 摘抄自 [廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137402760310626208b4f695940a49e5348b689d095fc000)

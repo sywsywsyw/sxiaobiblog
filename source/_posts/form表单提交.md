@@ -5,6 +5,7 @@ tags:
 categories: form
 ---
 
+<!-- more -->
 ------
 
  $("form").submit(function(){
