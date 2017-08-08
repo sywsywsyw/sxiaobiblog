@@ -2,7 +2,7 @@
 title: hexo博客搭建
 date: 2016-08-11
 tags:
-categories: Hexo
+categories: HEXO
 ---
 ------
 
