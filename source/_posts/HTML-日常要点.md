@@ -188,38 +188,8 @@ window.location.href.substring(window.location.protocol.length)
 调试高亮
 [].forEach.call($$("*"),function(a){a.style.outline="1px solid #"+(~~(Math.random()*(1<<24))).toString(16) })
 ```
-3. 两种ajax请求方式
-```js
-$.ajax({
-    url: "http://www.microsoft.com", //请求的url地址
-    dataType: "json", //返回格式为json
-    async: false, //请求是否异步，默认为异步，这也是ajax重要特性    项目中默认同步
-    data: {
-        "id": "value"
-    }, //参数值
-    type: "GET", //请求方式
-    beforeSend: function () {
-        //请求前的处理
-    },
-    success: function (req) {
-        //请求成功时处理
-    },
-    complete: function () {
-        //请求完成的处理
-    },
-    error: function () {
-        //请求出错处理
-    }
-});
+3. 两种ajax请求方式 (已放入别的文章)
 
-$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags=cat&tagmode=any&format=json&jsoncallback=?",function(req){
-    $.each(req.items,function(i, item){
-        if(i == vnum){
-            $("<img src="" + item.media.m + "" title="" + item.title + "" />").appendTo("#showjson");
-        }
-    });
-});
-```
 4. 测试一段代码的执行时间
 ```js
    console.timeEnd('aa')
