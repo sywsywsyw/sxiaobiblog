@@ -303,6 +303,11 @@ console.log(student)
       add_attr('del',vid,src)
     }
 ```
+```html
+<a href="
+javascript:if(confirm('确定删除视频吗'))window.location = 'index.php?app=gcategory;"></a>
+```
+
 11. 根据窗口大小调整视图
 ```js
 $(window).resize(function () {})
@@ -362,26 +367,6 @@ function getNowFormatDate() {
     return currentdate;
 }
 ```
-15. ifrmae高度获取
-```html
-    <div class="sui-mask" id="vd-videos" style="display: none;"></div>
-    <div class="vd-videos selectas" style="margin-left: -500px;">
-    <iframe src="index - 副本.html" frameborder="0"  id="login_container" scrolling="no" width="1000" height="400px" onLoad="iFrameHeight()"></iframe>
-    </div>
-```
-```html
-<script>
-function iFrameHeight() {
-var ifm= document.getElementById("login_container");
-console.log(ifm)
-var subWeb = document.frames ? document.frames["login_container"].document :ifm.contentDocument;
-  if(ifm != null && subWeb != null) {
-    ifm.height = subWeb.body.scrollHeight;
-    console.log(ifm.height)
-   }
-}
-</script> 
-```
 
 16. 监控回车发送消息
 ```html
@@ -411,6 +396,11 @@ test1.onkeydown = function(e){
  </script>
 ```
 
+17. 网页调用qq 
+```html
+http://wpa.qq.com/msgrd?v=3&uin=3314523834&site=qq&menu=yes
+```
+
 ## HTML
 
 1. 取消浏览器拖动的蓝色选择区
@@ -418,16 +408,7 @@ test1.onkeydown = function(e){
      <body onselectstart="return false"></body>
     <!-- 别的标签也可以使用 -->
 ```
-2. ifrmae标签
-```html
-media screen and(max-width: 300px)  媒体查询如果嵌套在iframe中会根据ifram的宽高走
-iframe页面是内嵌到父页面的，当点击iframe页面的服务器控件时，默认只刷新iframe页面，
-父页面是不会刷新的。若想刷新父页面，可以使用js来实现，如
-1. parent.location.reload();
-这种方法会重新加载整个页面。但如果要在原页面的基础上传递参数，则可以使用下面的方法：
-2.top.document.location.href='xxx.aspx?id=xx'。
-但这两种方法都有一个共同的缺点，就是iframe内嵌页面的状态不会保存了，刷新后会重新回到第一次加载的状态。
-```
+
 
 3. 在进行CSS网页布局的时候，我们经遇到刷新要保留表单里内容的时候，习惯的做法使用cookie，但是那样做实在是很麻烦，css中的behavior就为我们很好的解决了这个问题。今天就向大家介绍CSS属性behavior的语法。只兼容IE 哈哈 是不是很气愤呢
 
@@ -505,3 +486,7 @@ iframe页面是内嵌到父页面的，当点击iframe页面的服务器控件�
   $(initialize);        
 }())
 ```
+7. 怎么打出来&copy;
+```js
+<a href="">&copy;</a>
+``` 
