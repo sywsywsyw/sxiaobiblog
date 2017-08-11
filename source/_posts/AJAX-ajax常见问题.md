@@ -12,18 +12,44 @@ categories: AJAX
 
 * 建议图片一定通过异步上传。就是单独开一个接口。避免上传图片
 ```js
+// 获取其他表单数据
+var form=document.forms[0];
+var formData = new FormData(form);   //这里连带form里的其他参数也一起提交了,如果不需要提交其他参数可以直接FormData无参数的构造函数
+//convertBase64UrlToBlob函数是将base64编码转换为Blob
+formData.append("imageName",convertBase64UrlToBlob(base64Codes));  //append函数的第一个参数是后台获取数据的参数名,和html标签的input的name属性功能相同
+
+/**
+ * 将以base64的图片url数据转换为Blob
+ * @param urlData
+ *            用url方式表示的base64图片数据
+ */
+function convertBase64UrlToBlob(urlData){
+    
+    var bytes=window.atob(urlData.split(',')[1]);        //去掉url的头，并转换为byte
+    
+    //处理异常,将ascii码小于0的转换为大于0
+    var ab = new ArrayBuffer(bytes.length);
+    var ia = new Uint8Array(ab);
+    for (var i = 0; i < bytes.length; i++) {
+        ia[i] = bytes.charCodeAt(i);
+    }
+
+    return new Blob( [ab] , {type : 'image/png'});
+}
+
 //创建FormData对象
 var data = new FormData();
 //为FormData对象添加数据
 var file = $('#inputfile')[0].files[0];
 data.append('upload_file', file); //第一个参数为参数名，第二个为参数值
+console.log(data.get('imageName'));
 $.ajax({
     url: "http://www.baidu.com", //请求的url地址
     type: "POST", //请求方式 GET
     data: data, //参数值
     cache: false,
-    contentType: false,    //不可缺
-    processData: false,    //不可缺
+    contentType: false,     // 告诉jQuery不要去处理发送的数据
+    processData: false,     // 告诉jQuery不要去设置Content-Type请求头
     beforeSend: function () {//请求前的处理
         alert("正在加载");
     },
