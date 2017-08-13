@@ -39,10 +39,29 @@ frame页面是内嵌到父页面的，当点击iframe页面的服务器控件时
      但这两种方法都有一个共同的缺点，就是iframe内嵌页面的状态不会保存了，刷新后会重新回到第一次加载的状态。
 
 #### 怎么使iframe在iOS设备上支持滚动？
+
 ```html
 <div class="iframe-wrap" >
 <iframe src="index - 副本.html" frameborder="0"  id="login_container" scrolling="no" width="1000" height="400" onLoad="iFrameHeight()"></iframe>
 </div>
+```
+#### 怎麼判断iframe是否加载完成？
+```html
+<iframe id="previewFrame" scrolling="no" class="previewFrame" frameborder="0"></iframe>
+```` 
+```js 
+var iframe = document.getElementById("previewFrame");  
+if (iframe.attachEvent) {  
+    iframe.attachEvent("onload", function() {  
+                //以下操作必须在iframe加载完后才可进行  
+        $("#themes").find(".selected").trigger("click");  
+    });  
+} else {  
+    iframe.onload = function() {  
+                //以下操作必须在iframe加载完后才可进行  
+        $("#themes").find(".selected").trigger("click");  
+    };  
+}  
 ```
 CSS 代码
 要让IFRAME支持滚动,需要一个常用的CSS属性和一个很少人知道的CSS属性(property):
