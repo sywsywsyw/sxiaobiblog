@@ -6,7 +6,7 @@ categories: AJAX
 ---
 ------
 
-#### $.ajax(),$.getjson(),$.get(),$.post()的区别和差异
+# $.ajax(),$.getjson(),$.get(),$.post()的区别和差异
 
 <!-- more -->
 

@@ -6,6 +6,8 @@ categories: HEXO
 ---
 ------
 
+<!-- more -->
+
 NexT主题支持集成 Swiftype、 微搜索、Local Search 和 Algolia,Swiftype和Algolia都只有一段时间的试用期，可以采用Hexo提供的Local Search,原理是通过hexo-generator-search插件在本地生成一个search.xml文件，搜索的时候从这个文件中根据关键字检索出相应的链接。
 <a id="more"></a>
 
