@@ -197,3 +197,4 @@ https://segmentfault.com/a/1190000008782550
 http://taobaofed.org/blog/2016/05/23/video-player/
 http://blog.csdn.net/wqs977/article/details/53166887
 http://leonshi.com/2015/09/06/mobile-video-play/
+https://segmentfault.com/a/1190000006857675
