@@ -21,7 +21,7 @@ categories: HEXO
 * [Markdown](http://www.appinn.com/markdown/#autoescape)
 
 # 二、必要配置
-## 2.1 GitHub Pages仓库
+## 2.1 GitHub Pages仓库。
 ### 2.1.1 在Github中创建一个仓库命名为blog。
 
 ## 2.2 Git
