@@ -1,6 +1,6 @@
 ---
 title: hexo博客搭建
-date: 2016-08-11
+date: 2016-08-13
 tags:
 categories: HEXO
 ---
