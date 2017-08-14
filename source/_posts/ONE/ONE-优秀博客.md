@@ -21,6 +21,13 @@ categories: ONE
 angular 核桃大号 <http://www.angularjsapi.cn/>
 马教头博客 <http://nate-river.github.io/blog/>
 
+## 个人主页
+
+美曹 <https://304069550.github.io/MyBlog/#page1>
+亚林 <https://lin-sun.github.io>
+灰爷 <https://gxhpersonal.github.io>
+小笔 <https://sywsywsyw.github.io/person/>
+
 <!-- more -->
 
 ## 优秀文档
