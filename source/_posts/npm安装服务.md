@@ -1,5 +1,5 @@
 ---
-title: git安装教程
+title: npm安装服务
 date: 2017-08-15 08:45:47
 tags:
 categories:
@@ -49,6 +49,7 @@ node-sass -v
 >（2）index.scss
 >（3）打开cmd  cd  c:\users\name\desktop\课程\css3
 >（4）node-sass -w index.scss index.css --output-style expanded
+> node-sass -w  index.scss index.css --output--style expanded  --source-map  map  最后的map是自定义的文件
 >（5）ctrl+c两次，退出
 
 ### bower
@@ -150,6 +151,11 @@ yo -v
 npm install -g generator-webapp
 ```
 
-### 
+### ffmpeg
 
+* 使用
+> 用cmd切换到qqmuic/musics
+> node test.js
+> 歌曲 名字不能有空格
+> ffprobe -v quiet -print_format json -show_format 1.mp3
 

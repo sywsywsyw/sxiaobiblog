@@ -6,22 +6,6 @@ categories:
 ---
 ------
 
-c盘  用户  隐藏文件夹AppData/Roaming/npm 解压一下安装包   node-sass -v
-我的电脑  高级  环境变量
-删除
-node-sass  node-sass.cm  node_moudles/node-sass
-
-跑命令
-npm install -g cnpm
-cnpm install -g node-sass
-
-
-bower -v
-
-grunt -v
-
-gulp -v
-
 新建一个Css文件夹 新建一个index.scss
 .header{
 background:red;
@@ -31,15 +15,7 @@ background:red;
 color:red;
   }
 }
-运行
-cd Desktop/course/css3
-node-sass -w index.scss index.css --output--style expanded
 
-node-sass -w  index.scss index.css --output--style expanded  --source-map  map  最后的map是自定义的文件
-
-npm install -g bower
-npm install -g gulp-cli
-npm install -g grunt-cli
 
 	颜色函数
 	rgb
