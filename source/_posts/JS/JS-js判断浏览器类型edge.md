@@ -1,8 +1,8 @@
 ---
 title: js判断浏览器类型edge
-date: 2017-08-15 22:02:36
+date: 2017-03-28 22:02:36
 tags:
-categories:
+categories: JS
 ---
 ------
 
