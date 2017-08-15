@@ -12,6 +12,12 @@ categories: 工具
 
 <!-- more -->
 
+chinese  汉化
+pigments  显示颜色
+color-picker 快捷颜色插件
+vim-mode
+emmet
+
 ## 安装
 
 [打开官方主页](https://atom.io/)

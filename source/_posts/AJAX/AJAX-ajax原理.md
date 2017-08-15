@@ -98,3 +98,31 @@ var Ajax={
 ```
 
 http://www.w3school.com.cn/ajax/index.asp
+
+# Ajax中同步和异步的概念
+ var xhr=new XMLHttpRequest()
+ xhr.open('get','/robot.txt',true)
+ xhr.send()
+ document.body.innerHTML +=xhr.response;
+
+
+
+ var xhr=new XMLHttpRequest();  
+ xhr.addEventListener('readystatechange',function(){  //检测到状态改变
+            // console.log(xhr.response)
+            if( this.readyState !== 4){  状态改变
+                return;
+            }
+            if( this.status === 200 || this.status === 304){
+                document.body.innerHTML += xhr.response
+            }
+         })
+        xhr.open('get','/robot.txt',true);
+        xhr.send();
+ x 随意  ML  标记语言  HTTP 超文本传输协议  Request 请求
+
+执行队列
+
+异步
+
+可执行 待执行
