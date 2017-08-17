@@ -4,6 +4,9 @@ date: 2017-08-14 13:43:45
 tags:
 categories: HEXO
 ---
+------
+
+<!-- more -->
 
 # 解决hexo d命令提交部署博客发生的TaskCanceledException异常
 
