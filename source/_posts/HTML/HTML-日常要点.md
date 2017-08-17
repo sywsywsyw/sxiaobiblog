@@ -165,7 +165,8 @@ display: block;
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 100%;
+    width: 100%;
+    <!-- height: 100%; -->
     -ms-transform: translate(-50%,-50%);
     -moz-transform: translate(-50%,-50%);
     -o-transform: translate(-50%,-50%);

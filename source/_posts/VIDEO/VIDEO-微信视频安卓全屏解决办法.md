@@ -53,7 +53,7 @@ body {
 ```
 点击播放后，video元素占全屏，视频部分默认居中显示：
 
-![Img](https://pic1.zhimg.com/v2-eb869701403674a55da0f73d7f1600b4_b.jpg)
+![Img](http://pic1.zhimg.com/v2-eb869701403674a55da0f73d7f1600b4_b.jpg)
 
 ## 调整位置
 
@@ -63,8 +63,9 @@ body {
 .fullscreen .video {
     object-position: center top;
 }
-
- <code class="language-js">var player = document.getElementById('video');
+```
+```js
+var player = document.getElementById('video');
 player.addEventListener('x5videoenterfullscreen', function() {
     // 设为屏幕尺寸
     player.style.width = window.screen.width + 'px';
@@ -76,10 +77,10 @@ player.addEventListener('x5videoexitfullscreen', function() {
     player.style.width = player.style.height = '';
     document.body.classList.remove('fullscreen');
 }, false);
-````
+```
 效果如下（右图）：
 
-![Img](https://pic2.zhimg.com/v2-b0b27afc9b06694f4abbbf3b4bbaeeb9_b.jpg)注意把video元素的高设为屏幕高度时，要用「window.screen.height」而不能用「document.documentElement.clientHeight」，因为后者不包含导航栏高度，将会导致无法满屏（如上方左图所示）。
+![Img](http://pic2.zhimg.com/v2-b0b27afc9b06694f4abbbf3b4bbaeeb9_b.jpg)注意把video元素的高设为屏幕高度时，要用「window.screen.height」而不能用「document.documentElement.clientHeight」，因为后者不包含导航栏高度，将会导致无法满屏（如上方左图所示）。
 
 ## 全屏状态下的布局
 
@@ -99,7 +100,7 @@ player.addEventListener('x5videoexitfullscreen', function() {
 <header id="header" class="header">标题栏</header>
 <div class="player">
     <video id="video" class="video" controls="controls" playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true">
-        <source src="https://sywsywsyw.github.io/Video/test.mp4" />
+        <source src="http://sywsywsyw.github.io/Video/test.mp4" />
     </video>
 </div>
 ```
@@ -200,7 +201,7 @@ player.addEventListener('x5videoenterfullscreen', function() {
 
 ## 同类文章
 
-https://x5.tencent.com/tbs/guide/video.html
+<!-- https://x5.tencent.com/tbs/guide/video.html
 https://aotu.io/notes/2017/01/11/mobile-video/
 https://zhuanlan.zhihu.com/p/27559167
 https://segmentfault.com/a/1190000010377156?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io
@@ -208,4 +209,4 @@ https://segmentfault.com/a/1190000008782550
 http://taobaofed.org/blog/2016/05/23/video-player/
 http://blog.csdn.net/wqs977/article/details/53166887
 http://leonshi.com/2015/09/06/mobile-video-play/
-https://segmentfault.com/a/1190000006857675
+https://segmentfault.com/a/1190000006857675 -->
