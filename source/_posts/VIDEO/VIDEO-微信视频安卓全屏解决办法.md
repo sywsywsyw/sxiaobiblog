@@ -13,6 +13,8 @@ categories: VIDEO
 
 # 第一种 （不可以在视频层覆盖内容）
 
+普通播放模式类似腾讯视频文件：「**x5-playsinline**」。
+
 ```js
     <video id="video" class="video" controls="controls" x5-playsinline >
         <source src="test.mp4" />
@@ -49,7 +51,7 @@ p移动端浏览器中的video元素是比较特别的，早期无论是在iOS�
 
 点击播放后，video元素占全屏，视频部分默认居中显示：
 
-![](https://pic1.zhimg.com/v2-eb869701403674a55da0f73d7f1600b4_b.jpg)
+![Img](https://pic1.zhimg.com/v2-eb869701403674a55da0f73d7f1600b4_b.jpg)
 
 ## 调整位置
 
@@ -74,7 +76,7 @@ player.addEventListener('x5videoexitfullscreen', function() {
 
 效果如下（右图）：
 
-![](https://pic2.zhimg.com/v2-b0b27afc9b06694f4abbbf3b4bbaeeb9_b.jpg)注意把video元素的高设为屏幕高度时，要用「window.screen.height」而不能用「document.documentElement.clientHeight」，因为后者不包含导航栏高度，将会导致无法满屏（如上方左图所示）。
+![Img](https://pic2.zhimg.com/v2-b0b27afc9b06694f4abbbf3b4bbaeeb9_b.jpg)注意把video元素的高设为屏幕高度时，要用「window.screen.height」而不能用「document.documentElement.clientHeight」，因为后者不包含导航栏高度，将会导致无法满屏（如上方左图所示）。
 
 ## 全屏状态下的布局
 
@@ -108,7 +110,7 @@ player.addEventListener('x5videoexitfullscreen', function() {
 
 标题栏确实遮挡住视频了，但是就多了一层**黑色的渐变**以及**左右两个按钮**（下方左图）。据官方文档所述，这些都是无法移除的。
 
-![](https://pic3.zhimg.com/v2-7f05f4a825d8c9138d15f8df1e0055ce_b.jpg)接下来要做的是把视频下移，使整体UI与进入全屏前保持一致（上方右图）：
+![Img](http://pic3.zhimg.com/v2-7f05f4a825d8c9138d15f8df1e0055ce_b.jpg)接下来要做的是把视频下移，使整体UI与进入全屏前保持一致（上方右图）：
 
  <code class="language-css">.fullscreen .player .video {
     object-position: center 1.14rem;
@@ -136,7 +138,7 @@ player.addEventListener('x5videoexitfullscreen', function() {
 
 然而，进入全屏状态后，内容元素向上偏移了（下方左图）。
 
-![](https://pic3.zhimg.com/v2-88b10e3a61b1de118f8f691357ae5c62_b.jpg)明显地，该元素的位置也要下移标题栏的高度：
+![Img](http://pic3.zhimg.com/v2-88b10e3a61b1de118f8f691357ae5c62_b.jpg)明显地，该元素的位置也要下移标题栏的高度：
 
  <code class="language-css">.fullscreen .main {
     margin-top: 1.14rem;
@@ -159,7 +161,7 @@ main.addEventListener('click', function() {
 
 因为同层播放器的全屏状态只能指定一个方向（默认为竖屏），所以播放后还是会强制竖屏。此时整体效果都不太对劲：
 
-![](https://pic4.zhimg.com/v2-5e97ad18326db3d57ae800b1cd9d9677_b.jpg)因为横屏状态的宽高与竖屏状态下的刚好相反，所以才导致恢复竖屏时的UI异常。因此，进入全屏时要判断一下宽高，如果宽大于高，则将其交换：
+![Img](https://pic4.zhimg.com/v2-5e97ad18326db3d57ae800b1cd9d9677_b.jpg)因为横屏状态的宽高与竖屏状态下的刚好相反，所以才导致恢复竖屏时的UI异常。因此，进入全屏时要判断一下宽高，如果宽大于高，则将其交换：
 
  <code class="language-js">player.addEventListener('x5videoenterfullscreen', function() {
     var width = window.screen.width;
@@ -177,9 +179,9 @@ main.addEventListener('click', function() {
 
 如果播放前页面有滚动条，进入全屏状态下可以滚动吗？答案是确实可以滚动，但是与其叫滚动，不如叫抖动，具体效果可以自己尝试。总之进入全屏状态后就不要用页面的滚动了，而是用局部滚动。此外还应注意，因为调高了层级，如果内容元素太高，就会挡住视频的控制条。
 
-![](https://pic3.zhimg.com/v2-40e725130a28ea56e04e9f7d8888dec2_b.jpg)最后一个问题是，播放某些格式的视频时，进度条会出现错乱，即使返回非全屏模式时也还是错乱。
+![Img](http://pic3.zhimg.com/v2-40e725130a28ea56e04e9f7d8888dec2_b.jpg)最后一个问题是，播放某些格式的视频时，进度条会出现错乱，即使返回非全屏模式时也还是错乱。
 
-![](https://pic3.zhimg.com/v2-b22d5742b8487d9a1670ccd90e2cc33e_b.jpg)
+![Img](http://pic3.zhimg.com/v2-b22d5742b8487d9a1670ccd90e2cc33e_b.jpg)
 
 ## 总结
 
