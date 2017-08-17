@@ -6,6 +6,7 @@ categories:
 ---
 ------
 
+<!-- more -->
 ### localhost 点击打开一个网页
 
 ### phpMyadmin点击可以打开数据库页面

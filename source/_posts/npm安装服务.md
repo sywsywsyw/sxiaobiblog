@@ -6,6 +6,7 @@ categories:
 ---
 ------
 
+<!-- more -->
 ## git
 
 * 验证

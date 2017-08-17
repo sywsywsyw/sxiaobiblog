@@ -6,6 +6,7 @@ categories: JS
 ---
 ------
 
+<!-- more -->
 # html5中的Web Storage包括了两种存储方式：sessionStorage和localStorage。
 
 <!-- more -->

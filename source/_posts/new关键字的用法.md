@@ -4,6 +4,7 @@ title: new关键字的用法
 date: 2017-08-15 08:52:42
 tags:
 ---
+<!-- more -->
 
 <!DOCTYPE html>
 <html lang="en">

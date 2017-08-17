@@ -6,6 +6,7 @@ categories:
 ---
 ------
 
+<!-- more -->
 # angular.js
   
   一个全局对象angular  

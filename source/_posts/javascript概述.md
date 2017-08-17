@@ -6,6 +6,8 @@ categories:
 ---
 ------
 
+<!-- more -->
+
 javascript:;概述.md(markdown)
 
 >把dom身上的一些 事件 属性的赋值给一个函数让浏览器就进行调用

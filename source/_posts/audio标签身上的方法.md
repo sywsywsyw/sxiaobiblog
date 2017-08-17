@@ -6,6 +6,7 @@ categories:
 ---
 ------
 
+<!-- more -->
 [nate-river](http://nate-river.github.io/blog/)
 
 # **audio对象身上的属性方法和事件**

@@ -6,6 +6,7 @@ categories:
 ---
 ------
 
+<!-- more -->
 # **利用jquery fullpage 插件制作宣传页面的流程**
 
 May 25, 2016

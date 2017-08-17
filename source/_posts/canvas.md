@@ -6,6 +6,7 @@ categories:
 ---
 ------
 
+<!-- more -->
 解决用dom 建立小游戏会出现大量卡顿的现象
 canvas 游戏必须 没法用样式设置 必须用内置属性设置width,height 不建议用css强制修改
 

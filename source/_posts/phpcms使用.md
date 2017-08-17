@@ -6,6 +6,7 @@ categories:
 ---
 ------
 
+<!-- more -->
 1.将phpcmsv9.zip解压  然后将install_package 下面的所有东西拷贝到www目录
 2.打开localhost/index.html
 3.安装过程中  第3步选择全新安装  第5步选择 账户 root  root    root  空  email1@2.com         一个是L一个是1

@@ -5,6 +5,7 @@ tags:
 categories: VIDEO
 ---
 
+<!-- more -->
 "controls": true， //是否显示控制条
 "autoplay": true， //是否自动播放(ios不支持自动播放)
 

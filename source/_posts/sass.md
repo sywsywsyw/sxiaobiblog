@@ -6,6 +6,7 @@ categories:
 ---
 ------
 
+<!-- more -->
 新建一个Css文件夹 新建一个index.scss
 .header{
 background:red;

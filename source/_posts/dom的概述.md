@@ -6,6 +6,7 @@ categories:
 ---
 ------
 
+<!-- more -->
 #DOM是什么
 
 Document  Object Modal(文档对象模型)

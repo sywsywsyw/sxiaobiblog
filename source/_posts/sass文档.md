@@ -6,6 +6,7 @@ categories:
 ---
 ------
 
+<!-- more -->
 {
 
 "color_scheme": "Packages/Color Scheme - Default/Monokai Bright.tmTheme",

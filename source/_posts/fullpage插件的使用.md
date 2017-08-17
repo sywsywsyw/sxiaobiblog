@@ -6,6 +6,7 @@ categories:
 ---
 ------
 
+<!-- more -->
 # **jQuery全屏滚动插件fullpage**
 
 Apr 5, 2016

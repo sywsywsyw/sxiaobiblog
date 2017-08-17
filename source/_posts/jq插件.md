@@ -6,6 +6,7 @@ categories:
 ---
 ------
 
+<!-- more -->
 <link href="//cdn.bootcss.com/fullPage.js/2.7.9/jquery.fullPage.css" rel="stylesheet">
 //表示根据你的协议编写
 
