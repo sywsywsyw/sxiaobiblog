@@ -95,7 +95,7 @@ player.addEventListener('x5videoexitfullscreen', function() {
  <code class="language-html"><header id="header" class="header">标题栏</header>
 <div class="player">
     <video id="video" class="video" controls="controls" playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true">
-        <source src="test.mp4" />
+        <source src="https://sywsywsyw.github.io/Video/test.mp4" />
     </video>
 </div></code> 
 
@@ -126,6 +126,7 @@ player.addEventListener('x5videoexitfullscreen', function() {
     padding: 0.3rem;
 }</code> 
 
+```html
  <code class="language-html"><header id="header" class="header">标题栏</header>
 <div class="player">
     <video id="video" class="video" controls="controls" playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true">
@@ -135,7 +136,7 @@ player.addEventListener('x5videoexitfullscreen', function() {
 <div id="main" class="main">
     <div class="inner">这里是其他内容</div>
 </div></code> 
-
+```
 然而，进入全屏状态后，内容元素向上偏移了（下方左图）。
 
 ![Img](http://pic3.zhimg.com/v2-88b10e3a61b1de118f8f691357ae5c62_b.jpg)明显地，该元素的位置也要下移标题栏的高度：
@@ -161,7 +162,7 @@ main.addEventListener('click', function() {
 
 因为同层播放器的全屏状态只能指定一个方向（默认为竖屏），所以播放后还是会强制竖屏。此时整体效果都不太对劲：
 
-![Img](https://pic4.zhimg.com/v2-5e97ad18326db3d57ae800b1cd9d9677_b.jpg)因为横屏状态的宽高与竖屏状态下的刚好相反，所以才导致恢复竖屏时的UI异常。因此，进入全屏时要判断一下宽高，如果宽大于高，则将其交换：
+![Img](http://pic4.zhimg.com/v2-5e97ad18326db3d57ae800b1cd9d9677_b.jpg)因为横屏状态的宽高与竖屏状态下的刚好相反，所以才导致恢复竖屏时的UI异常。因此，进入全屏时要判断一下宽高，如果宽大于高，则将其交换：
 
  <code class="language-js">player.addEventListener('x5videoenterfullscreen', function() {
     var width = window.screen.width;
