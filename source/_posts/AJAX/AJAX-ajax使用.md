@@ -17,7 +17,7 @@ $.ajax(options)
 其中options是一个object类型，它指明了本次ajax调用的具体参数，这里我把最常用的几个参数附上
 ```js
 $.ajax({
-    url: "http://www.baidu.com",  
+    url: "",  
     type: "POST", //请求方式 GET
     async: false,   
     data: { "xx": "xxx" },
@@ -36,7 +36,7 @@ $.ajax({
     }
 });
 $.ajax({
-    url: "http://www.baidu.com", //请求的url地址
+    url: "", //请求的url地址
     type: "POST", //请求方式 GET
     async: false,  //请求是否异步，默认为异步，这也是ajax重要特性 飞鸟项目默认为同步了 注意，同步请求将锁住浏览器，用户其它操作必须等待请求完成才可以执行。
     data: { "xx": "xxx" }, //参数值
