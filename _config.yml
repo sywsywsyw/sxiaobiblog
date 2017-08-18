@@ -4,9 +4,9 @@
 
 # Site
 # Site #站点信息
-title: 笔者 #标题
-subtitle: 善于使用各种工具的小开发。 #副标题
-description: 善于使用各种工具的小开发。 #描述
+title: 孙小笔 #标题
+subtitle:  己所不欲勿施于人,己所欲者慎施于人。 #副标题
+description: 己所不欲勿施于人,己所欲者慎施于人。 #描述
 author: 笔者 #作者
 language: zh-Hans #语言
 timezone:         #时区
@@ -30,7 +30,7 @@ i18n_dir: :lang  #国际化
 skip_render:
 
 # Writing  #写作
-new_post_name: :title.md #新文章标题 # File name of new posts 
+new_post_name: :title.md #新文章标题 # File name of new posts
 default_layout: post #默认模板 在scaffolds文件夹下
 titlecase: false #标题转换成大写 # Transform title into titlecase
 external_link: true #新标签页里打开连接 # Open external links in new tab
@@ -69,7 +69,7 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy: #部署, sywsywsyw是我的用户名, 同时发布GitHub 
+deploy: #部署, sywsywsyw是我的用户名, 同时发布GitHub
   type: git
   repository: https://github.com/sywsywsyw/hexo
   branch: gh-pages
@@ -89,7 +89,7 @@ search:
   limit: 10000
 
 # Disqus #Disqus评论系统
-# disqus_shortname: 
+# disqus_shortname:
 
 # plugins: #插件，例如生成 RSS 和站点地图的
 # - hexo-generator-feed
