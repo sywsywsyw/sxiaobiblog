@@ -20,16 +20,16 @@ $.ajax({
     url: "http://www.baidu.com",  
     type: "POST", //请求方式 GET
     async: false,   
-    data: { "xx": "xxx" }, 
-    dataType: "json", 
-    beforeSend: function () { 
-        alert("正在加载");
+    data: { "xx": "xxx" },
+    dataType: "json",
+    beforeSend: function () {
+        console.log("正在加载");
     },
     success: function (req) {  
         console.log(req);
     },
-    complete: function () { 
-        alert("修改完成");
+    complete: function () {
+        console.log("修改完成");
     },
     error: function (req) {  
         console.log(req);
@@ -42,13 +42,13 @@ $.ajax({
     data: { "xx": "xxx" }, //参数值
     dataType: "json", //返回格式为json
     beforeSend: function () {//请求前的处理
-        alert("正在加载");
+        console.log("正在加载");
     },
     success: function (req) { //请求成功时处理
         console.log(req);
     },
     complete: function () { //请求完成的处理
-        alert("修改完成");
+        console.log("修改完成");
     },
     error: function (req) { //请求出错处理
         console.log(req);
@@ -80,13 +80,13 @@ type：type为请求的数据类型，可以是html,xml,json等类型，如果�
 ```js
 $.post(
     "submit.aspx",{
-        id:     '123',
-        name:   '青藤园',
+        id:     '2016',
+        name:   '笔者',
     },function(data,state){
         //这里显示从服务器返回的数据
-        alert(data);
+        console.log(data);
         //这里显示返回的状态
-        alert(state);
+        console.log(state);
     },
     "json"
 )
@@ -106,9 +106,9 @@ $.get(
         name:   '笔者',
     },function(data,state){
         //这里显示从服务器返回的数据
-        alert(data);
+        console.log(data);
         //这里显示返回的状态
-        alert(state);
+        console.log(state);
     }
 )
 ```
