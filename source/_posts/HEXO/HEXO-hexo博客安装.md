@@ -2,7 +2,7 @@
 title: hexo博客搭建
 date: 2016-08-13
 tags:
-categories: Hexo
+categories: HEXO
 ---
 ------
 
@@ -102,9 +102,9 @@ provide shell access.
 connect to host github.com port 22: Connection timed out
 ```
 
-解决方法： 
-在.ssh文件夹下，新建一个config文件，记住把扩展名去掉。 
-另注：.ssh文件夹，在你的个人目录下：C–>用户–>登录用户名文件夹下。 
+解决方法：
+在.ssh文件夹下，新建一个config文件，记住把扩展名去掉。
+另注：.ssh文件夹，在你的个人目录下：C–>用户–>登录用户名文件夹下。
 在config文件夹内写入以下内容：
 ```bash
 Host github.com
@@ -114,7 +114,7 @@ PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_rsa
 Port 443
 ```
-User 代表你的登录邮箱 
+User 代表你的登录邮箱
 此时再执行
 ```bash
 $ ssh -T git@github.com
@@ -142,7 +142,7 @@ $ npm install -g hexo-cli
 $ hexo init
 ```
 该命令会在目标文件夹内建立网站所需要的所有文件。接下来是安装依赖包：
-如果报错 
+如果报错
 ```bash
 bash: hexo: command not found
 ```

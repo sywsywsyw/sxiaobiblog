@@ -2,7 +2,7 @@
 title: jq插件
 date: 2017-08-15 08:54:15
 tags:
-categories:
+categories: JQ
 ---
 ------
 
@@ -183,8 +183,8 @@ $.rs('123') -->
 	// 	}
 	// })
 
-    
- 
+
+
     // $.extend({
      // quchong:function(arr){
     	// var r = [];

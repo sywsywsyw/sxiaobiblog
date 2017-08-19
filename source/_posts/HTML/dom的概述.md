@@ -2,7 +2,7 @@
 title: dom的概述
 date: 2017-08-15 08:43:33
 tags:
-categories:
+categories: HTML
 ---
 ------
 
@@ -380,6 +380,6 @@ forEach.call(els,function(v){
 	console.log(v)  //v就是dom集合中的dom对象
 })
 arr.filter(function(v){
-	return v.id = id 
+	return v.id = id
 	//filter 条件为真保存下来如果满足就放到新数组中 要不就不操作
 })

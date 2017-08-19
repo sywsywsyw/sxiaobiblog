@@ -2,7 +2,7 @@
 title: canvas
 date: 2017-08-14 22:29:51
 tags:
-categories:
+categories: HTML
 ---
 ------
 

@@ -2,7 +2,7 @@
 title: 移动端布局rem
 date: 2017-08-14 22:17:38
 tags:
-categories:
+categories: MOB
 ---
 ------
 

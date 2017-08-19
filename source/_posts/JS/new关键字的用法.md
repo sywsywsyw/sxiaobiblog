@@ -2,7 +2,7 @@
 layout: w
 title: new关键字的用法
 date: 2017-08-15 08:52:42
-tags:
+tags: JS
 ---
 ------
 
@@ -16,13 +16,13 @@ tags:
 	<title>Document</title>
 </head>
 <body>
-	
+
 	<script>
 		// javascript中构建一个对象的4种方式
 		// 1. 字面量的形式
 		var obj = {
 		     "a":12,
-		     "b":234	
+		     "b":234
 		}
 		// 根据字面量的形式创建的对象
 		// 原型就是 Obj.prototype 这个对象

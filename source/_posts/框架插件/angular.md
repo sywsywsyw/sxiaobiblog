@@ -2,13 +2,13 @@
 title: angular
 date: 2017-08-15 09:00:26
 tags:
-categories:
+categories: 框架插件
 ---
 ------
 
 <!-- more -->
 # angular.js
-  
+
   一个全局对象angular  
   ```
   {
@@ -16,7 +16,7 @@ categories:
      toJsonL:fn,
      forEach:fn,
      module:fn(str,arry)   eg:var XX = angular.module('项目名字',[])
-  } 
+  }
   一个模块对象的内部结构
   {
      controller:fn,
@@ -41,7 +41,7 @@ categories:
   var xx = angular.module('xx',[])
   nw.controller('mainCtrl',['$scope',function($scope){
   }])
-  </script>	
+  </script>
   ```
 ## 模块
   <script src="angular-animate.js"></script>
@@ -71,7 +71,7 @@ categories:
 >  angular会以ajax请求的方式去调用
    xx.directive('sywTop',[function(){
        return {
-       restrict:'AECM', //E元素,A属性,C Class,M 
+       restrict:'AECM', //E元素,A属性,C Class,M
        replace:true,  隐藏自定义标签
        template:'<div></div>'
        templageUrl:'views/tab.html',
@@ -122,7 +122,7 @@ categories:
     });
     }]);
 
-##  使用动画 
+##  使用动画
     <script src="angular-animate.js"></script>
     var xx = angular.moudel('xx',['ngAnimate'])  
     .ng-if   .ng-hide

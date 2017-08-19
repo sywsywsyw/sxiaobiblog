@@ -2,7 +2,7 @@
 title: audio标签身上的方法
 date: 2017-08-14 22:23:38
 tags:
-categories:
+categories: VIDEO
 ---
 ------
 

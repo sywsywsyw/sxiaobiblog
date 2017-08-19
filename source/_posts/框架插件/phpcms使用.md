@@ -1,36 +1,35 @@
 ---
-title: phpcms使用
+title: phpcms使用（不会用了）
 date: 2017-08-15 08:54:53
 tags:
-categories:
+categories: 框架插件
 ---
 ------
 
 <!-- more -->
+
 1.将phpcmsv9.zip解压  然后将install_package 下面的所有东西拷贝到www目录
 2.打开localhost/index.html
 3.安装过程中  第3步选择全新安装  第5步选择 账户 root  root    root  空  email1@2.com         一个是L一个是1
-4.后台管理 phpcms phpcms 
+4.后台管理 phpcms phpcms
 
 
+phpcms的安装
 
-```javascript
-<!--phpcms的安装
- 1.将phpcmsv9.zip解压  然后将install_package 下面的所有东西拷贝到www目录
-2.打开localhost/index.html
-3.安装过程中  第3步选择全新安装  第5步选择 账户 root  root    root  空  email1@2.com         一个是L一个是1
-4.后台管理 phpcms phpcms  -->
-```javascript
+1. 将phpcmsv9.zip解压  然后将install_package 下面的所有东西拷贝到www目录
+2. 打开localhost/index.html
+3. 安装过程中  第3步选择全新安装  第5步选择 账户 root  root    root  空  email1@2.com         一个是L一个是1
+4. 后台管理 phpcms phpcms
 
 后台入口：localhost/admin.php
 前台入口：localhost/index.php
-
 
 # phpcms使用
 
 localhost/admin.php
 
 ## 什么是内容管理系统？
+
 用来制作动态网站的一个系统
 phpcmsv9
 把index.php公开给用户去访问
@@ -38,15 +37,17 @@ index.php是一段程序
 这段程序根据得到的参数决定把哪个页面发送给用户
 这段程序会在web服务器上寻找html和脚本,图片，拼接起来发送给用户
 
+## html文件在哪里?
 
-html文件在哪里
 phpcms/templates(模板)/default/content/
 
-脚本和图片在哪里
+## 脚本和图片在哪里?
+
 statics/css
 statics/js
 statics/image
 
+```js
 引入js,css,image
 <link rel="stylesheet" href="{CSS_PATH}xxx/yyy.css">
 <script src="{JS_PATH}xxx/yyy.js"></script>
@@ -58,14 +59,7 @@ statics/image
 .log{
     background-image:url(/statics/images/xxx/a.png)
 }
-
-
-
-
-
-
-
-
+```
 
 ## 如果想改样式和结构怎么？
 
@@ -76,7 +70,7 @@ body以下都注释掉
 ```html
 <div class="1_header">
 	<ul>
-	<!-- nav-site --> 
+	<!-- nav-site -->
 	{pc}
 	{loop}
 	<li><a href=""></a></li>
@@ -104,8 +98,6 @@ body以下都注释掉
 文章模型 show.html
 商品模型 show_shangpin.html
 教师模型 show_jiaoshi.html  
-
-
 
 ## index.html -> category.html -> list.html -> show.html
 
@@ -156,7 +148,7 @@ body以下都注释掉
 取内容中的标题和文章 {title} {content}
 <!-- <div class="main">
         <div class="biaoti"><h1>{$title}</h1></div>        
-        <div class="neirong"><span>{$content}</span></div> 
+        <div class="neirong"><span>{$content}</span></div>
 </div> -->
 ```
 
@@ -187,7 +179,7 @@ description 描述
 {template "content","header"}
 
 list {$r[title]} {$r[thumb]} {$r[url]}
-show {$title} {$url} {$thumb} 
+show {$title} {$url} {$thumb}
 
 lis.hide().eq(this).show()
 

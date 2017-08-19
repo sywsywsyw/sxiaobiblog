@@ -2,7 +2,7 @@
 title: javascript概述
 date: 2017-08-14 22:30:38
 tags:
-categories:
+categories: JS
 ---
 ------
 
@@ -103,7 +103,7 @@ var fn=function(){
 }
 obj.c=fn;
 fn();        this指向window
-obj.c();     指向obj对象 
+obj.c();     指向obj对象
 obj.c.call('111')   指向它的宿主对象
 obj.c.apply([1,2,3,4],[3,4])
 fn.call([1,2,3,4,5]);   指向它的宿主对象
@@ -112,7 +112,7 @@ var fn=function(){
 	console.log(this)
 }
 fn()
-第二种 如果我们需要把this换成任何我们想要的对象  指向obj对象 
+第二种 如果我们需要把this换成任何我们想要的对象  指向obj对象
 var obj={
 	a:1;
 	b:1;
