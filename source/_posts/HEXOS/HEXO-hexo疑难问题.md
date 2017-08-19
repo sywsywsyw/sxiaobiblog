@@ -2,7 +2,7 @@
 title: hexo疑难问题
 date: 2017-08-14 13:43:45
 tags:
-categories: HEXO
+categories: HEXOS
 ---
 ------
 
@@ -34,7 +34,7 @@ fatal: could not read Username for 'https://github.com': Invalid argument
     at maybeClose (internal/child_process.js:818:16)
     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
 ```
-## 解决 
+## 解决
 
 重新安装上传插件
 
