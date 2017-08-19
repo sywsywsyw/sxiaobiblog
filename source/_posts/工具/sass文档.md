@@ -7,22 +7,6 @@ categories: 工具
 ------
 
 <!-- more -->
-{
-
-"color_scheme": "Packages/Color Scheme - Default/Monokai Bright.tmTheme",
-
-"font_size": 12,
-
-"ignored_packages":
-
-[
-
-""
-
-]
-
-}
-
 [nate-river](http://nate-river.github.io/blog/)
 
 # **Sass**
