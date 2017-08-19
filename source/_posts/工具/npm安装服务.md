@@ -46,12 +46,12 @@ cnpm install -g node-sass
 node-sass -v
 ```
 * 使用
->（1）进入课程/css3
->（2）index.scss
->（3）打开cmd  cd  c:\users\name\desktop\课程\css3
->（4）node-sass -w index.scss index.css --output-style expanded
-> node-sass -w  index.scss index.css --output--style expanded  --source-map  map  最后的map是自定义的文件
->（5）ctrl+c两次，退出
+```bash
+node-sass -w index.scss index.css --output-style expanded
+node-sass -w  index.scss index.css --output--style expanded  --source-map  map  //最后的map是自定义的文件
+```
+sass官方文档 http://sass.bootcss.com/docs/sass-reference/
+sass学习 http://www.w3cplus.com/sassguide/
 
 ### bower
 ```bash
