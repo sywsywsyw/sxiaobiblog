@@ -1,6 +1,6 @@
 ---
 title: 日常笔记
-date: 2016-07-16 18:08:35
+date: 2017-07-16 18:08:35
 tags:
 categories: HTML
 ---
@@ -21,7 +21,7 @@ word-break: break-word; //不包括数字
 ```
 2.  下划线
 ```css
-text-decoration: line-through; 
+text-decoration: line-through;
 ```
 3. 控制文字在一行并且出现...
 ```css
@@ -84,7 +84,7 @@ display:table;
         -ms-transform: translate(-50%,-50%);
         -moz-transform: translate(-50%,-50%);
         -o-transform: translate(-50%,-50%);
-        transform: translate(-50%,-50%); 
+        transform: translate(-50%,-50%);
     }
 ```
 9. 去除input type=number的上下箭头样式
@@ -93,15 +93,15 @@ display:table;
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button{
     -webkit-appearance: none !important;
-    margin: 0; 
+    margin: 0;
 }
 Firefox下：
 input[type="number"]{-moz-appearance:textfield;}
 ```
 
-10. 一个1920*900的大图，在1024*768的分辨率只能显示一部分，希望仍居中显示 
+10. 一个1920*900的大图，在1024*768的分辨率只能显示一部分，希望仍居中显示
 ```css
-width: 100%; 
+width: 100%;
 background-position: 50% 50%;
 ```
 
@@ -183,7 +183,7 @@ window.location.href = targetProtocol +
 window.location.href.substring(window.location.protocol.length)
 ```
 
-2. 不同HTML层都被使用不同的颜色添加了一个高亮的边框 
+2. 不同HTML层都被使用不同的颜色添加了一个高亮的边框
 ```js
 转载自<http://buluo.qq.com/p/detail.html?bid=314687&pid=3951568-1476250690>
 调试高亮
@@ -241,7 +241,7 @@ $('.pilun').scroll(function(){
     }  
 })
 function pl_Topjs(){
-    if( $('.pilun').scrollTop() == pl_Top) { 
+    if( $('.pilun').scrollTop() == pl_Top) {
         clearInterval(interval)
         $('.pilun').scrollTop(0)
         interval = null
@@ -345,8 +345,8 @@ function checkPhoto(str){
      if( type!="JPEG"   &&   type!="PNG"   &&   type!="JPG"   &&   type!="GIF"){
       zeroModal.error('上传图片类型错误');
       return false;
-    } 
-} 
+    }
+}
 ```
 14. js获取当前日期时间 转为"yyyy-MM-dd HH:MM:SS"
 ```js
@@ -379,7 +379,7 @@ function getNowFormatDate() {
   console.log(test,test1)
 test1.onkeydown = function(e){  
     send(e);  
-  } 
+  }
   // test.onkeydown = function(e){  
   //   send(e);  
   // }  
@@ -397,7 +397,7 @@ test1.onkeydown = function(e){
  </script>
 ```
 
-17. 网页调用qq 
+17. 网页调用qq
 ```html
 http://wpa.qq.com/msgrd?v=3&uin=3314523834&site=qq&menu=yes
 ```
@@ -490,4 +490,4 @@ http://wpa.qq.com/msgrd?v=3&uin=3314523834&site=qq&menu=yes
 7. 怎么打出来&copy;
 ```js
 <a href="">&copy;</a>
-``` 
+```

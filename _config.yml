@@ -78,8 +78,8 @@ deploy: #部署, sywsywsyw是我的用户名, 同时发布GitHub
 avatar: /images/avator.png
 
 #jiathis 分享服务
-jiathis: true
-baidushare: true
+jiathis: false
+baidushare: false
 
 #搜索
 search:

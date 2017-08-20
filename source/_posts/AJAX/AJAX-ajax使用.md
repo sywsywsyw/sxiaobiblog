@@ -1,6 +1,6 @@
 ---
 title: ajax4种方式
-date: 2017-07-19
+date: 2016-07-19
 tags:
 categories: AJAX
 ---

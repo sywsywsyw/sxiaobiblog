@@ -1,6 +1,6 @@
 ---
 title: ajax常见问题
-date: 2017-07-20
+date: 2016-07-29
 tags:
 categories: AJAX
 ---
@@ -24,9 +24,9 @@ formData.append("imageName",convertBase64UrlToBlob(base64Codes));  //append函�
  *            用url方式表示的base64图片数据
  */
 function convertBase64UrlToBlob(urlData){
-    
+
     var bytes=window.atob(urlData.split(',')[1]);        //去掉url的头，并转换为byte
-    
+
     //处理异常,将ascii码小于0的转换为大于0
     var ab = new ArrayBuffer(bytes.length);
     var ia = new Uint8Array(ab);
@@ -102,9 +102,9 @@ $origin = isset($_SERVER['HTTP_ORIGIN'])? $_SERVER['HTTP_ORIGIN'] : ''; $allow_o
     'http://client1.runoob.com',  
     'http://client2.runoob.com'  
 );  
-if(in_array($origin, $allow_origin)){ 
+if(in_array($origin, $allow_origin)){
      header('Access-Control-Allow-Origin:'.$origin);      
-} 
+}
 ## 3、允许所有域名访问
 允许所有域名访问则只需在http://server.runoob.com/server.php文件头部添加如下代码：
 header('Access-Control-Allow-Origin:*');

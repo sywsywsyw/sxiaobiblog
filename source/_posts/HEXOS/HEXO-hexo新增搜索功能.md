@@ -1,6 +1,6 @@
 ---
 title: hexo新增搜索功能
-date: 2017-04-24
+date: 2016-10-24
 tags:
 categories: HEXOS
 ---

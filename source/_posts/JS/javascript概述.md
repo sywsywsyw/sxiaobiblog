@@ -1,6 +1,6 @@
 ---
 title: javascript概述
-date: 2017-08-14 22:30:38
+date: 2016-02-16 22:30:38
 tags:
 categories: JS
 ---

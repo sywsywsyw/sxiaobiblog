@@ -1,6 +1,6 @@
 ---
-title: 微信视频安卓全屏解决办法 
-date: 2017-06-20
+title: 微信视频安卓全屏解决办法
+date: 2017-04-20
 tags:
 categories: VIDEO
 ---
@@ -131,7 +131,7 @@ player.addEventListener('x5videoexitfullscreen', function() {
 }
 .main .inner {
     padding: 0.3rem;
-} 
+}
 ```
 ```html
 <header id="header" class="header">标题栏</header>
