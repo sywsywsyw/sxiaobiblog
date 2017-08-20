@@ -1,6 +1,6 @@
 ---
-title: video在IOS和安卓的属性 
-date: 2017-06-13
+title: video在IOS和安卓的属性
+date: 2017-01-17
 tags:
 categories: VIDEO
 ---
@@ -89,14 +89,14 @@ categories: VIDEO
 ### 6\. 详细解释
 ```html
 <video
-  id="videoALL" 
-  src="video/01.mp4" 
+  id="videoALL"
+  src="video/01.mp4"
   poster="images/1.jpg" /*视频封面*/
-  preload="auto" 
+  preload="auto"
   webkit-playsinline="true" /*这个属性是ios 10中设置可以
                      让视频在小窗内播放，也就是不是全屏播放*/  
-  playsinline="true"  /*IOS微信浏览器支持小窗内播放*/ 
-  x-webkit-airplay="allow" 
+  playsinline="true"  /*IOS微信浏览器支持小窗内播放*/
+  x-webkit-airplay="allow"
   x5-video-player-type="h5"  /*启用H5播放器,是wechat安卓版特性*/
   x5-video-player-fullscreen="true" /*全屏设置，
                      设置为 true 是防止横屏*/>

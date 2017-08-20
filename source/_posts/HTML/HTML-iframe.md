@@ -1,6 +1,6 @@
 ---
 title: iframe
-date: 2016-08-11
+date: 2016-01-23
 tags:
 categories: HTML
 ---
@@ -48,8 +48,8 @@ frame页面是内嵌到父页面的，当点击iframe页面的服务器控件时
 #### 怎麼判断iframe是否加载完成？
 ```html
 <iframe id="previewFrame" scrolling="no" class="previewFrame" frameborder="0"></iframe>
-```` 
-```js 
+````
+```js
 var iframe = document.getElementById("previewFrame");  
 if (iframe.attachEvent) {  
     iframe.attachEvent("onload", function() {  

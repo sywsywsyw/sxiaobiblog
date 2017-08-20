@@ -1,6 +1,6 @@
 ---
 title: HTML标签学习
-date: 2016-04-27
+date: 2016-01-22
 tags:
 categories: HTML
 ---
@@ -31,11 +31,11 @@ _top	在整个窗口中打开被链接文档。
 framename	在指定的框架中打开被链接文档。
 ```
 * <a href="http://www.w3school.com.cn/tags/att_a_name.asp">HTML a 标签的 name 属性</a>
-  
+
   > name 属性用于指定锚（anchor）的名称。
 
 ```html
-<ul>	
+<ul>
 <li><a href="#C1">第一章</a></li>
 <li><a href="#C2">第二章</a></li>
 </ul>
@@ -50,9 +50,9 @@ framename	在指定的框架中打开被链接文档。
 ```  
 
 * <a href="http://www.w3school.com.cn/tags/att_a_charset.asp">HTML a 标签的 charset 属性</a>
- 
+
  > a 标签的 charset 属性用于指定作为链接目标的文档中所使用的字符编码。charset 属性的值必须是标准字符集的名称，例如 "UTF-8"，默认值是 "ISO-8859-1"。
- 
+
  > 主流的浏览器几乎都不支持 charset 属性。
 
 ```html
