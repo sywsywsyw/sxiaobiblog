@@ -53,13 +53,6 @@ $ ping arobot.github.io
   repo: https://github.com/arobot/arobot.github.io.git
   branch: master</code>
 
-原文见我的[博客](http://wluo.me/2016/12/06/set-up-your-hexo/)
-
-作者：arobot
-链接：http://www.jianshu.com/p/a47b7a1fb14c
-來源：简书
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
 ## hexo新增搜索功能
 NexT主题支持集成 Swiftype、 微搜索、Local Search 和 Algolia,Swiftype和Algolia都只有一段时间的试用期，可以采用Hexo提供的Local Search,原理是通过hexo-generator-search插件在本地生成一个search.xml文件，搜索的时候从这个文件中根据关键字检索出相应的链接。
 <a id="more"></a>
