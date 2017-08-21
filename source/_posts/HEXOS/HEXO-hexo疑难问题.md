@@ -50,10 +50,10 @@ $ hexo deploy
 
 今天设置目录老是乱码
 错误：
-<!-- ![错误](/images/hexo乱码目录.png)![错误](/images/hexo乱码目录md.png)
+![错误](/images/hexo乱码目录.png)![错误](/images/hexo乱码目录md.png)
 
 正确:
-![正确](/images/hexo目录正常.png)![正确](/images/hexo目录正常md.png) -->
+![正确](/images/hexo目录正常.png)![正确](/images/hexo目录正常md.png)
 
 对的 你没看错 hexo的标题不能进行跳级 比较严格
 
@@ -64,3 +64,16 @@ $ hexo deploy
 官方文档：
 资源（Asset）代表 source 文件夹中除了文章以外的所有文件，例如图片、CSS、JS 文件等。比方说，如果你的Hexo项目中只有少量图片，那最简单的方法就是将它们放在 source/images 文件夹中。然后通过类似于 `![](/images/image.jpg) `的方法访问它们。
 https://hexo.io/zh-cn/docs/asset-folders.html
+
+## 资源不一致报错
+
+![错误](/images/git报错.png)
+
+原因：
+GitHub远程仓库中的README.md文件不在本地仓库中。 因为我手动在github创建了一个README.md文件
+
+解决方案：
+
+```bash
+$ git pull --rebase origin master
+```
