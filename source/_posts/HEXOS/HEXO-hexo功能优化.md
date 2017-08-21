@@ -1,11 +1,11 @@
 ---
-title: hexo优化
+title: hexo功能优化
 date: 2016-08-16 13:16:24
 tags:
 categories: HEXOS
 ---
 
-## 给自己的博客设置个人域名
+## 给博客设置个人域名
 
 ### 获取ip
 
