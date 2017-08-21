@@ -2,7 +2,7 @@
 title: 团队代码规范
 date: 2016-08-11
 tags:
-categories: SPECS
+categories: SPEC
 ---
 ------
 
@@ -115,19 +115,19 @@ bg-body.jpg spr-home.png img-promo.jpg btn-submit.png icon-game.png
 <!-- [if IE]>
 这里只有ie浏览器才可以显示
 <![endif]-->
- 
+
 <!-- [if !IE]>
 这里只有非ie浏览器才可以显示
 <! <![endif]-->
- 
+
 <!--[if IE 6]>
 这里只有ie6浏览器才可以显示
 <![endif]-->
- 
+
 <!--[if lt IE 9]>
 这里只有ie9以下浏览器才可以显示
 <![endif]-->
- 
+
 <!--[if lte IE 8]>
 这里只有ie8以及ie8以下浏览器才可以显示
 <![endif]-->
@@ -285,7 +285,7 @@ input,textarea,select{*font-size:100%}
 
 ###### 为单个css选择器或新申明开启新行
 
-###### css属性书写顺序   布局定位属性 自身属性 文本属性 其他属性 CSS3属性 
+###### css属性书写顺序   布局定位属性 自身属性 文本属性 其他属性 CSS3属性
 
 ```html
 /*  这些属性只是最常用到的, 并不代表全部 */
@@ -315,7 +315,7 @@ selectors{
 ```
 ###### 不要以没有寓意的标签做为选择器
 
-> `强烈建议不要使用`，因为这会造成大面积污染，除非你可以断定现在或将来你的这个选择器不会污染其他同类 
+> `强烈建议不要使用`，因为这会造成大面积污染，除非你可以断定现在或将来你的这个选择器不会污染其他同类
 
 ###### css单行书写法
 
@@ -400,7 +400,7 @@ selectors{ color:#000; background-color:#def;}
 
 #### 删除css属性值为0的单位
 
-> 0就是0，任何单位都不需要 
+> 0就是0，任何单位都不需要
 
 ```html
 /*不推荐*/
@@ -458,13 +458,13 @@ selectors{ font-size:12px;}
 ### 变量定义和初始化
 
 > javascript并不强调变量在使用前必须定义，但是如果没有使用var 关键字来定义变量，则这个变量就会变成全局变量，可能会造成对同名全局变量的覆盖，在多人写作开发，引入多个库或多个js文件的情况下，容易导致变量名冲突等问题。因此，对变量的定义和初始化建议参照一下规则：总是将代码包裹成一个IIFE（Immediateley-Invoked Function Expression）,用一创建独立隔绝的定义域。这一举措可以防止全局命名空间被污染。IIFE还可以确保你的代码不会轻易被其他全局命名空间的代码所修改。
-  
+
 > 不推荐
 
 ```javascript
 var x = 10,
     y = 100;
- 
+
 // Declaring variables in the global scope is resulting in global scope pollution. All variables declared like this
 // will be stored in the window object. This is very unclean and needs to be avoided.
 console.log(window.x + ' ' + window.y);
@@ -476,13 +476,13 @@ console.log(window.x + ' ' + window.y);
 // We declare a IIFE and pass parameters into the function that we will use from the global space
 (function(log, w, undefined){
   'use strict';
- 
+
   var x = 10,
       y = 100;
- 
+
   // Will output 'true true'
   log((w.x === undefined) + ' ' + (w.y === undefined));
- 
+
 }(window.console.log, window));
 ```
 
@@ -538,7 +538,7 @@ if (condition == true) {
 } else {
     // do something else
 }
- 
+
 for(var i = 0; i < data.length; i++) {
     // loop body
 }
@@ -581,7 +581,7 @@ var msg = '<li class="msg">这是一条信息</li>';
  function doSomething() {
      alert('hello');
  }
- 
+
 /**
  * 这是一个有调用参数和返回值的函数
  * 注释里要用@param和@return分别标注参数和返回值
