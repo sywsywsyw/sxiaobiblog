@@ -46,6 +46,12 @@ $ ping arobot.github.io
 
 ![](/images/hexo自定义域名.png)
 
+！注意事项
+> 如果启用了自定义域名，则项目文件不能是 sywsywsyw.github.io  必须换个名字
+  否则会出现各种乱七八糟的报错
+  
+官方文档:(https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/)
+
 ### 部署博客
 
 静态网页可以部署在多种服务器上，Hexo官方提供了多种[部署](https://hexo.io/zh-cn/docs/deployment.html)方式，详细的部署方式参见官网。
