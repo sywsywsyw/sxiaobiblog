@@ -39,11 +39,11 @@ $('#appDateTime').focus(function(){
 
 > android是腾讯x5
 
-<img src="/hexo/images/txX5.png" alt="腾讯x5"  height="80">
+<img src="/images/txX5.png" alt="腾讯x5"  height="80">
 
 > ios不是腾讯x5
 
-<img src="/hexo/images/txnX5.png" alt="腾讯nx5">
+<img src="/images/txnX5.png" alt="腾讯nx5">
 
 ## 问题：ios Safari 浏览器的input点击选中时候有高亮边框 safari
 

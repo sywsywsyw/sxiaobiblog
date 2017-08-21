@@ -43,10 +43,10 @@ categories: HTML
 这个内层div其实是会出现滚动条的，所以不影响鼠标的滚动效果，而且我们看不到滚动条了。   
 
 内层ul效果：
-<img src="/hexo/images/纯cssdiv隐藏滚动条保留鼠标滚动效果/内层效果.png" alt="内层效果">
+<img src="/images/纯cssdiv隐藏滚动条保留鼠标滚动效果/内层效果.png" alt="内层效果">
 
 外层div wrap效果：
-<img src="/hexo/images/纯cssdiv隐藏滚动条保留鼠标滚动效果/外层效果.png" alt="外层效果">
+<img src="/images/纯cssdiv隐藏滚动条保留鼠标滚动效果/外层效果.png" alt="外层效果">
 
 css代码
 

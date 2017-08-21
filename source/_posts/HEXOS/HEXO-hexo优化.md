@@ -23,7 +23,7 @@ $ ping arobot.github.io
 
 进入阿里云的云解析，可以为你购买的域名添加解析。
 
-![](/hexo/images/hexo网站解析.png)
+![](/images/hexo网站解析.png)
 
 域名解析
 
@@ -42,6 +42,10 @@ $ ping arobot.github.io
 
 个性化域名的配置就完成了，将博客部署上去就能够通过自己的域名链接过来。
 
+或者可以在项目文件夹中添加自己的网址
+
+![](/images/hexo自定义域名.png)
+
 ### 部署博客
 
 静态网页可以部署在多种服务器上，Hexo官方提供了多种[部署](https://hexo.io/zh-cn/docs/deployment.html)方式，详细的部署方式参见官网。
@@ -50,8 +54,9 @@ $ ping arobot.github.io
 
 <code>deploy:
   type: git
-  repo: https://github.com/arobot/arobot.github.io.git
+  repo: https://github.com/sywsywsyw/sywsywsyw.github.io
   branch: master</code>
+
 
 ## hexo新增搜索功能
 NexT主题支持集成 Swiftype、 微搜索、Local Search 和 Algolia,Swiftype和Algolia都只有一段时间的试用期，可以采用Hexo提供的Local Search,原理是通过hexo-generator-search插件在本地生成一个search.xml文件，搜索的时候从这个文件中根据关键字检索出相应的链接。

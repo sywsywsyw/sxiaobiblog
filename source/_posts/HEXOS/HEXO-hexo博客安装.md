@@ -296,7 +296,7 @@ hexo d -g
 
 我们刚才使用Hexo生成的博客使用的是Hexo的默认主题：Landscape。
 
-不过hexo 给我们提供了大量的主题，[Themes·Hexo](https://github.com/hexojs/hexo/wiki/Themes) 我选择的是这个主题：NexT。
+不过hexo 给我们提供了大量的主题，[Themes·Hexo](https://github.com/hexojs/wiki/Themes) 我选择的是这个主题：NexT。
 
 ### 4.2 安装NexT主题
 

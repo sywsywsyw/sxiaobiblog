@@ -25,7 +25,7 @@ git --version
 node -v 得到版本号
 npm -v  得到版本号
 ```
-git https://sywsywsyw.github.io/hexo/2016/07/17/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7-git%E5%91%BD%E4%BB%A4/
+git https://sywsywsyw.github.io/2016/07/17/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7-git%E5%91%BD%E4%BB%A4/
 
 ## 安装服务(如果npm无法使用可以用cnpm代理)
 
