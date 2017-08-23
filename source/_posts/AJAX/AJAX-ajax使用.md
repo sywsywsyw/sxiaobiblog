@@ -16,6 +16,26 @@ categories: AJAX
 $.ajax(options)
 其中options是一个object类型，它指明了本次ajax调用的具体参数，这里我把最常用的几个参数附上
 ```js
+// 新写法
+// 代码更加美化
+
+$.ajax({
+  url: '/path/to/file',
+  type: 'default GET (Other values: POST)',
+  dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+  data: {param1: 'value1'}
+})
+.done(function() {
+  console.log("success");
+})
+.fail(function() {
+  console.log("error");
+})
+.always(function() {
+  console.log("complete");
+});
+```
+```js
 $.ajax({
     url: "",  
     type: "POST", //请求方式 GET
