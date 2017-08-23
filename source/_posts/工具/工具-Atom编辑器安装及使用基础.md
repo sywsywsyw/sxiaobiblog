@@ -127,3 +127,130 @@ JS代码智能提示。
 ![命令面板](https://i.github-camo.com/894f5500758f862aea9995f174a8a17a17db0b57/68747470733a2f2f636c6f75642e67697468756275736572636f6e74656e742e636f6d2f6173736574732f313838353333332f31363534323538332f31633864393735632d343038352d313165362d383330372d6533356466373433306131302e706e67)
 ![美化语言的命令](https://i.github-camo.com/1b0c8e9e1bbbf4af2d88d540a4405ab2f32c4227/68747470733a2f2f636c6f75642e67697468756275736572636f6e74656e742e636f6d2f6173736574732f313838353333332f32353737353538362f66336663376563342d333237652d313165372d383537362d3435653733356538303033322e676966)
 ![官方文档](https://atom.io/packages/atom-beautify)
+
+#### 2、原生Markdown书写和预览
+
+ Markdown 是一种轻量级的「标记语言」，它的优点很多，目前也被越来越多的写作爱好者，撰稿者广泛使用。看到这里请不要被「标记」、「语言」所迷惑，Markdown 的语法十分简单。常用的标记符号也不超过十个，这种相对于更为复杂的HTML标记语言来说，Markdown可谓是十分轻量的，学习成本也不需要太多，且一旦熟悉这种语法规则，会有一劳永逸的效果。
+
+Atom原生支持Markdown的书写和预览，这相较于Sublime的需要安装第三方Markdown插件使用起来还要优秀，由于时Github自家打造，Markdown语法当然也是与github语法完全同步。
+
+使用快捷键 Ctrl + Shift + M 则可打开Markdown的预览界面。
+
+ [![原文:Atom - 介绍和使用方法（好用的文本编辑器，代码提示高亮、Markdown）](http://www.hangge.com/blog_uploads/201604/2016042314061974900.png)](http://www.hangge.com/blog/cache/detail_1149.html)
+
+Atom的markdown Preview官方效果图如下：
+
+ [![原文:Atom - 介绍和使用方法（好用的文本编辑器，代码提示高亮、Markdown）](http://www.hangge.com/blog_uploads/201604/2016042314072625097.png)](http://www.hangge.com/blog/cache/detail_1149.html)
+
+#### 3、原生Git支持
+
+作为一个程序员，Git无疑是一个版本控制神器。如果你编辑了你从GitHub上Pull代码，那么在编辑器的右下角或者菜单树中能直观的看到自己编辑代码的状态，当然还有其他很多功能。这个大家可以自行去摸索。
+
+### 三，常用快捷键
+
+Atom设置选项 keybindings 中列举了相当长的一份关于快捷键的绑定列表，你也可以自定义快捷键的配置文件，有相同的快捷键则会覆盖掉原有的，使用你自己设定的。下面是一些常用的快捷键：
+
+ Crtl+Shift+M    开启Markdown实时预览
+Command+Shift+P    打开命令窗口，可以运行各种菜单功能
+Command + T    快速多文件切换
+Command + F    文件内查找和替换
+Command + Shift + F    多文件查找和替换
+Command + [    对选中内容向左缩进
+Command + ]    对选中内容向右缩进
+Command + \    显示或隐藏目录树
+Crtl + m    相应括号之间，html tag之间等跳转
+Crtl + Alt + B    格式化代码（需要安装atom-beautify）
+Crtl + `    调起CLI命令行界面（需要安装terminal-panel）
+
+### 四，常用的一些插件
+
+Atom的常用插件基本上都在 Atom Packages 首页中能找到，选择热门的、下载量较多的适合自己需要的基本上都是正确的选择，下面列举一写比较好用的插件：
+
+#### 1、minimap
+
+minimap是一个预览全部代码的一个插件，同时能方便的移动到指定的文件位置。
+
+ [![原文:Atom - 介绍和使用方法（好用的文本编辑器，代码提示高亮、Markdown）](http://www.hangge.com/blog_uploads/201604/2016042314082539950.png)](http://www.hangge.com/blog/cache/detail_1149.html)
+
+#### 2、atom-beautify
+
+atom-beautify是一个格式化代码的插件，支持HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C,CoffeeScript, TypeScript, SQL等多种语言。
+
+*   安装后可以使用 Crtl + Alt + B 快捷键进行格式化。
+*   也可以点击菜单“Packages”->“Atom Beautify”->“Beautify”进行格式化。
+
+#### 3、emmet
+
+emmet是HTML,CSS快速编写的神器,具体的使用可以参看emmet官网。
+
+#### 4、autocomplete-* 系列
+
+autocomplete-*系列包含各个语言的代码自动补全功能，你需要什么语言的就可以下载该语言相关的插件即可。
+
+*   autocomplete-paths：填写路径的时候有Sug提示
+*   autocomplete-php：php代码提示补全
+*   autocomplete-java：java代码提示补全
+
+ [![原文:Atom - 介绍和使用方法（好用的文本编辑器，代码提示高亮、Markdown）](https://i.github-camo.com/be24f52ffa9df28969b5114bb46ba099f8194701/68747470733a2f2f7261772e6769746875622e636f6d2f417a616b7572342f6175746f636f6d706c6574652d7068702f6d61737465722f6173736574732f696d672f64656d6f2e676966)](http://www.hangge.com/blog/cache/detail_1149.html)
+
+ [![原文:Atom - 介绍和使用方法（好用的文本编辑器，代码提示高亮、Markdown）](https://i.github-camo.com/5e1071f4b0acf2074a5a0d443a9e46e3e99b236a/68747470733a2f2f7261772e6769746875622e636f6d2f6b65736b696a752f6175746f636f6d706c6574652d6a6176612f6d61737465722f73637265656e73686f742e676966)](http://www.hangge.com/blog/cache/detail_1149.html)
+
+#### 5、pigments
+
+pigments是项目文件中，样式显色显示的的插件。在Atom中的下载量可是相当的高。对于前端人员来讲还是很重要的一个插件。
+
+ [![原文:Atom - 介绍和使用方法（好用的文本编辑器，代码提示高亮、Markdown）](http://www.hangge.com/blog_uploads/201604/2016042314092387296.gif)](http://www.hangge.com/blog/cache/detail_1149.html)
+
+#### 6、terminal-panel
+
+用于执行命令并显示输出。打开终端面板快捷键：Ctrl + `
+
+ [![原文:Atom - 介绍和使用方法（好用的文本编辑器，代码提示高亮、Markdown）](https://i.github-camo.com/08b164c6803467b8824a34ca9f52b6f2d1d6b2e6/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f74686564616e69656c2f7465726d696e616c2d70616e656c2f6d61737465722f7465726d696e616c2d64656d6f2e676966)](http://www.hangge.com/blog/cache/detail_1149.html)
+
+#### 7、docblockr
+
+可以帮助我们方便快速地写注释。
+
+ [![原文:Atom - 介绍和使用方法（好用的文本编辑器，代码提示高亮、Markdown）](https://i.github-camo.com/75520d0785add27aad25b9111d5fbfe49eb85214/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f4e696b68696c4b616c6967652f646f63626c6f636b722f6d61737465722f7265736f75726365732f66756e6374696f6e2d74656d706c6174652e676966)](http://www.hangge.com/blog/cache/detail_1149.html)
+
+#### 8、javascript-snippets
+
+让我们书写js时使用各种缩写，自动补全代码。
+
+ [![原文:Atom - 介绍和使用方法（好用的文本编辑器，代码提示高亮、Markdown）](https://i.github-camo.com/530eafbaf5b2bc0e6cf78666bbdb339cd65bf713/68747470733a2f2f636c6f75642e67697468756275736572636f6e74656e742e636f6d2f6173736574732f3339383839332f333532383131382f66303763323037322d303738622d313165342d393365392d6363623133333938323465362e676966)](http://www.hangge.com/blog/cache/detail_1149.html)
+
+#### 9、file-icons
+
+让文件前面有彩色图片，使文件类型看得更加清除舒服。(如果使用着 seti-ui 主题，则体现不了效果哦)
+
+ [![原文:Atom - 介绍和使用方法（好用的文本编辑器，代码提示高亮、Markdown）](http://www.hangge.com/blog_uploads/201701/201701311029097574.png)](http://www.hangge.com/blog/cache/detail_1149.html)
+
+### 五、常用主题
+
+Atom 的主题是分为UI主题和语法主题，默认情况下软件已经提供了好几套主题（有暗色调、也有亮色调）供我们使用。
+
+*   在菜单“Atom”->“Preferences”->“Themes” 页面中可以分别切换 UI Theme 和 Syntax Theme
+*   在菜单“Atom”->“Preferences”->“Install” 页面中可以搜索安装各种主题。
+
+除了默认自带的主题，下面推荐几个优秀的Theme，大家可以自行安装。
+
+###
+1，seti-ui + seti-syntax 
+
+ 每个文件前的icons是最大亮点
+
+ [![原文:Atom - 介绍和使用方法（好用的文本编辑器，代码提示高亮、Markdown）](http://www.hangge.com/blog_uploads/201701/2017013111414287284.png)](http://www.hangge.com/blog/cache/detail_1149.html)
+
+### 2，atom-material-ui + atom-material-syntax
+
+ 颜色正
+
+（1）暗色调
+
+ [![原文:Atom - 介绍和使用方法（好用的文本编辑器，代码提示高亮、Markdown）](http://www.hangge.com/blog_uploads/201701/2017013111455655669.png)](http://www.hangge.com/blog/cache/detail_1149.html)
+
+（2）亮色调
+
+ [![原文:Atom - 介绍和使用方法（好用的文本编辑器，代码提示高亮、Markdown）](http://www.hangge.com/blog_uploads/201701/2017013111460736360.png)](http://www.hangge.com/blog/cache/detail_1149.html)
+
+原文出自：[www.hangge.com](http://www.hangge.com/)  转载请保留原文链接：[http://www.hangge.com/blog/cache/detail_1149.html](http://www.hangge.com/blog/cache/detail_1149.html)
