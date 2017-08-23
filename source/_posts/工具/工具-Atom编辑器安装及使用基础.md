@@ -98,6 +98,8 @@ css代码前缀自动补全。
 ![Image text](http://upload-images.jianshu.io/upload_images/1980884-d4c97a1b1e7c2a86.gif?imageMogr2/auto-orient/strip)
 ### 10、color-picker
 取色器。
+右键单击并选择Color Picker，或者点击CMD-SHIFT-C/ CTRL-ALT-C打开它。目前读HEX，HEXa，RGB，RGBa，HSL，HSLa，HSV，HSVa，VEC3和VEC4颜色-并能在格式之间的转换。
+它还检查Sass和LESS颜色变量。只需Color Picker用光标打开一个变量，它就会查找你的定义。从那里，您可以单击定义并直接转到定义的位置。
 
 ![Image text](http://upload-images.jianshu.io/upload_images/1980884-deb030a911e29e87.gif?imageMogr2/auto-orient/strip)
 
@@ -113,3 +115,8 @@ JS代码智能提示。
 
 ### 13、snippets
 按tab键自动填充代码。
+
+### 14、atom-beautify
+代码美化
+
+![官方文档](https://atom.io/packages/atom-beautify)
