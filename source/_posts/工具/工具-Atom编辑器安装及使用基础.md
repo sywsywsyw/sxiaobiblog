@@ -1,6 +1,6 @@
 ---
 title: Atom编辑器安装及使用基础
-date: 2016-05-23T00:00:00.000Z
+date: 2016-08-23T00:00:00.000Z
 tags: null
 categories: 工具
 ---

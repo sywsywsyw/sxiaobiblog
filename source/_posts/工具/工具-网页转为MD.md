@@ -1,16 +1,17 @@
 ---
 title: 网页转为MD
-date: 2017-03-06
-tags:
+date: 2017-03-06T00:00:00.000Z
+tags: null
 categories: 工具
 ---
-------
+
+--------------------------------------------------------------------------------
 
 # 转载
 
-<!-- more -->
+项目预览:<https://phodal.github.io/2md/> 项目地址: <https://github.com/phodal/2md> <!-- more -->
 
-# 【开源】2md：将复制的内容、网页转成 markdown
+## 【开源】2md：将复制的内容、网页转成 markdown
 
 > 如果一个 Markdown 编辑器不能解决问题，那么就用两个编辑器。
 
@@ -44,49 +45,49 @@ MDPub 截图
 
 一如即往的，保持了简洁的风格。并且，它的代码也足够的简单：
 
-1.  tinymce.init({
+1. tinymce.init({
 
-2.  selector: 'textarea#input',
+2. selector: 'textarea#input',
 
-3.  height: 500,
+3. height: 500,
 
-4.  menubar: false,
+4. menubar: false,
 
-5.  statusbar: false,
+5. statusbar: false,
 
-6.  toolbar: ['code'],
+6. toolbar: ['code'],
 
-7.  plugins: [
+7. plugins: [
 
-8.  'advlist autolink lists link image charmap print preview anchor',
+8. 'advlist autolink lists link image charmap print preview anchor',
 
-9.  'searchreplace visualblocks code fullscreen',
+9. 'searchreplace visualblocks code fullscreen',
 
-10.  'insertdatetime media table contextmenu paste code'
+10. 'insertdatetime media table contextmenu paste code'
 
-11.  ],
+11. ],
 
-12.  setup: function(editor) {
+12. setup: function(editor) {
 
-13.  editor.on('change', function(e) {
+13. editor.on('change', function(e) {
 
-14.  varcontent = tinymce.get('input').getContent();
+14. varcontent = tinymce.get('input').getContent();
 
-15.  varmd = toMarkdown(content);
+15. varmd = toMarkdown(content);
 
-16.  $("#output").val(md);
+16. $("#output").val(md);
 
-17.  });
+17. });
 
-18.  }
+18. }
 
-19.  });
+19. });
 
-21.  $('document').ready(function() {
+20. $('document').ready(function() {
 
-22.  newClipboard('.btn');
+21. newClipboard('.btn');
 
-23.  });
+22. });
 
 而，我们所做的便是从网页，或者编辑器里直接复制内容，粘贴到左侧的编辑器里：
 
@@ -101,7 +102,3 @@ MDPub 截图
 ![](http://img.mp.itc.cn/upload/20170418/ffd90d9dd6a3471a837877cd6029e7f2_th.jpeg)
 
 2MD WebSite
-
-说了，这么多，你要来试试吗？
-
-GitHub: https://github.com/phodal/2md
