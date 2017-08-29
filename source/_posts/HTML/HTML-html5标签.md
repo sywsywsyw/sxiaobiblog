@@ -8,6 +8,30 @@ categories: HTML
 
 <!-- more -->
 
+### HTML的声明属性 <html lang="zh-CN"></html>
+
+*
+# [html标签中lang属性及xml:lang属性的作用](http://www.cnblogs.com/oray/p/3746688.html)
+
+lang属性：HTML语言声明属性，用来定义当前文档显示的语言。
+
+如：lang="en"表示定义语言为英文；lang="zh-CN"表示定义语言为中文。其实对于文档显示来说怎样写都无所谓，定义成en的文档也可以显示中文，定义成zh-CN的文档也可以显示英文。但还是应该遵循标准，毕竟这个属性对浏览器和搜索引擎还是有作用的。
+
+其实，在新的XHTML文档中，lang属性已经被xml:lang属性代替。但是，XHTML规范建议在XHTML 1.0文档的<html>元素中同时使用**lang属性**和**xml:lang属性**，以在不同的浏览器之间获得最大的兼容性。如果网页定义为XHTML1.1或者XML格式,那么可以使用xml:lang属性(因为xml:lang属性是在XML中确定语言信息的标准用法)。
+
+设计 lang 属性是为了向用户提供语言特有的显示，尽管它对主要的浏览器具有较小的影响。使用lang属性后，真正受益的是搜索引擎(搜索引擎利用它能够告诉用户采用哪一种语言编写文档)、屏幕阅读器(屏幕阅读器利用它能够以不同的方式发音不同的语言)以及一些应用程序(应用程序能够在它们不支持所提供的语言或者该语言与它们的默认语言不同时向用户发出警报)。当lang属性用于<html>元素中时，它将作用于整个文档；而在用于其他元素中时，它将仅作用于这些元素的内容。
+
+lang属性的值是ISO-639标准两字符语言代码。如果希望指定某种语言的方言，可以在语言代码后面紧跟一个破折号和一个子代码名称。
+
+示例如下：
+```
+声明英文文档：
+ `<``html` `lang``=``"en"` `xml:lang``=``"en"``>`
+声明中文文档：
+ `<``html` `lang``=``"zh-CN"` `xml:lang``=``"zh-CN"``>`
+```
+以上就是html中lang属性的一些简介，详情可以参考W3C官方文档：
+
 ###  <a href="http://www.w3school.com.cn/tags/tag_a.asp">HTML a 标签的属性</a>
 
 * <a href="http://www.w3school.com.cn/tags/att_a_href.asp">HTML a 标签的 href 属性</a>
