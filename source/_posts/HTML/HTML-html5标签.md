@@ -8,10 +8,7 @@ categories: HTML
 
 <!-- more -->
 
-### HTML的声明属性 <html lang="zh-CN"></html>
-
-*
-# [html标签中lang属性及xml:lang属性的作用](http://www.cnblogs.com/oray/p/3746688.html)
+###  [html标签中lang属性及xml:lang属性的作用]
 
 lang属性：HTML语言声明属性，用来定义当前文档显示的语言。
 
