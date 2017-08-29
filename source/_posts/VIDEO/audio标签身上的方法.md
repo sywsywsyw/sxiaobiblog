@@ -1,13 +1,13 @@
 ---
 title: audio标签身上的方法
-date: 2017-01-15 22:23:38
-tags:
+date: 2017-01-15T22:23:38.000Z
+tags: null
 categories: VIDEO
 ---
-------
 
-<!-- more -->
-[nate-river](http://nate-river.github.io/blog/)
+--------------------------------------------------------------------------------
+
+<!-- more --> [nate-river](http://nate-river.github.io/blog/)
 
 # **audio对象身上的属性方法和事件**
 
@@ -15,7 +15,7 @@ May 26, 2016
 
 一个audio对象就是普通的dom对象 比其他的dom对象多出一些自己独有的属性方法和事件
 
-  var audio =  $('audio').get(0);
+var audio = $('audio').get(0);
 
 ## **属性**
 
@@ -81,31 +81,35 @@ audio.onended = fn()
 
 ## **事件驱动的编程模式**
 
-  // 这里只设置数据
+// 这里只设置数据
 
-  $('音量div').on('click',function(e){
+$('音量div').on('click',function(e){
 
-    audio.volume = e.offsetX / e.offsetWidth;
+```
+audio.volume = e.offsetX / e.offsetWidth;
+```
 
-  })
+})
 
-  // 这里操作界面
+// 这里操作界面
 
-  $('audio').on('volumechange',function(){
+$('audio').on('volumechange',function(){
 
-    let width = (this.currentTime/this.duration).toFixed(2)*100 + '%';
+```
+let width = (this.currentTime/this.duration).toFixed(2)*100 + '%';
 
-    $('音量div').find('.inner').width(width);
+$('音量div').find('.inner').width(width);
+```
 
-  })
+})
 
 ## **开始项目**
 
 使用一个hmtl5模块或其他js插件的一般步骤
 
-1.  查阅API
-2.  快速定型API
-3.  确定一个例子,开始制作
+1. 查阅API
+2. 快速定型API
+3. 确定一个例子,开始制作
 
 例子中如果依赖一些公开库。
 
@@ -115,8 +119,8 @@ audio.onended = fn()
 
 我们通过其他方式来解决
 
-1.  使用cdn
-2.  使用前端自动化工具bower
+1. 使用cdn
+2. 使用前端自动化工具bower
 
 bower init
 
@@ -126,94 +130,102 @@ bower install jquery --save
 
 ## **node.js**
 
-var fs = require('fs');var minglinghang = require('child_process');var files = fs.readdirSync('./musics/');var result = [];
+var fs = require('fs');var minglinghang = require('child_process');var files = fs.readdirSync('./musics/');var result = [];
 
-var format_duration = function(str){
+var format_duration = function(str){
 
-  var num = Number(str);
+var num = Number(str);
 
-  var fen = parseInt( num/60 );
+var fen = parseInt( num/60 );
 
-  var miao = Math.round(num%60);
+var miao = Math.round(num%60);
 
-  miao = (miao < 10)?( '0' + miao):miao;
+miao = (miao < 10)?( '0' + miao):miao;
 
-  fen = '0' + fen;
+fen = '0' + fen;
 
-  return  fen + ':' + miao;}
+return fen + ':' + miao;}
 
 files.forEach(function(v){
 
-  var data = JSON.parse( minglinghang.execSync('ffprobe -v quiet -print_format json   -show_format  "./musics/'+ v +'"'));
+var data = JSON.parse( minglinghang.execSync('ffprobe -v quiet -print_format json -show_format "./musics/'+ v +'"'));
 
-  var duration = format_duration(data.format.duration);
+var duration = format_duration(data.format.duration);
 
-  var r = {
+var r = {
 
-    filename: data.format.filename,
+```
+filename: data.format.filename,
 
-    duration: duration,
+duration: duration,
 
-    title: data.format.tags.title,
+title: data.format.tags.title,
 
-    album: data.format.tags.album,
+album: data.format.tags.album,
 
-    artist: data.format.tags.artist
+artist: data.format.tags.artist
+```
 
-  };
+};
 
-  result.push( r );})
+result.push( r );})
 
-fs.writeFile('./database.json',JSON.stringify(result, null, 2) );
+fs.writeFile('./database.json',JSON.stringify(result, null, 2) );
 
 递归遍历文件夹
 
-var fs   = require('fs');var childProcess = require('child_process');
+var fs = require('fs');var childProcess = require('child_process');
 
-// 递归遍历文件夹 对其中的每一个文件调用 callbackvar walk = function(path, callback){
+// 递归遍历文件夹 对其中的每一个文件调用 callbackvar walk = function(path, callback){
 
-  var files  = fs.readdirSync(path);
+var files = fs.readdirSync(path);
 
-  for( var i = 0; i< files.length; i++ ){
+for( var i = 0; i< files.length; i++ ){
 
-    var newpath = path + files[i];
+```
+var newpath = path + files[i];
 
-    if ( fs.statSync(newpath).isFile() ){
+if ( fs.statSync(newpath).isFile() ){
 
-      callback(files[i],newpath);
+  callback(files[i],newpath);
 
-    }else if(fs.statSync(newpath).isDirectory() ){
+}else if(fs.statSync(newpath).isDirectory() ){
 
-      walk( newpath+'/' ) ;
+  walk( newpath+'/' ) ;
 
-    }
+}
+```
 
-  }};
+}};
 
-// 遍历./musics 文件夹  对其中的音乐文件  调用ffprobe 解析音乐数据var fileExtension = ['mp3', 'wav'];var database = [];walk('./musics/', function(name, path){
+// 遍历./musics 文件夹 对其中的音乐文件 调用ffprobe 解析音乐数据var fileExtension = ['mp3', 'wav'];var database = [];walk('./musics/', function(name, path){
 
-  var extName = name.split('.').pop();
+var extName = name.split('.').pop();
 
-  if( fileExtension.indexOf(extName) !== -1 ){
+if( fileExtension.indexOf(extName) !== -1 ){
 
-    // 这个在windows下不生效
+```
+// 这个在windows下不生效
 
-    var path = path.trim().replace(/\s/g,'\\ ');
+var path = path.trim().replace(/\s/g,'\\ ');
 
-    var data = childProcess.execSync('ffprobe -v quiet -print_format json -show_format  ' + path);
+var data = childProcess.execSync('ffprobe -v quiet -print_format json -show_format  ' + path);
 
-    database.push( JSON.parse(data).format );
+database.push( JSON.parse(data).format );
+```
 
-  }});
+}});
 
-// 写入js文件var js =  'var database = ' + JSON.stringify(database, null, 4);fs.writeFile('./scripts/database.js', js, function (err) {
+// 写入js文件var js = 'var database = ' + JSON.stringify(database, null, 4);fs.writeFile('./scripts/database.js', js, function (err) {
 
-  if (err){
+if (err){
 
-    throw err;
+```
+throw err;
+```
 
-  }
+}
 
-  console.log('saved!');});
+console.log('saved!');});
 
-*   [ nate-river](https://github.com/nate-river)A web fullstack developer
+- [nate-river](https://github.com/nate-river)A web fullstack developer
