@@ -129,6 +129,11 @@ $ git push -u origin master
 $ git pull --rebase origin master
 ```
 
+2. ```bash
+   error:src refspec master does not match any
+   ```
+   原因： 目录中没有文件，空目录是不能提交上去的
+
 ## 2.4、从远程仓库clone至本地
 
 只需执行一条命令
