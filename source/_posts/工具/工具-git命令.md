@@ -121,18 +121,18 @@ $ git push -u origin master
   hint: See the 'Note about fast-forwards' in 'git push --help' for details.
   ```
 
-  原因： GitHub远程仓库中的README.md文件不在本地仓库中。 因为我手动在github创建了一个README.md文件
-
-解决方案：
+  > 原因： GitHub远程仓库中的README.md文件不在本地仓库中。 因为我手动在github创建了一个README.md文件 解决方案：
 
 ```bash
 $ git pull --rebase origin master
 ```
 
-2. ```bash
-   error:src refspec master does not match any
-   ```
-   原因： 目录中没有文件，空目录是不能提交上去的
+1. ```bash
+  error:src refspec master does not match any
+  ```
+
+  > 原因： 目录中没有文件，空目录是不能提交上去的
+
 
 ## 2.4、从远程仓库clone至本地
 
