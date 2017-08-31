@@ -16,7 +16,7 @@ categories: VIDEO
 普通播放模式类似腾讯视频文件：「**x5-playsinline**」。
 
 ```js
-    <video id="video" class="video" controls="controls" x5-playsinline >
+    <video id="video" class="video" controls="controls" playsinline webkit-playsinline x5-playsinline >
         <source src="test.mp4" />
     </video>
 ```
