@@ -6,7 +6,7 @@ categories: VIDEO
 ---
 ------
 
-项目预览：https://sywsywsyw.github.io/Video/
+项目预览：https://sxiaobiblog.comVideo/
 项目地址：https://github.com/sywsywsyw/Video
 
 <!-- more -->
