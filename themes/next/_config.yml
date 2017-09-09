@@ -315,19 +315,19 @@ han: false
 #duoshuo_shortname:
 
 # Disqus
-disqus:
-  enable: true
-  shortname: sun-xiao-bi
-  count: true
+# disqus:
+#   enable: true
+#   shortname: sun-xiao-bi
+#   count: true
 
 # Hypercomments
 #hypercomments_id:
 
 # changyan
-# changyan:
-#   enable: true
-#   appid: cytcPpAsu
-#   appkey: 0c6448a3466642354028801bc68fb5dc
+changyan:
+  enable: true
+  appid: cytcPpAsu
+  appkey: 0c6448a3466642354028801bc68fb5dc
 
 
 # Valine.
