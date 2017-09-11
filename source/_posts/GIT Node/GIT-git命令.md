@@ -2,7 +2,7 @@
 title: git学习
 date: 2016-07-17T00:00:00.000Z
 tags: null
-categories: 工具
+categories: GIT
 ---
 
 <!-- more -->
