@@ -1,7 +1,7 @@
 ---
 title: fullpage插件的使用
 date: 2017-08-14 22:22:05
-tags:
+tags: fullpage
 categories: 框架插件
 ---
 ------

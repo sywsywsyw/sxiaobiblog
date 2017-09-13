@@ -1,7 +1,7 @@
 ---
 title: Sublime Text使用技巧
 date: 2016-02-24T00:00:00.000Z
-tags: null
+tags: sublime
 categories: 工具
 ---
 

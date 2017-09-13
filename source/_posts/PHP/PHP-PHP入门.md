@@ -1,7 +1,7 @@
 ---
 title: php入门
 date: 2016-08-07
-tags:
+tags: php
 categories: PHP
 ---
 ------

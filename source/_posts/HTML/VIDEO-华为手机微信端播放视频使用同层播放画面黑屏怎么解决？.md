@@ -1,0 +1,16 @@
+---
+title: 华为手机微信端播放视频使用同层播放画面黑屏怎么解决？
+date: 2017-01-16T00:00:00.000Z
+tags: [微信,video]
+categories: VIDEO
+---
+
+--------------------------------------------------------------------------------
+
+<!-- more -->
+
+ 问题反馈：<http://bbs.mb.qq.com/thread-1524201-1-1.html#2155836>
+
+华为机先点击了input框然后再点击播放视频，黑屏的bug，有没有解决方案?
+解决方案：<http://res.imtt.qq.com/qqbrowser/js/test-x5-video-player-type.html>
+早已解决 代码里加canvas标签就可以了 之前没发现同层的例子里就加了canvas 但是还不知道原理。。。

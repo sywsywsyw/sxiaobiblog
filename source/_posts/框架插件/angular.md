@@ -1,7 +1,7 @@
 ---
 title: angular
 date: 2017-08-15 09:00:26
-tags:
+tags: angular
 categories: 框架插件
 ---
 ------
