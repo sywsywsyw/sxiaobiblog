@@ -1,5 +1,5 @@
 ---
-title: phpcms使用（不会用了）
+title: phpcms使用
 date: 2016-06-01T08:54:53.000Z
 tags: phpcms
 categories: 网站搭建

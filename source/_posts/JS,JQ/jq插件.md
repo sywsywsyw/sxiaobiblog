@@ -1,5 +1,5 @@
 ---
-title: jq插件
+title: jQ插件
 date: 2016-04-01 08:54:15
 tags: jq
 categories: JQ
