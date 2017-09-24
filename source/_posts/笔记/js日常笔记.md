@@ -35,7 +35,7 @@ categories: JS
   console.time('aa')
   ```
 
-5.判断是苹果手机还是andorid手机 进行控制"关注按钮"的位置 解决安卓手机视频最优先
+5.判断是ios手机还是andorid手机 进行控制"关注按钮"的位置 解决安卓手机视频最优先
 
   ```javascript
   var ua = navigator.userAgent.toLowerCase();
@@ -252,3 +252,35 @@ categories: JS
   ```html
   http://wpa.qq.com/msgrd?v=3&uin=3314523834&site=qq&menu=yes
   ```
+
+17.textarea中屏蔽回车默认换行
+多行文本框textarea.清除默认回车事件
+```js
+<textarea id= "test"></textarea>  
+<script type="text/javascript">  
+  var test= document.getElementById("test");  
+ test.onkeydown = function(e){  
+    send(e);  
+ }  
+    function send(e){  
+    var code;  
+    if (!e) var  e = window.event;  
+    if (e.keyCode) code = e.keyCode;  
+    else if (e.which) code = e.which;  
+    if(code==13 && window.event){  
+        e.returnValue = false;  
+    }else if(code==13){  
+        e.preventDefault();  
+    }  
+  
+}  
+ </script>  
+```
+
+18.页面刷新
+```js
+window.location.reload()刷新当前页面. 
+parent.location.reload()刷新父亲对象（用于框架） 
+opener.location.reload()刷新父窗口对象（用于单开窗口） 
+top.location.reload()刷新最顶端对象（用于多开窗口）
+```

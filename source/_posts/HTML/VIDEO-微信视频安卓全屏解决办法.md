@@ -201,12 +201,13 @@ player.addEventListener('x5videoenterfullscreen', function() {
 
 ## 同类文章
 
-<!-- https://x5.tencent.com/tbs/guide/video.html
-https://aotu.io/notes/2017/01/11/mobile-video/
-https://zhuanlan.zhihu.com/p/27559167
-https://segmentfault.com/a/1190000010377156?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io
-https://segmentfault.com/a/1190000008782550
-http://taobaofed.org/blog/2016/05/23/video-player/
-http://blog.csdn.net/wqs977/article/details/53166887
-http://leonshi.com/2015/09/06/mobile-video-play/
-https://segmentfault.com/a/1190000006857675 -->
+<https://zzx18023.github.io/x5VideoDemo/>
+<https://x5.tencent.com/tbs/guide/video.html>
+<https://aotu.io/notes/2017/01/11/mobile-video/>
+<https://zhuanlan.zhihu.com/p/27559167>
+<https://segmentfault.com/a/1190000010377156?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io>
+<https://segmentfault.com/a/1190000008782550>
+<http://taobaofed.org/blog/2016/05/23/video-player/>
+<http://blog.csdn.net/wqs977/article/details/53166887>
+<http://leonshi.com/2015/09/06/mobile-video-play/>
+<https://segmentfault.com/a/1190000006857675>
