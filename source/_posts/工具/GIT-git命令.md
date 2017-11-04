@@ -143,6 +143,14 @@ $ git pull --rebase origin master
 
   > 原因： 目录中没有文件，空目录是不能提交上去的
 
+2. ```bash
+
+ Your branch is up-to-date with 'origin/master'.  nothing to commit, working tree clean
+
+```
+
+> 意思太明显了,该文件又回到了以前...
+
 
 ## 2.4、从远程仓库clone至本地
 

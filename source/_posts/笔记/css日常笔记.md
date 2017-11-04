@@ -27,25 +27,21 @@ text-decoration: line-through;
 3.控制文字在一行并且出现...
 
 ```css
-div{
-width: 100%;
-overflow: hidden;
-text-overflow: ellipsis;
-white-space: nowrap;
-}
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display:  block;
 ```
 
 4.控制文字在多行显示并且出现...
 
 ```css
-div{
 display: -webkit-box;
 -webkit-box-orient: vertical;
--webkit-line-clamp: 3;
+-webkit-line-clamp: 2;
 overflow: hidden;
 word-break: break-all;
 text-overflow: ellipsis;
-}
 ```
 
 5.去除重复的线条
@@ -259,4 +255,11 @@ input::-ms-input-placeholder {
   /* Internet Explorer 10+ */
   color: #fff;
 }
+```
+
+21.四周阴影
+```bash
+-webkit-box-shadow: #c5c5c5 0px 0px 10px;
+ -moz-box-shadow: #c5c5c5 0px 0px 10px;
+ box-shadow: #c5c5c5 0px 0px 10px;
 ```
