@@ -27,19 +27,22 @@ categories: JS
 
 console.log”后，调试器；&#39;是我最喜欢的快速和肮脏的调试工具。一旦你的代码，浏览器会自动停止执行时。你甚至可以把它包在条件句，所以它只会在你需要它。
 
+```js
 if (thisThing) {
     debugger;
 }
+```
 ## 2。显示对象表
 
 有时候，你有一套复杂的对象，你想看。你可以console.log和滚动列表，或打破console.table帮手。使得它更容易看到你在做什么！
 
+```js
 var animals = [
     { animal: 'Horse', name: 'Henry', age: 43 },
     { animal: 'Dog', name: 'Fred', age: 13 },
     { animal: 'Cat', name: 'Frodo', age: 18 }
 ]; console.table(animals);
-
+````
 将输出：
 
 [![Screenshot showing the resulting table for JavaScript debugging tip 2 ](https://raygun.com/upload/Debugging%202b.png)](https://raygun.com/upload/Debugging%202b.png)
@@ -62,12 +65,15 @@ var animals = [
 
 它可以是超级有用，知道长的东西已经执行，尤其是当调试慢回路。你甚至可以设置多个定时器的方法分配一个标签。让我们看看它是如何工作的：
 
+```js
 console.time('Timer1');
 
 var items = [];
 
 for(var i = 0; i < 100000; i++){ items.push({index: i});
 } console.timeEnd('Timer1');
+
+```
 
 这就产生了以下结果：
 
@@ -83,6 +89,7 @@ for(var i = 0; i < 100000; i++){ items.push({index: i});
 
 想象你想看到的函数调用funcz在汽车实例33线整个堆栈跟踪：
 
+```js
 var car;
 var func1 = function() { func2();
 }
@@ -131,6 +138,7 @@ var Car = function() {
 } func1();
 
 将输出线：33
+```
 
 [![](https://raygun.com/upload/Debugging%204.png)](https://raygun.com/upload/Debugging%204.png)
 
@@ -159,6 +167,7 @@ var Car = function() {
 
 很快，但缺点是它不在私人或匿名函数的工作。但如果不是这样的话，很可能找到一个功能调试的最快方式。（注：有一个功能叫做console.debug这不是一回事。）
 
+```js
 var func1 = function() { func2();
 };
 
@@ -173,7 +182,7 @@ var Car = function() {
 }
 
 var car = new Car();
-
+```
 型调试（汽车节）在控制台和脚本将停止在调试模式时，它会调用一个函数来car.funcy：
 
 [![](https://raygun.com/upload/Debugging%206.png)](https://raygun.com/upload/Debugging%206.png)
@@ -201,11 +210,11 @@ console.todo = function(msg) { console.log(‘ % c % s % s % s‘, ‘color: yel
 ## 11。看具体的函数调用和参数
 
 在Chrome的控制台，你可以监视特定的功能。每次调用函数时，它将是传入的值记录。
-
+```js
 var func1 = function(x, y, z) {
 //....
 };
-
+```
 将输出：
 
 [![](https://raygun.com/upload/Debugging%208.png)](https://raygun.com/upload/Debugging%208.png)
