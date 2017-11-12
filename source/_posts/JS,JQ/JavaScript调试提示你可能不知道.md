@@ -195,10 +195,11 @@ var car = new Car();
 
 在更复杂的调试，我们有时想输出多行。你能做的一件事保持较好的结构你的输出是使用更多的控制台的功能，例如，console.log，console.debug，console.warn，console.info，console.error等等。然后你可以过滤你的检查员。但有时这真的不是你想要的东西的时候，你需要调试JavaScript。现在，你可以得到创意和风格你的消息。使用CSS和使你自己的结构化控制台消息当你想调试JavaScript：
 
+```js
 console.todo = function(msg) { console.log(‘ % c % s % s % s‘, ‘color: yellow; background - color: black;’, ‘–‘, msg, ‘–‘);
 } console.important = function(msg) { console.log(‘ % c % s % s % s’, ‘color: brown; font - weight: bold; text - decoration: underline;’, ‘–‘, msg, ‘–‘);
 } console.todo(“This is something that’ s need to be fixed”); console.important(‘This is an important message’);
-
+```
 将输出：
 
 [![](https://raygun.com/upload/Debugging%207.png)](https://raygun.com/upload/Debugging%207.png)
