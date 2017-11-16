@@ -345,3 +345,25 @@ toLocaleDateString()  根据本地时间格式，把 Date 对象的日期部分�
 UTC() 根据世界时返回 1970 年 1 月 1 日 到指定日期的毫秒数。
 valueOf() 返回 Date 对象的原始值。
 ```
+
+21: json数据可视化
+```
+JSON.parse用于从一个字符串中解析出json对象,如
+var str = '{"name":"huangxiaojian","age":"23"}'
+结果：
+JSON.parse(str)
+
+Object
+
+age: "23"
+name: "huangxiaojian"
+__proto__: Object
+
+JSON.stringify()用于从一个对象解析出字符串，如
+var
+ a = {a:1,b:2}
+结果：
+JSON.stringify(a)
+
+"{"a":1,"b":2}"
+```
