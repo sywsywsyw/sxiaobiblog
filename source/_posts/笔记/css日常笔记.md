@@ -255,6 +255,14 @@ input::-ms-input-placeholder {
   /* Internet Explorer 10+ */
   color: #fff;
 }
+input::-webkit-input-placeholder {
+  /* placeholder颜色  */
+  color: #aab2bd;
+  /* placeholder字体大小  */
+  font-size: 14px;
+  /* placeholder位置  */
+  // text-align: right;
+}
 ```
 
 21.四周阴影
