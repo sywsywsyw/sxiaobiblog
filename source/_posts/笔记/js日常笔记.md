@@ -1,43 +1,45 @@
 ---
 title: js日常笔记
-date: 2017-09-14 22:49:51
+date: 2017-09-14T22:49:51.000Z
 tags: 笔记
 categories: JS
 ---
-------
+
+--------------------------------------------------------------------------------
 
 <!-- more -->
-# JS、JQ
+
+ # JS、JQ
 
 1.https转为http
 
-  ```javascript
+```javascript
   var targetProtocol = "http:";
   if (window.location.protocol != targetProtocol)
   window.location.href = targetProtocol +
   window.location.href.substring(window.location.protocol.length)
-  ```
+```
 
 2.不同HTML层都被使用不同的颜色添加了一个高亮的边框
 
-  ```javascript
+```javascript
   转载自<http://buluo.qq.com/p/detail.html?bid=314687&pid=3951568-1476250690>
   调试高亮
   [].forEach.call($$("*"),function(a){a.style.outline="1px solid #"+(~~(Math.random()*(1<<24))).toString(16) })
-  ```
+```
 
 3.两种ajax请求方式 (已放入别的文章)
 
 4.测试一段代码的执行时间
 
-  ```javascript
+```javascript
   console.timeEnd('aa')
   console.time('aa')
-  ```
+```
 
 5.判断是ios手机还是andorid手机 进行控制"关注按钮"的位置 解决安卓手机视频最优先
 
-  ```javascript
+```javascript
   var ua = navigator.userAgent.toLowerCase();
   if(/iphone|ipad|ipod/.test(ua)){
   alert("iphone");
@@ -45,11 +47,11 @@ categories: JS
   alert("android");
   $('.FBfollow').addClass('android')
   };
-  ```
+```
 
 6.日历计算 输出2017-06-01 - 2018-12-01的值
 
-  ```javascript
+```javascript
   date=new Date();
   var year=date.getFullYear();
   var month=date.getMonth()+1;
@@ -68,11 +70,11 @@ categories: JS
   }
   }
   cc();
-  ```
+```
 
 7.// js判断滚动条是否停止状态
 
-  ```javascript
+```javascript
   //根据上一秒的值去对比当前时间的scrollTop如果没变则设置为0
   var pl_Top = 0; // 上次滚动条到顶部的距离  
   var interval = null; // 定时器  
@@ -91,9 +93,9 @@ categories: JS
   pl_Top = $('.pilun').scrollTop()
   }
   }
-  ```
+```
 
-  ```html
+```html
   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
   <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
@@ -120,11 +122,11 @@ categories: JS
   </div>
   </body>
   </html>
-  ```
+```
 
 8.判断网络连接
 
-  ```javascript
+```javascript
   if(window.navigator.onLine==true) {　
   alert("首次 -- 已连接");
   }else {　
@@ -134,32 +136,32 @@ categories: JS
   window.addEventListener("offline", offline, false);
   function online() {  alert("重新连接");  }
   function offline() {  alert("连接断开");  }
-  ```
+```
 
 9.传一个对象给php var student = { 'info': [] }; $("input[name='student']:checked").each(function (i, n) { student['info'].push(n.value); }); console.log(student)
 
 10.原生提示框
 
-  ```javascript
+```javascript
   if (confirm("确定删除视频吗 ?")){  //给出一个警告框，点确定时就执行里面的代码
   add_attr('del',vid,src)
   }
-  ```
+```
 
-  ```html
+```html
   <a href="
   javascript:if(confirm('确定删除视频吗'))window.location = 'index.php?app=gcategory;"></a>
-  ```
+```
 
 11.根据窗口大小调整视图
 
-  ```javascript
+```javascript
   $(window).resize(function () {})
-  ```
+```
 
 12.用 Unicode字符范围判断字节
 
-  ```javascript
+```javascript
   以下方法是用于统计输入字符串的长度，如果是汉字，则字符串长度加2 ；否则字符串长度加1。
   function chkstrlen(str){
   console.log(str)
@@ -177,11 +179,11 @@ categories: JS
   }
   var cc ='1111你好444'
   chkstrlen(cc)
-  ```
+```
 
 13.是否是图片
 
-  ```javascript
+```javascript
   function checkPhoto(str){
   console.log(str)
   var type="";
@@ -194,11 +196,11 @@ categories: JS
   return false;
   }
   }
-  ```
+```
 
 14.js获取当前日期时间 转为"yyyy-MM-dd HH:MM:SS"
 
-  ```javascript
+```javascript
   function getNowFormatDate() {
   var date = new Date();
   var seperator1 = "-";
@@ -216,11 +218,11 @@ categories: JS
     + seperator2 + date.getSeconds();
   return currentdate;
   }
-  ```
+```
 
 15.监控回车发送消息
 
-  ```html
+```html
   //控制输入框 textarea  回车不换行
   <textarea class="test" id="test"></textarea>  
   <script type="text/javascript">  
@@ -245,17 +247,17 @@ categories: JS
   }  
   }  
   </script>
-  ```
+```
 
 16.网页调用qq
 
-  ```html
+```html
   http://wpa.qq.com/msgrd?v=3&uin=3314523834&site=qq&menu=yes
-  ```
+```
 
-17.textarea中屏蔽回车默认换行
-多行文本框textarea.清除默认回车事件
-```js
+17.textarea中屏蔽回车默认换行 多行文本框textarea.清除默认回车事件
+
+```javascript
 <textarea id= "test"></textarea>  
 <script type="text/javascript">  
   var test= document.getElementById("test");  
@@ -272,22 +274,23 @@ categories: JS
     }else if(code==13){  
         e.preventDefault();  
     }  
-  
+
 }  
- </script>  
+ </script>
 ```
 
 18.页面刷新
-```js
-window.location.reload()刷新当前页面. 
-parent.location.reload()刷新父亲对象（用于框架） 
-opener.location.reload()刷新父窗口对象（用于单开窗口） 
+
+```javascript
+window.location.reload()刷新当前页面.
+parent.location.reload()刷新父亲对象（用于框架）
+opener.location.reload()刷新父窗口对象（用于单开窗口）
 top.location.reload()刷新最顶端对象（用于多开窗口）
 ```
 
-20.关于日期
-不明白 为什么不用getDay表示日子  getweek表示星期哦
-```js
+20.关于日期 不明白 为什么不用getDay表示日子 getweek表示星期哦
+
+```javascript
 var 日期 = new Date();
 var 年 = 日期.getFullYear();
 var 月 = 日期.getMonth();
@@ -347,6 +350,7 @@ valueOf() 返回 Date 对象的原始值。
 ```
 
 21: json数据可视化
+
 ```
 JSON.parse用于从一个字符串中解析出json对象,如
 var str = '{"name":"huangxiaojian","age":"23"}'
@@ -366,4 +370,84 @@ var
 JSON.stringify(a)
 
 "{"a":1,"b":2}"
+```
+
+22: 清除所有cookie
+
+```
+  function clearAllCookie() {  
+    var date=new Date();  
+    date.setTime(date.getTime()-10000);  
+    var keys=document.cookie.match(/[^ =;]+(?=\=)/g);  
+    if (keys) {  
+        for (var i =  keys.length; i--;)  
+          document.cookie=keys[i]+"=0; expire="+date.toGMTString()+"; path=/";  
+    }  
+  }
+```
+
+23： 按enter键，禁止换行
+
+```
+ue.addListener("keydown", function(type, event){<br>
+//if (event.ctrlKey && event.which == 13) { // 判断ctrl 回车 发送 if (event.which == 13) { // 禁止换行 event.cancelBubble=true; event.preventDefault(); event.stopPropagation(); } }
+```
+
+24：一个简单的倒计时
+
+```
+// 一天 = 24 h = 1440 m = 86400 s = 86400 000ms // 一小时 // 一分钟 // 秒
+var millseconds = 97879;
+function timeCom(times) {
+  var _day = 00; var _hour = 00;
+  var _seconds = 00;
+  var _millseconds = 00;
+  var val = times;
+  setInterval(function(){
+    if( val > 0 ){
+      _day = parseInt(val/86400);
+      _hour = parseInt((val/3600)-(24__day));
+       _seconds = parseInt((val/60)-(_day_1440)-(_hour_60));
+       _millseconds = parseInt(val-(_day_86400)-(_hour_3600)-(_seconds_60));
+        (_day < 10)?_day = '0'+_day:_day;
+        (_hour < 10)?_hour = '0'+_hour:_hour;
+         (_seconds < 10)?_seconds = '0'+_seconds:_seconds;
+        (_millseconds < 10)?_millseconds = '0'+_millseconds:_millseconds; console.log(_day,_hour,_seconds,_millseconds); val--;
+    }
+  },1000)
+}
+timeCom(millseconds)
+```
+
+25：JQUERY操作CHECKBOX 第二次无法选中的问题
+
+> 用JQuery做CheckBox全选和反选的时候，遇到一个问题。当用JQ控制全选，全取消一次以后，再次点击全选，发现代码变了，但是CheckBox没有处于选中状态。 百度后得知： 我使用的方法是 $("#id").attr("checked",true); 方式，jQuery API明确说明，1.6+的jQuery要用prop，尤其是checkBox的checked的属性的判断。因此修改为
+
+```
+ $("input[type='checkbox']").prop("checked"); $("input[type='checkbox']").prop("disabled", false); $("input[type='checkbox']").prop("checked", true);
+```
+
+26：js unicode转中文
+
+```
+unescape(str.replace(/\u/g, '%u'))
+```
+
+27： JS格式化 Thu Dec 07 2017 14:00:43 GMT+0800 (中国标准时间)
+
+```
+//2017-6-13 14:35:31
+var d = new Date('Thu Dec 07 2017 14:00:43 GMT+0800 (中国标准时间)');
+youWant=d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
+//2017-06-13 14:35:31
+var date_time = new Date('Thu Dec 07 2017 14:00:43 GMT+0800 (中国标准时间)');
+var month = parseInt(date_time.getMonth() + 1);
+( month < 10)? month = '0'+month:month; var day = parseInt(date_time.getDate());
+(day < 10)?day = '0'+day:day; var hours = parseInt(date_time.getHours());
+(hours < 10)?hours = '0'+hours:hours;
+var minutes = parseInt(date_time.getMinutes());
+(minutes < 10)?minutes = '0'+minutes:minutes;
+var seconds = parseInt(date_time.getSeconds());
+(seconds < 10)?seconds = '0'+seconds:seconds;
+date = date_time.getFullYear() + '-' + month + '-' + day + ' ' + hours + ':' + minutes + ':' + seconds;
 ```
