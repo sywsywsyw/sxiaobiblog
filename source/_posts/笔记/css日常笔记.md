@@ -315,3 +315,9 @@ input::-webkit-input-placeholder {
 }
 
 ```
+
+23、去除table表格的间隙
+
+```
+border-collapse: collapse;
+```
