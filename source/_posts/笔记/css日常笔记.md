@@ -321,3 +321,12 @@ input::-webkit-input-placeholder {
 ```
 border-collapse: collapse;
 ```
+
+24、CSS3 filter(滤镜) 属性
+修改所有图片的颜色为黑白 (100% 灰度):
+```css
+img {
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+}
+```
