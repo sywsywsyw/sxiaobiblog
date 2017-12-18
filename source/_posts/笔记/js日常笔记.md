@@ -464,3 +464,18 @@ break和continue都是用来控制循环结构的，主要是停止循环。
 2.continue
 continue和break有点类似，区别在于continue只是终止本次循环，接着还执行后面的循环，break则完全终止循环。
 可以理解为continue是跳过当次循环中剩下的语句，执行下一次循环。
+
+29：数组中对象遍历不能直接赋值给另一个v 
+```
+正确
+var _new_data = {
+              'spec_id': v.spec_id,
+              'spec_name': v.spec_name,
+              'spec_nature_array': [],
+              'spec_type': v.spec_type
+};
+不正确
+var _new_data = v;
+var _new_data = spec_nature[i];
+这样会改变原数组内容
+```
