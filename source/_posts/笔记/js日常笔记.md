@@ -479,3 +479,28 @@ var _new_data = v;
 var _new_data = spec_nature[i];
 这样会改变原数组内容
 ```
+
+30：  限制只能输入数字
+onkeyup="inputKeyUpNumberValue(this);" 键盘按下之后触发
+onafterpaste="inputAfterPasteNumberValue(this);" 粘贴之后触发
+```bash
+ /**
+     * input  只能输入数字
+     */
+    function inputKeyUpNumberValue(event) {
+      if (event.value.length == 1) {
+        event.value = event.value.replace(/[^0-9]/g, '');
+      } else {
+        event.value = event.value.replace(/\D/g, '');
+      }
+    }
+
+    function inputAfterPasteNumberValue(event) {
+      if (event.value.length == 1) {
+        event.value = event.value.replace(/[^0-9]/g, '');
+      } else {
+        event.value = event.value.replace(/\D/g, '');
+      }
+    }
+```
+
