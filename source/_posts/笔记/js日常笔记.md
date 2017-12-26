@@ -140,8 +140,7 @@ categories: JS
 
 9.传一个对象给php var student = { 'info': [] }; $("input[name='student']:checked").each(function (i, n) { student['info'].push(n.value); }); console.log(student)
 
-10.原生提示框  // 判断刷新页面
-
+10.原生提示框 // 判断刷新页面
 
 ```javascript
   if (confirm("确定删除视频吗 ?")){  //给出一个警告框，点确定时就执行里面的代码
@@ -467,21 +466,13 @@ var seconds = parseInt(date_time.getSeconds());
 (seconds < 10)?seconds = '0'+seconds:seconds;
 date = date_time.getFullYear() + '-' + month + '-' + day + ' ' + hours + ':' + minutes + ':' + seconds;
 ```
-28：for 循环 和 each跳出循环的区别
-each中要实现break和continue的功能的话，要使用其它的方式 
-break—-用return false; 
-continue –用return ture;
 
-break和continue的区别和作用
-break和continue都是用来控制循环结构的，主要是停止循环。
-1.break
-有时候我们想在某种条件出现的时候终止循环而不是等到循环条件为false才终止。
-这是我们可以使用break来完成。break用于完全结束一个循环，跳出循环体执行循环后面的语句。
-2.continue
-continue和break有点类似，区别在于continue只是终止本次循环，接着还执行后面的循环，break则完全终止循环。
-可以理解为continue是跳过当次循环中剩下的语句，执行下一次循环。
+28：for 循环 和 each跳出循环的区别 each中要实现break和continue的功能的话，要使用其它的方式 break---用return false; continue –用return ture;
 
-29：数组中对象遍历不能直接赋值给另一个v 
+break和continue的区别和作用 break和continue都是用来控制循环结构的，主要是停止循环。 1.break 有时候我们想在某种条件出现的时候终止循环而不是等到循环条件为false才终止。 这是我们可以使用break来完成。break用于完全结束一个循环，跳出循环体执行循环后面的语句。 2.continue continue和break有点类似，区别在于continue只是终止本次循环，接着还执行后面的循环，break则完全终止循环。 可以理解为continue是跳过当次循环中剩下的语句，执行下一次循环。
+
+29：数组中对象遍历不能直接赋值给另一个v
+
 ```
 正确
 var _new_data = {
@@ -496,9 +487,8 @@ var _new_data = spec_nature[i];
 这样会改变原数组内容
 ```
 
-30：  限制只能输入数字
-onkeyup="inputKeyUpNumberValue(this);" 键盘按下之后触发
-onafterpaste="inputAfterPasteNumberValue(this);" 粘贴之后触发
+30： 限制只能输入数字 onkeyup="inputKeyUpNumberValue(this);" 键盘按下之后触发 onafterpaste="inputAfterPasteNumberValue(this);" 粘贴之后触发
+
 ```bash
  /**
      * input  只能输入数字
@@ -520,3 +510,55 @@ onafterpaste="inputAfterPasteNumberValue(this);" 粘贴之后触发
     }
 ```
 
+31、定位元素在鼠标指向元素的上方
+
+```
+网页被卷起来的高度/宽度（即浏览器滚动条滚动后隐藏的页面内容高度）
+(javascript)        document.documentElement.scrollTop //firefox
+(javascript)        document.documentElement.scrollLeft //firefox
+(javascript)        document.body.scrollTop //IE
+(javascript)        document.body.scrollLeft //IE
+(jqurey)             $(window).scrollTop()
+(jqurey)             $(window).scrollLeft()
+网页工作区域的高度和宽度  
+(javascript)       document.documentElement.clientHeight// IE firefox       
+(jqurey)             $(window).height()
+元素距离文档顶端和左边的偏移值  
+(javascript)        DOM元素对象.offsetTop //IE firefox
+(javascript)        DOM元素对象.offsetLeft //IE firefox
+(jqurey)             jq对象.offset().top
+(jqurey)             jq对象.offset().left
+获取页面元素距离浏览器工作区顶端的距离
+ 页面元素距离浏览器工作区顶端的距离  =  元素距离文档顶端偏移值  -   网页被卷起来的高度  
+即：
+ 页面元素距离浏览器工作区顶端的距离 =  DOM元素对象.offsetTop  -  document.documentElement.scrollTop
+    /**
+     * 鼠标浮上图片，显示
+     */
+    $(document).on("mouseenter", '#sui-spec-details-list .det-spec-nav-img', function() {
+      var src = $(this).attr("src");
+      var top = $(this).offset().top - $(window).scrollTop();
+      var left = $(this).offset().left - $(window).scrollLeft();
+      $('.popover-content img').attr('src', src);
+      var height = $('.popover').height();
+      var width = $('.popover').width();
+      $('.popover').css({
+        'top': top - height - 30,
+        'left': left - width / 2,
+        'opacity': 1,
+        'display': 'block'
+      });
+    });
+    /**
+     * 鼠标离开图片时，隐藏
+     */
+    $(document).on("mouseleave", '#sui-spec-details-list .det-spec-nav-img', function() {
+      $('.popover-content img').attr('src', '');
+      $('.popover').css({
+        'top': 0,
+        'left': 0,
+        'opacity': 0,
+        'display': 'none'
+      });
+    });
+```

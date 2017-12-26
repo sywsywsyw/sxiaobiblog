@@ -1,15 +1,15 @@
 ---
 title: css日常笔记
-date: 2017-09-14 22:50:00
+date: 2017-09-14T22:50:00.000Z
 tags: 笔记
 categories: HTML
 ---
-------
+
+--------------------------------------------------------------------------------
 
 <!-- more -->
 
-
-# CSS
+ # CSS
 
 1.字体换行
 
@@ -212,8 +212,7 @@ transform: translate(-50%,-50%);
 
 当网页内容撑不满一屏时，通过以下代码获得整个网页高度会有问题
 
-document.body.clientHeight;
-document.body.clientWidth;
+document.body.clientHeight; document.body.clientWidth;
 
 得到的宽高不对，可能是因为html与body标签缺一个样式：height:100%
 
@@ -266,13 +265,14 @@ input::-webkit-input-placeholder {
 ```
 
 21.四周阴影
+
 ```bash
 -webkit-box-shadow: #c5c5c5 0px 0px 10px;
  -moz-box-shadow: #c5c5c5 0px 0px 10px;
  box-shadow: #c5c5c5 0px 0px 10px;
 ```
 
-22. 一个base64图片的微信加载样式
+1. 一个base64图片的微信加载样式
 
 ```bash
 <div class="weui-loadmore">
@@ -313,7 +313,6 @@ input::-webkit-input-placeholder {
     transform: rotate3d(0, 0, 1, 360deg);
   }
 }
-
 ```
 
 23、去除table表格的间隙
@@ -322,8 +321,8 @@ input::-webkit-input-placeholder {
 border-collapse: collapse;
 ```
 
-24、CSS3 filter(滤镜) 属性
-修改所有图片的颜色为黑白 (100% 灰度):
+24、CSS3 filter(滤镜) 属性 修改所有图片的颜色为黑白 (100% 灰度):
+
 ```css
 img {
     -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
@@ -332,6 +331,7 @@ img {
 ```
 
 25、vertical-align: 属性值
+
 ```
 baseline 默认。元素放在父元素的基线上。
 sub 垂直对齐文本的下标
@@ -346,6 +346,7 @@ inherit 规定从父元素vertical-align继承
 ```
 
 26、pointer-events: none;
+
 ```
 auto：
 与pointer-events属性未指定时的表现效果相同。在svg内容上与visiblepainted值相同

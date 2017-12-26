@@ -1,33 +1,34 @@
 ---
 title: html日常笔记
-date: 2017-09-14 22:50:06
+date: 2017-09-14T22:50:06.000Z
 tags: 笔记
 categories: HTML
 ---
-------
+
+--------------------------------------------------------------------------------
 
 <!-- more -->
 
-# HTML
+ # HTML
 
 1.取消浏览器拖动的蓝色选择区
 
-  ```html
+```html
   <body onselectstart="return false"></body>
   <!-- 别的标签也可以使用 -->
-  ```
+```
 
 2.在进行CSS网页布局的时候，我们经遇到刷新要保留表单里内容的时候，习惯的做法使用cookie，但是那样做实在是很麻烦，css中的behavior就为我们很好的解决了这个问题。今天就向大家介绍CSS属性behavior的语法。只兼容IE 哈哈 是不是很气愤呢
 
 3.手机号电话号
 
-  ```html
+```html
   <input type="tel" placeholder="手机号或固定电话" name="tel" pattern="[0-9]*" maxlength="11" class="adphone_tel srfonchang">
-  ```
+```
 
 4.表格
 
-  ```html
+```html
   <table border="1">
   <thead>
   <tr>
@@ -54,13 +55,13 @@ categories: HTML
   </tr>
   </tbody>
   </table>
-  ```
+```
 
 5.禁止浏览器记录 文本框之前输入过的内容 autocomplete="off"
 
-  ```html
+```html
   <input type="text" autocomplete="off">
-  ```
+```
 
 6.HTML给视频截图
 
@@ -98,6 +99,6 @@ categories: HTML
 
 7.怎么打出来©
 
-  ```javascript
+```javascript
   <a href="">©</a>
-  ```
+```
