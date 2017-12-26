@@ -330,3 +330,26 @@ img {
     filter: grayscale(100%);
 }
 ```
+
+25、vertical-align: 属性值
+```
+baseline 默认。元素放在父元素的基线上。
+sub 垂直对齐文本的下标
+super 垂直对齐文本的上标
+top 把元素的顶端与行内最高元素的顶端对齐
+text-top 把元素的顶端与父元素字体的顶端对齐
+middle 把元素放在父元素的中部
+bottom 把元素的顶端与父元素字体的底端对齐
+length
+% 使用line-height属性的百分比来排列此元素，允许使用负值
+inherit 规定从父元素vertical-align继承
+```
+
+26、pointer-events: none;
+```
+auto：
+与pointer-events属性未指定时的表现效果相同。在svg内容上与visiblepainted值相同
+none：
+元素永远不会成为鼠标事件的target。但是，当其后代元素的pointer-events属性指定其他值时，鼠标事件可以指向后代元素，在这种情况下，鼠标事件将在捕获或冒泡阶触发父元素的事件侦听器。
+其他值只能应用在SVG上。
+```

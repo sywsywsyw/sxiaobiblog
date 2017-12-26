@@ -140,12 +140,28 @@ categories: JS
 
 9.传一个对象给php var student = { 'info': [] }; $("input[name='student']:checked").each(function (i, n) { student['info'].push(n.value); }); console.log(student)
 
-10.原生提示框
+10.原生提示框  // 判断刷新页面
+
 
 ```javascript
   if (confirm("确定删除视频吗 ?")){  //给出一个警告框，点确定时就执行里面的代码
   add_attr('del',vid,src)
   }
+  window.onbeforeunload = function(){...}
+  Onunload，onbeforeunload都是在刷新或关闭时调用，可以在'<script></script>script>'脚本中通过window.onunload来指定或者在<body>里指定。区别在于onbeforeunload在onunload之前执行，它还可以阻止onunload的执行。Onbeforeunload也是在页面刷新或关闭时调用，Onbeforeunload是正要去服务器读取新的页面时调用，此时还没开始读取；而onunload则已经从服务器上读到了需要加载的新的页面，在即将替换掉当前页面时调用。Onunload是无法阻止页面的更新和关闭的。而 Onbeforeunload 可以做到。
+页面加载时只执行onload
+页面关闭时先执行onbeforeunload，最后onunload
+页面刷新时先执行onbeforeunload，然后onunload，最后onload。
+一个判断页面是否真的关闭和刷新的好方法：
+
+window.onbeforeunload=function (){
+alert("===onbeforeunload===");
+if(event.clientX>document.body.clientWidth && event.clientY < 0 || event.altKey){
+     alert("你关闭了浏览器");
+}else{
+     alert("你正在刷新页面");
+}
+}
 ```
 
 ```html
