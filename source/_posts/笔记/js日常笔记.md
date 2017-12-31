@@ -586,4 +586,4 @@ var str = undefined; if (str== undefined) { alert("null or undefined"); } var st
 > 判断undefined、null与NaN:
 > var str = null; if (!str) { alert("null or undefined or NaN"); }
 ```
-34、
+34、11
