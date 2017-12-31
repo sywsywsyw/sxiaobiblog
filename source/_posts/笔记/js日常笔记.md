@@ -509,3 +509,81 @@ var _new_data = spec_nature[i];
       }
     }
 ```
+
+31、定位元素在鼠标指向元素的上方
+
+```
+网页被卷起来的高度/宽度（即浏览器滚动条滚动后隐藏的页面内容高度）
+(javascript)        document.documentElement.scrollTop //firefox
+(javascript)        document.documentElement.scrollLeft //firefox
+(javascript)        document.body.scrollTop //IE
+(javascript)        document.body.scrollLeft //IE
+(jqurey)             $(window).scrollTop()
+(jqurey)             $(window).scrollLeft()
+网页工作区域的高度和宽度  
+(javascript)       document.documentElement.clientHeight// IE firefox       
+(jqurey)             $(window).height()
+元素距离文档顶端和左边的偏移值  
+(javascript)        DOM元素对象.offsetTop //IE firefox
+(javascript)        DOM元素对象.offsetLeft //IE firefox
+(jqurey)             jq对象.offset().top
+(jqurey)             jq对象.offset().left
+获取页面元素距离浏览器工作区顶端的距离
+ 页面元素距离浏览器工作区顶端的距离  =  元素距离文档顶端偏移值  -   网页被卷起来的高度  
+即：
+ 页面元素距离浏览器工作区顶端的距离 =  DOM元素对象.offsetTop  -  document.documentElement.scrollTop
+    /**
+     * 鼠标浮上图片，显示
+     */
+    $(document).on("mouseenter", '#sui-spec-details-list .det-spec-nav-img', function() {
+      var src = $(this).attr("src");
+      var top = $(this).offset().top - $(window).scrollTop();
+      var left = $(this).offset().left - $(window).scrollLeft();
+      $('.popover-content img').attr('src', src);
+      var height = $('.popover').height();
+      var width = $('.popover').width();
+      $('.popover').css({
+        'top': top - height - 30,
+        'left': left - width / 2,
+        'opacity': 1,
+        'display': 'block'
+      });
+    });
+    /**
+     * 鼠标离开图片时，隐藏
+     */
+    $(document).on("mouseleave", '#sui-spec-details-list .det-spec-nav-img', function() {
+      $('.popover-content img').attr('src', '');
+      $('.popover').css({
+        'top': 0,
+        'left': 0,
+        'opacity': 0,
+        'display': 'none'
+      });
+    });
+```
+
+32、 打印内容的时候有可能会出现报错，项目上线请关闭自己的console.调试内容
+
+```
+var aa =  null;
+aa.length  会直接阻止js代码的执行
+```
+
+33、判断undefinded null NaN
+
+```
+> 判断undefined:
+> var str = undefined;if (typeof(str) == "undefined"){  alert("undefined"); }
+> 说明：typeof 返回的是字符串，有六种可能："number"、"string"、"boolean"、"object"、"function"、"undefined"
+> 判断null
+> var str = null; if (!str && typeof(str)!="undefined" && str!=0){ alert("null"); }
+> 判断NaN
+> var str = 0/0; if(isNaN(str)){ alert("NaN"); }
+> 说明：如果把 NaN 与任何值（包括其自身）相比得到的结果均是 false，所以要判断某个值是否是 NaN，不能使用 == 或 === 运算符。 提示：isNaN() 函数通常用于检测 parseFloat() 和 parseInt() 的结果，以判断它们表示的是否是合法的数字。当然也可以用 isNaN() 函数来检测算数错误，比如用 0 作除数的情况。 判断undefined和null:
+var str = undefined; if (str== undefined) { alert("null or undefined"); } var str = undefined; if (str== null) { alert("null or undefined"); }
+> 说明：null==undefined
+> 判断undefined、null与NaN:
+> var str = null; if (!str) { alert("null or undefined or NaN"); }
+```
+34、
