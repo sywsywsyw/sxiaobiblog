@@ -5,6 +5,9 @@ tags: atom
 categories: 工具
 ---
 
+--------------------------------------------------------------------------------
+
+<!-- more -->
 
 version control with git and github
 
