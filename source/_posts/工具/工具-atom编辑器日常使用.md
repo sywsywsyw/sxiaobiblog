@@ -9,6 +9,17 @@ categories: 工具
 
 <!-- more -->
 
+
+### 快速打开命令行
+    ctrl+shift+p
+    http://blog.csdn.net/hunyxv/article/details/52549153
+### 代码兼容性
+    https://atom.io/packages/autoprefixer
+
+### 自动保存
+  OS X: cmd-,, Windows & Linux: Ctrl-,
+  https://atom.io/packages/autosave
+
 version control with git and github
 
 tracks changes to your code as you work.Branch,commit,push,and pull widthout leaving the comfort of you editor. collaborate with other developers on GitHub.
