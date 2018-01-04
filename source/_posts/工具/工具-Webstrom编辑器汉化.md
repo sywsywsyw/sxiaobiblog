@@ -40,3 +40,5 @@ File -> Settings -> Appearance&Behavior -> Appearance -> 选中Override default 
 Name: Microsoft YaHei (选择任意中文字体)
 
 然后将resources_cn.jar 复制到 .\lib 目录，重新打开Webstorm 就能正常显示中文了
+
+

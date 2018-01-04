@@ -354,3 +354,18 @@ none：
 元素永远不会成为鼠标事件的target。但是，当其后代元素的pointer-events属性指定其他值时，鼠标事件可以指向后代元素，在这种情况下，鼠标事件将在捕获或冒泡阶触发父元素的事件侦听器。
 其他值只能应用在SVG上。
 ```
+
+27、怎麼让一个未知宽高元素变为正方形
+```
+父元素:{
+  width:x;
+  height:y;
+  position:relative;
+}
+子元素:{
+  position:absolute;
+  width:20%;
+  padding-top:20%;
+  border-radius:50%;
+}
+```
