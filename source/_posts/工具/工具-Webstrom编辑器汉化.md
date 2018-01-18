@@ -41,4 +41,11 @@ Name: Microsoft YaHei (选择任意中文字体)
 
 然后将resources_cn.jar 复制到 .\lib 目录，重新打开Webstorm 就能正常显示中文了
 
+## 网站HTML模版突然变成写一行代码就空一行
+
+> 最近使用ftp上传 老出现诡异的代码 https://zhidao.baidu.com/question/362896057092145932.html
+
+这个以前遇到过，跟上传到服务器的时候选择的 上传模式有关系。
+上传ftp的时候可以在工具上选择
+传输模式设置为二进制(图象)
 
