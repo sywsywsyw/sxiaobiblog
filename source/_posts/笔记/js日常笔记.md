@@ -586,4 +586,7 @@ var str = undefined; if (str== undefined) { alert("null or undefined"); } var st
 > 判断undefined、null与NaN:
 > var str = null; if (!str) { alert("null or undefined or NaN"); }
 ```
-34、11
+34、视频下载
+
+> var $a = $("<a></a>").attr("href", req.url).attr("download", req.filename);
+>        $a[0].click();
