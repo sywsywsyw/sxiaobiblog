@@ -61,7 +61,7 @@ var animals = [
 
 [![](https://raygun.com/upload/Debugging%202.png)](https://raygun.com/upload/Debugging%202.png)
 
-## 5。基准循环使用控制台。time() timeend()和控制台。
+## 5。基准循环使用控制台。time() timeEnd()和控制台。
 
 它可以是超级有用，知道长的东西已经执行，尤其是当调试慢回路。你甚至可以设置多个定时器的方法分配一个标签。让我们看看它是如何工作的：
 
