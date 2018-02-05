@@ -590,3 +590,5 @@ var str = undefined; if (str== undefined) { alert("null or undefined"); } var st
 
 > var $a = $("<a></a>").attr("href", req.url).attr("download", req.filename);
 >        $a[0].click();
+
+35、replace() 方法可用一个新文档取代当前文档。 location.replace(newURL)
