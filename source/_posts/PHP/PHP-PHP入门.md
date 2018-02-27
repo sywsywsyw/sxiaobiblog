@@ -6,9 +6,19 @@ categories: PHP
 ---
 ------
 
-# php标签的说明
 
 <!-- more -->
+
+## 部分常用php代码
+
+> <php>print_r($info);exit;</php>  打印数据但是会打断页面其他信息加载
+
+> <php>print_r($info);</php>  打印数据不会打断页面其他信息加载
+
+> <php>echo json_encode($info);</php>  json数据
+
+## php标签的说明
+
 
 ### 可以通过memory_get_usage();来获取当前php消耗的内存;
 
@@ -103,15 +113,6 @@ is_integer(变量名) 判断是否为整数  is_string()  is_double()浮点型 i
 
 当字符串中有很长的字符的时候，可以使用heredoc结构形式的方法来解决问题，首先使用定界符表示字符串（<<<）然后再字符串后面提供一个表示符号GOD然后接字符串，最后提供这个标识符结束字符串
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
 <?php 
 $string1 = <<<GOD;
 我有一只小毛驴，我从来也不骑。

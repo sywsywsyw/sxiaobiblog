@@ -155,16 +155,16 @@ word-break: break-all;  /*控制标点不在第一个字显示*/
 14.滚动条样式修改
 
 ```css
-*::-webkit-scrollbar-track
+*::-webkit-scrollbar-track  //轨道部分；
 {
   background-color: white;
 }
-*::-webkit-scrollbar
+*::-webkit-scrollbar   //定义了滚动条整体的样式；
 {
   width: 0;
   background-color: rgba(0,0,0,0.3);
 }
-*::-webkit-scrollbar-thumb
+*::-webkit-scrollbar-thumb   //滑块部分；
 {
   background-color: #e4e4e4;
 }
