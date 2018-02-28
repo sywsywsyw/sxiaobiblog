@@ -369,3 +369,9 @@ none：
   border-radius:50%;
 }
 ```
+
+28、一个阴影效果 适用于图片底部需要放置内容的地方
+```
+    background: linear-gradient(bottom, rgba(0,0,0,0.7), rgba(255,255,255,0));
+    background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.7), rgba(255,255,255,0));
+```
