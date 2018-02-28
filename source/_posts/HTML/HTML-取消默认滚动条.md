@@ -42,12 +42,6 @@ categories: HTML
 然后再设置外层div的width小于内层div的width。
 这个内层div其实是会出现滚动条的，所以不影响鼠标的滚动效果，而且我们看不到滚动条了。   
 
-内层ul效果：
-<img src="/images/纯cssdiv隐藏滚动条保留鼠标滚动效果/内层效果.png" alt="内层效果">
-
-外层div wrap效果：
-<img src="/images/纯cssdiv隐藏滚动条保留鼠标滚动效果/外层效果.png" alt="外层效果">
-
 css代码
 
 ```css
@@ -97,5 +91,5 @@ html代码
 </div>
 ```
 
-演示链接：<https://sxiaobiblog.comCSS-scroll/>
+演示链接：<https://sywsywsyw.github.io/CSS-scroll/>
 layui: <http://www.layui.com/demo/>
