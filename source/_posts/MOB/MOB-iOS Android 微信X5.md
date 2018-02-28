@@ -12,6 +12,37 @@ categories: MOB
 
 > 直接img标签会出现类似朋友弹出层效果，如果不想要则用div包裹起来。
 
+### 判断是ios手机还是andorid手机 进行控制"关注按钮"的位置 解决安卓手机视频最优先
+
+```javascript
+  var ua = navigator.userAgent.toLowerCase();
+  if(/iphone|ipad|ipod/.test(ua)){
+    alert("iphone");
+  }else if(/android/.test(ua)){
+    alert("android");
+  };
+```
+
+## 在ios10系统中meta设置失效了：
+```javascript
+// IOS 禁止缩放页面的实现方法
+window.onload=function () {
+    document.addEventListener('touchstart',function (event) {
+      if(event.touches.length>1){
+        event.preventDefault();
+      }
+    })
+    var lastTouchEnd=0;
+    document.addEventListener('touchend',function (event) {
+      var now=(new Date()).getTime();
+      if(now-lastTouchEnd<=300){
+        event.preventDefault();
+      }
+      lastTouchEnd=now;
+    },false)
+  }
+```
+
 ### 禁止 iOS input标签自动调用输入法
 
 > 今天做了一个关于移动端时间日期的插件，必须使用input为载体，然后设置了 readonly="readonly" 不能输入 但ios微信端出现  ‘确定取消’ 两个输入框按键，经过测试发现当input获得焦点的时候就会触发ios输入法失去焦点就会关闭ios输入法所以做了下面的操作.
@@ -58,50 +89,4 @@ $('#appDateTime').focus(function(){
 
 > 兼容性：除了iOS Safari，大部分android手机也是支持的，只是显示效果有所不同。
 
-## 常见的meta
 
-```bash
-<head>
-  <meta charset="utf-8">
-  <!-- 优先使用 IE 最新版本和 Chrome -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <!-- 360 浏览器就会在读取到这个标签后，立即切换对应的极速核 -->
-  <meta name="renderer" content="webkit">
-  <!-- 禁止百度转码 -->
-  <meta http-equiv="Cache-Control" content="no-siteapp">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Mobile App</title>
-
-  <!-- Disable tap highlight on IE -->
-  <meta name="msapplication-tap-highlight" content="no">
-
-  <!-- Web Application Manifest -->
-  <link rel="manifest" href="manifest.json">
-
-  <!-- Add to homescreen for Chrome on Android -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="Web Starter Kit">
-  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
-
-  <!-- Add to homescreen for Safari on iOS -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
-  <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
-
-  <!-- Tile icon for Win8 (144x144 + tile color) -->
-  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-  <meta name="msapplication-TileColor" content="#2F3BA2">
-
-  <!-- Color the status bar on mobile devices -->
-  <meta name="theme-color" content="#2F3BA2">
-
-  <!-- Your styles -->
-  <link rel="stylesheet" href="styles/main.css">
-
-  <!-- bower:css -->
-  <!-- endbower -->
-</head>
-```

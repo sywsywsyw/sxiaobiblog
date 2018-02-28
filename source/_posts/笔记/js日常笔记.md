@@ -42,10 +42,9 @@ categories: JS
 ```javascript
   var ua = navigator.userAgent.toLowerCase();
   if(/iphone|ipad|ipod/.test(ua)){
-  alert("iphone");
+     alert("iphone");
   }else if(/android/.test(ua)){
-  alert("android");
-  $('.FBfollow').addClass('android')
+    alert("android");
   };
 ```
 
