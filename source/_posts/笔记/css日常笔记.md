@@ -24,7 +24,7 @@ word-break: break-word; //不包括数字
 text-decoration: line-through;
 ```
 
-3.控制文字在一行并且出现...
+3.控制文字在一行并且出现... 一行变省略
 
 ```css
     overflow: hidden;
@@ -33,7 +33,7 @@ text-decoration: line-through;
     display:  block;
 ```
 
-4.控制文字在多行显示并且出现...
+4.控制文字在多行显示并且出现... 多行变二条字体的省略
 
 ```css
 display: -webkit-box;
