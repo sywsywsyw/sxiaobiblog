@@ -356,7 +356,7 @@ none：
 ```
 
 27、怎麼让一个未知宽高元素变为正方形
-```
+```css
 父元素:{
   width:x;
   height:y;
@@ -371,7 +371,32 @@ none：
 ```
 
 28、一个阴影效果 适用于图片底部需要放置内容的地方
-```
+```css
     background: linear-gradient(bottom, rgba(0,0,0,0.7), rgba(255,255,255,0));
     background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.7), rgba(255,255,255,0));
+```
+
+29、js获取上传图片真实的尺寸大小和存储大小
+```
+http://blog.csdn.net/u014236259/article/details/52885591
+让图片按比例缩放
+```
+
+30、输入框类型
+```
+  textarea:focus,
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="datetime"]:focus,
+    input[type="datetime-local"]:focus,
+    input[type="date"]:focus,
+    input[type="month"]:focus,
+    input[type="time"]:focus,
+    input[type="week"]:focus,
+    input[type="number"]:focus,
+    input[type="email"]:focus,
+    input[type="url"]:focus,
+    input[type="search"]:focus,
+    input[type="tel"]:focus,
+    input[type="color"]:focus,
 ```

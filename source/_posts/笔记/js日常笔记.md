@@ -447,7 +447,7 @@ timeCom(millseconds)
 unescape(str.replace(/\u/g, '%u'))
 ```
 
-27： JS格式化 Thu Dec 07 2017 14:00:43 GMT+0800 (中国标准时间)
+27： JS格式化 Thu Dec 07 2017 14:00:43 GMT+0800 (中国标准时间) 转为 2017-12-07
 
 ```
 //2017-6-13 14:35:31
