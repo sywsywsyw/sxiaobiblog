@@ -69,3 +69,22 @@ var dataRegex = {
   }
 }
 ```
+5、密码特殊字符匹配正则
+
+```javascript
+// 密码特殊字符匹配正则
+function stripscript(val) {
+    var pattern = new RegExp("[`~!@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥……&*（）——|{}【】‘；：”“'。，、？]")
+    // var rs = "";
+    var flag = true;
+    for (var i = 0; i < val.length; i++) {
+        if( pattern.test(val[i]) ){
+           flag = false;
+           return false;
+        // rs = rs+val.substr(i, 1).replace(pattern, '');
+        }
+    }
+    // return rs;
+    return flag;
+}
+```
