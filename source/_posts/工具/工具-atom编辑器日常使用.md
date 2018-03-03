@@ -1,5 +1,5 @@
 ---
-title: Atom编辑器安装及使用基础
+title: Atom编辑器常见问题和快捷方式
 date: 2016-08-23T00:00:00.000Z
 tags: atom
 categories: 工具
@@ -32,3 +32,31 @@ tracks changes to your code as you work.Branch,commit,push,and pull widthout lea
 * 通过Ctrl+T或Ctrl+P来搜索目录中的文件
 * 通过Ctrl+B来搜索一个当前打开的文件
 * 通过Ctrl+Shift+B来搜索一个新建的或更改过的文件
+
+
+atom 扩展插件报错
+解决办法：https://github.com/atom/apm/issues/322
+```bash
+Updating to “file-icons@2.1.17” failed.Hide output…
+gyp info it worked if it ends with ok
+gyp info using node-gyp@3.4.0
+gyp info using node@6.9.5 | win32 | x64
+gyp http GET https://atom.io/download/electron/v1.6.16/iojs-v1.6.16.tar.gz
+gyp WARN install got an error, rolling back install
+gyp ERR! install error 
+gyp ERR! stack Error: connect ETIMEDOUT 54.231.120.19:443
+gyp ERR! stack     at Object.exports._errnoException (util.js:1022:11)
+gyp ERR! stack     at exports._exceptionWithHostPort (util.js:1045:20)
+gyp ERR! stack     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1087:14)
+gyp ERR! System Windows_NT 10.0.16299
+gyp ERR! command "C:\\Users\\SUI\\AppData\\Local\\atom\\app-1.24.0\\resources\\app\\apm\\bin\\node.exe" "C:\\Users\\SUI\\AppData\\Local\\atom\\app-1.24.0\\resources\\app\\apm\\node_modules\\node-gyp\\bin\\node-gyp.js" "install" "--runtime=electron" "--target=1.6.16" "--dist-url=https://atom.io/download/electron" "--arch=x64" "--ensure"
+gyp ERR! cwd C:\Users\SUI\.atom
+gyp ERR! node -v v6.9.5
+gyp ERR! node-gyp -v v3.4.0
+gyp ERR! not ok 
+
+Compiler tools not found
+Packages that depend on modules that contain C/C++ code will fail to install.
+Read here for instructions on installing Python and Visual Studio.
+Run apm install --check after installing to test compiling a native module.
+```
