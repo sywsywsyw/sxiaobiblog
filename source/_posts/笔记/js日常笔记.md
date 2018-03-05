@@ -586,18 +586,30 @@ var str = undefined; if (str== undefined) { alert("null or undefined"); } var st
 > var str = null; if (!str) { alert("null or undefined or NaN"); }
 ```
 34、视频下载
-
+```
 > var $a = $("<a></a>").attr("href", req.url).attr("download", req.filename);
->        $a[0].click();
+> $a[0].click();
+```
 
-35、replace() 方法可用一个新文档取代当前文档。 location.replace(newURL)
+35、replace() 方法可用一个新文档取代当前文档。
+```
+ location.replace(newURL)
+```
 
 36、两个对象合并
+```
 var a ={"name":"SUI"};
 var b= {"age":24};
 Object.assign(a,b)
-
+```
 37、对象添加属性
+```
 var obj = {};
 var a="newKey";
 obj[a]='1';
+```
+
+38、http接口必须用http,不允许出现https
+```
+今天和后台对接，他给了个https接口放入了http资源导致表单提交出错。
+```
