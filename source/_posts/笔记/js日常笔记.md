@@ -591,3 +591,13 @@ var str = undefined; if (str== undefined) { alert("null or undefined"); } var st
 >        $a[0].click();
 
 35、replace() 方法可用一个新文档取代当前文档。 location.replace(newURL)
+
+36、两个对象合并
+var a ={"name":"SUI"};
+var b= {"age":24};
+Object.assign(a,b)
+
+37、对象添加属性
+var obj = {};
+var a="newKey";
+obj[a]='1';
