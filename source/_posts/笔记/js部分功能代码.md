@@ -2,7 +2,7 @@
 title: js部分功能代码
 date: 2018-02-26T22:49:51.000Z
 tags: 笔记
-categories: JS
+categories: JS/JQ
 ---
 
 --------------------------------------------------------------------------------
@@ -113,18 +113,20 @@ categories: JS
 7. 图片转base64
 
 ```javascript
-         document.getElementById("upload_file").onchange = function () {
-                gen_base64();
-            };
-            function $_(id) {
-                    return document.getElementById(id);
-            }
-            function gen_base64() {
-                var file = $_('upload_file').files[0];
-                r = new FileReader();  //本地预览
-                r.onload = function(){
-                    $_('base64_output').value = r.result;
-                }
-                r.readAsDataURL(file);    //Base64
-            }
+document.getElementById("upload_file").onchange = function () {    
+    gen_base64();
+};
+ 
+function $_(id) {    
+    return document.getElementById(id);
+}
+ 
+function gen_base64() {    
+    var file = $_('upload_file').files[0];    
+    r = new FileReader();     //本地预览 r.onload=function() {
+             
+    $_('base64_output').value = r.result;    
+}    
+r.readAsDataURL(file);     //Base64
+}
 ```

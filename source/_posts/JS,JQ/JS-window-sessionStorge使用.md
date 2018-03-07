@@ -2,7 +2,7 @@
 title: window.sessionStorge使用
 date: 2017-07-10 14:01:34
 tags:
-categories: JS
+categories: JS/JQ
 ---
 ------
 
@@ -36,9 +36,9 @@ if (window.localStorage) {
     alert("浏览支持localStorage")
 } else {
     alert("浏览暂不支持localStorage")
-} //或者 
+} //或者
 if(typeof window.localStorage == 'undefined'){ 	
-    alert("浏览暂不支持localStorage") 
+    alert("浏览暂不支持localStorage")
 }
 ```
 ## localStorage和sessionStorage操作

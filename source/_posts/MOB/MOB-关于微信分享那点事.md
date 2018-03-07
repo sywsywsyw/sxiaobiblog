@@ -27,7 +27,8 @@ html
 
 ```html
 <!-- 微信分享 -->
-<div id="wx-share" wx-title="{$info.chan_name}" wx-desc="{$info.affiche}" wx-link="{$info.redirect_url}" wx-imgUrl="{$info.face_url}"></div>
+<div id="wx-share" wx-title="{$info.chan_name}" wx-desc="{$info.affiche}" wx-link="{$info.redirect_url}" wx-imgUrl="{$info.face_url}">
+</div>
 ```
 
 js

@@ -2,7 +2,7 @@
 title: Json
 date: 2017--07-31
 tags:
-categories: JS
+categories: JS/JQ
 ---
 ------
 

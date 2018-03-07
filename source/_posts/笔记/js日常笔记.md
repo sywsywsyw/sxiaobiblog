@@ -2,7 +2,7 @@
 title: js日常笔记
 date: 2017-09-14T22:49:51.000Z
 tags: 笔记
-categories: JS
+categories: JS/JQ
 ---
 
 --------------------------------------------------------------------------------
@@ -137,8 +137,16 @@ categories: JS
   function offline() {  alert("连接断开");  }
 ```
 
-9.传一个对象给php var student = { 'info': [] }; $("input[name='student']:checked").each(function (i, n) { student['info'].push(n.value); }); console.log(student)
-
+9.传一个对象给php
+```javascript
+var student = {
+    'info': []
+};
+$("input[name='student']:checked").each(function (i, n) {
+    student['info'].push(n.value);
+});
+console.log(student)
+```
 10.原生提示框 // 判断刷新页面
 
 ```javascript
@@ -400,11 +408,18 @@ JSON.stringify(a)
   }
 ```
 
-23： 按enter键，禁止换行
+23：按enter键禁止换行
 
 ```
-ue.addListener("keydown", function(type, event){<br>
-//if (event.ctrlKey && event.which == 13) { // 判断ctrl 回车 发送 if (event.which == 13) { // 禁止换行 event.cancelBubble=true; event.preventDefault(); event.stopPropagation(); } }
+ue.addListener("keydown", function (type, event) {    
+    if (event.ctrlKey && event.which == 13) {     // 判断ctrl 回车 发送
+        if (event.which == 13) {     // 禁止换行
+            event.cancelBubble = true;
+            event.preventDefault();
+            event.stopPropagation();
+        }
+    }
+})
 ```
 
 24：一个简单的倒计时
@@ -413,22 +428,25 @@ ue.addListener("keydown", function(type, event){<br>
 // 一天 = 24 h = 1440 m = 86400 s = 86400 000ms // 一小时 // 一分钟 // 秒
 var millseconds = 97879;
 function timeCom(times) {
-  var _day = 00; var _hour = 00;
-  var _seconds = 00;
-  var _millseconds = 00;
-  var val = times;
-  setInterval(function(){
-    if( val > 0 ){
-      _day = parseInt(val/86400);
-      _hour = parseInt((val/3600)-(24__day));
-       _seconds = parseInt((val/60)-(_day_1440)-(_hour_60));
-       _millseconds = parseInt(val-(_day_86400)-(_hour_3600)-(_seconds_60));
-        (_day < 10)?_day = '0'+_day:_day;
-        (_hour < 10)?_hour = '0'+_hour:_hour;
-         (_seconds < 10)?_seconds = '0'+_seconds:_seconds;
-        (_millseconds < 10)?_millseconds = '0'+_millseconds:_millseconds; console.log(_day,_hour,_seconds,_millseconds); val--;
-    }
-  },1000)
+    var _day = 00;
+    var _hour = 00;
+    var _seconds = 00;
+    var _millseconds = 00;
+    var val = times;
+    setInterval(function () {
+        if (val > 0) {
+            _day = parseInt(val / 86400);
+            _hour = parseInt((val / 3600) - (24__day));
+            _seconds = parseInt((val / 60) - (_day_1440) - (_hour_60));
+            _millseconds = parseInt(val - (_day_86400) - (_hour_3600) - (_seconds_60));
+            (_day < 10) ? _day = '0' + _day : _day;
+            (_hour < 10) ? _hour = '0' + _hour : _hour;
+            (_seconds < 10) ? _seconds = '0' + _seconds : _seconds;
+            (_millseconds < 10) ? _millseconds = '0' + _millseconds : _millseconds;
+            console.log(_day, _hour, _seconds, _millseconds);
+            val--;
+        }
+    }, 1000)
 }
 timeCom(millseconds)
 ```
@@ -438,7 +456,9 @@ timeCom(millseconds)
 > 用JQuery做CheckBox全选和反选的时候，遇到一个问题。当用JQ控制全选，全取消一次以后，再次点击全选，发现代码变了，但是CheckBox没有处于选中状态。 百度后得知： 我使用的方法是 $("#id").attr("checked",true); 方式，jQuery API明确说明，1.6+的jQuery要用prop，尤其是checkBox的checked的属性的判断。因此修改为
 
 ```
- $("input[type='checkbox']").prop("checked"); $("input[type='checkbox']").prop("disabled", false); $("input[type='checkbox']").prop("checked", true);
+ $("input[type='checkbox']").prop("checked");
+ $("input[type='checkbox']").prop("disabled", false);
+ $("input[type='checkbox']").prop("checked", true);
 ```
 
 26：js unicode转中文
@@ -617,4 +637,9 @@ obj[a]='1';
 39、swiper 文字 和图片模糊
 ```
 roundLengths : true, //防止文字模糊
+```
+
+40、限制数字
+```
+!/^[0-9]*$/.test(verifyhightValue)
 ```

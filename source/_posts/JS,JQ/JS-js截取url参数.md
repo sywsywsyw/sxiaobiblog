@@ -2,7 +2,7 @@
 title: js截取url参数
 date: 2016-09-09
 tags:
-categories: JS
+categories: JS/JQ
 ---
 ------
 
@@ -13,7 +13,7 @@ categories: JS
 <!-- more -->
 
 ``` js
-// 第一种正则 
+// 第一种正则
 function getQueryString(name) {  
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");  
     var r = window.location.search.substr(1).match(reg);  
@@ -22,7 +22,7 @@ function getQueryString(name) {
 var app = getQueryString("app");  
 console.log(app);
 
-// 第二种字符串 
+// 第二种字符串
 function GetRequest() {   
     var url = location.search; //获取url中"?"符后的字串   
     var theRequest = new Object();   

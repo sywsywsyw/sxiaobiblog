@@ -2,7 +2,7 @@
 title: jQuery概述
 date: 2016-04-20 22:31:36
 tags: jq
-categories: JQ
+categories: JS/JQ
 ---
 ------
 

@@ -1,5 +1,5 @@
 ---
-title: pageMOB-MOB知识点
+title: MOB-MOB知识点
 date: 2017-10-09 21:15:29
 tags:
 categories: MOB

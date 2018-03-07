@@ -2,7 +2,7 @@
 layout: w
 title: new关键字的用法
 date: 2017-03-15 08:52:42
-tags: JS
+categories: JS/JQ
 ---
 ------
 

@@ -2,21 +2,18 @@
 title: jQ插件
 date: 2016-04-01 08:54:15
 tags: jq
-categories: JQ
+categories: JS/JQ
 ---
 ------
 
 <!-- more -->
 <link href="//cdn.bootcss.com/fullPage.js/2.7.9/jquery.fullPage.css" rel="stylesheet">
 //表示根据你的协议编写
-
 swiper 移动端广泛应用的插件
-
 cdn 内容分发网络（content dliver network)
 如果百度使用了cdn中的jquery。js 用户打开过百度
 下载过这个js文件 我们使用的和他同一个cdn中的jquery。js
 用户打开我们的网页时使用浏览器缓存中jquery.js
-
 (function($){
    var lunbo = function(){
 	 console.log(1)
@@ -26,8 +23,6 @@ cdn 内容分发网络（content dliver network)
 	 })
 })(jQuery)
 $(document).lunbo();
-
-
 ## jquery 插件
 (function($){
 	var lunbo=function(config){

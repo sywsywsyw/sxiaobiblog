@@ -2,7 +2,7 @@
 title: 以更高的速度和效率调试JavaScript
 date: 2017-11-08 00:55:50
 tags:
-categories: JS
+categories: JS/JQ
 ---
 ------
 
