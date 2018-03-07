@@ -1,8 +1,8 @@
 ---
-title: 取消默认滚动条
+title: scroll取消默认滚动条
 date: 2016-01-30
-tags:
-categories: HTML
+tags: CSS
+categories: css
 ---
 ------
 
