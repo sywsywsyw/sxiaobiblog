@@ -2,7 +2,7 @@
 title: css日常笔记
 date: 2017-09-14T22:50:00.000Z
 tags: 笔记
-categories: HTML
+categories: CSS
 ---
 
 --------------------------------------------------------------------------------
@@ -399,4 +399,17 @@ http://blog.csdn.net/u014236259/article/details/52885591
     input[type="search"]:focus,
     input[type="tel"]:focus,
     input[type="color"]:focus,
+```
+
+31、div模拟input  contenteditable="true" 
+```
+<!-- html -->
+<div class="test" contenteditable="true"  data-text="和主播一起聊天-.-"></div>
+
+<!-- 模拟 placeholder -->
+<style>
+.test:before {
+  content: attr(data-text);
+}
+</style>
 ```
