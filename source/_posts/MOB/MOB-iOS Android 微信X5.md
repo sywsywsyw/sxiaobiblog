@@ -12,10 +12,25 @@ categories: MOB
 
 > 直接img标签会出现类似朋友弹出层效果，如果不想要则用div包裹起来。
 
-如果是类似于映客直播之类的请使用做为封面图片
+如果是类似于映客直播之类的请使用背景图片做为封面图片
 ```
 <div class="poster" style="background-image: url(https://file.feiniaolive.com/fc5026378c1b5540aa7085ab68ce5858?imageView2/1/w/480/h/270/format/png/interlace/1/q/75|imageslim)">
 </div>
+<style>
+.poster {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0.7);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+</style>
 ```
 
 
