@@ -33,6 +33,10 @@ categories: MOB
 </style>
 ```
 
+### 关于iPhone的点击事件绑定无效的处理方法
+之前做过一个项目，元素是动态加载的，于是将点击事件绑定到document上，结果在安卓手机上点击没问题，来到iPhone就不行，后来查资料，得出结果，要在绑定的元素上加一个属性：cursor:pointer;才会有效。暂时还没找到原因，是ios的bug？另外再记录一个点击后消除背景闪一下的css：-webkit-tap-highlight-color:transparent;
+http://blog.csdn.net/u014477038/article/details/52527194
+
 
 ### 判断是ios手机还是andorid手机 进行控制"关注按钮"的位置 解决安卓手机视频最优先
 
