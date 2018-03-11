@@ -272,7 +272,7 @@ input::-webkit-input-placeholder {
  box-shadow: #c5c5c5 0px 0px 10px;
 ```
 
-1. 一个base64图片的微信加载样式
+22.一个base64图片的微信加载样式
 
 ```bash
 <div class="weui-loadmore">
