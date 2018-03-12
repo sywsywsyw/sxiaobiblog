@@ -401,11 +401,10 @@ http://blog.csdn.net/u014236259/article/details/52885591
     input[type="color"]:focus,
 ```
 
-31、div模拟input  contenteditable="true" 
+31、div模拟input输入框 contenteditable="true" 
 ```
 <!-- html -->
 <div class="test" contenteditable="true"  data-text="和主播一起聊天-.-"></div>
-
 <!-- 模拟 placeholder -->
 <style>
 .test:before {
