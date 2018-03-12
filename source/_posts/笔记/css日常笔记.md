@@ -260,7 +260,7 @@ input::-webkit-input-placeholder {
   /* placeholder字体大小  */
   font-size: 14px;
   /* placeholder位置  */
-  // text-align: right;
+  /* text-align: right; */
 }
 ```
 
