@@ -10,6 +10,13 @@ categories: MOB
 
 <!-- more -->
 
+## 关于微信浏览器中 高度问题
+
+   导航栏+iphone状态栏高度： 64px =  导航栏44+状态栏20
+
+http://www.25xt.com/allcode/9581.html
+http://www.25xt.com/html5css3/14584.html
+
   **一、meta标签**
 
 　　**1、控制显示区域各种属性：**

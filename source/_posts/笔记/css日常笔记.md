@@ -410,5 +410,9 @@ http://blog.csdn.net/u014236259/article/details/52885591
 .test:before {
   content: attr(data-text);
 }
+.input_mnzz:empty:before {
+  content: attr(data-text);
+  color: #bbb;
+}
 </style>
 ```
