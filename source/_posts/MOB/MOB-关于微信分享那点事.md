@@ -13,6 +13,13 @@ categories: 微信
 
 必须使用字符 不可以使用字节进行判断 因为ios 和 android 都把数字 统一当成一个字来判断 所以不能使用字节。
 
+## 关于微信浏览器中 高度问题
+
+导航栏+iphone状态栏高度： 64px =  导航栏44+状态栏20
+
+http://www.25xt.com/allcode/9581.html
+http://www.25xt.com/html5css3/14584.html
+
 ## 微信分享
 
 今天遇到微信分享输入了""，而在页面中直接用php模板语言输出进`js`中报错.

@@ -10,14 +10,83 @@ categories: MOB
 
 <!-- more -->
 
+##  ios input设置readonly之后点击出现光标和输入法 
+http://www.bubuko.com/infodetail-2044502.html
+```bash
+第一种方式：<input disalbed/>，添加disabled，禁用输入框。可能会造成数据上传出错可以查看；
+http://sxiaobiblog.com/2016/01/26/HTML/HTML-form/
+第二种方式：不使用input,使用其他非焦点获取的标签来代替，比如div ！！！！！建议使用这个；
+第三种方式：通过js控制，
+<input readonly retype="text"  style="-webkit-user-select:none;" onfocus="this.blur();">
+ <!-- css --> 禁止出现光标
+ style="-webkit-user-select:none;"
+ <!-- js --> 禁止出现输入法
+ onfocus="this.blur();"
+```
+## ios input内阴影
+
+```bash
+input,textarea{
+  -webkit-appearance: none;
+}
+```
+
 ## 关于微信浏览器中 高度问题
 
-   导航栏+iphone状态栏高度： 64px =  导航栏44+状态栏20
+导航栏+iphone状态栏高度： 64px =  导航栏44+状态栏20
 
 http://www.25xt.com/allcode/9581.html
 http://www.25xt.com/html5css3/14584.html
 
-  **一、meta标签**
+
+## 移动端html5手机网站如何定义字体font-family
+
+很多懒友在使用自定义字体时候，很容易像PC端那样定义，其实安卓和ISO系统，对中文字体是不支持，所以定义以后看到效果不是直接定义字体效果，如果需要定义
+大家会想到 @font-face 定义为微软雅黑字体并存放到 web 服务器上，在需要使用时被自动下载
+@font-face {
+    font-family: 'MicrosoftYaHei';
+    src: url('MicrosoftYaHei.eot'); /* IE9 Compat Modes */
+    src: url('MicrosoftYaHei.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+             url('MicrosoftYaHei.woff') format('woff'), /* Modern Browsers */
+             url('MicrosoftYaHei.ttf')  format('truetype'), /* Safari, Android, iOS */
+             url('MicrosoftYaHei.svg#MicrosoftYaHei') format('svg'); /* Legacy iOS */
+   }
+ 
+问题虽然解决了，但是这样操作很消耗用户流量，也对页面打开造成了很大延迟。
+
+我们在一起看看三大主流系统他们字体到底支持哪些呢？
+
+ios 系统
+ 
+默认中文字体是Heiti SC
+默认英文字体是Helvetica
+默认数字字体是HelveticaNeue
+无微软雅黑字体
+ 
+android 系统
+ 
+默认中文字体是Droidsansfallback
+默认英文和数字字体是Droid Sans
+无微软雅黑字体
+ 
+winphone 系统 （已弃用）
+ 
+默认中文字体是Dengxian(方正等线体)
+默认英文和数字字体是Segoe
+无微软雅黑字体
+ 
+总结：
+各个手机系统有自己的默认字体，一般不支持我们常用字体，例如微软雅黑等；
+如无特殊需求，手机端无需定义中文字体，使用系统默认即可。
+英文字体和数字字体可使用 Helvetica ，三种系统都支持。
+
+/* 移动端定义字体的代码 */
+body{font-family:Helvetica;}
+
+http://www.lanrenmb.com/yidongyunying/shoujijianzhan/1292.html
+https://segmentfault.com/a/1190000006110417
+
+##  meta标签
 
 　　**1、控制显示区域各种属性：**
 　　metacontent=width=device-width， initial-scale=1.0， maximum-scale=1.0， user-scalable=0name=viewport
