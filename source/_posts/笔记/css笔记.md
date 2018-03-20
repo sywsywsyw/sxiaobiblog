@@ -1,5 +1,5 @@
 ---
-title: css日常笔记
+title: css笔记
 date: 2017-09-14T22:50:00.000Z
 tags: 笔记
 categories: CSS

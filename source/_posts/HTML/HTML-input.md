@@ -11,14 +11,14 @@ categories: HTML
 
 ### 检测`input`内容值改变的事件
 
-> 0. 常用写法
+> 0. 常用写法 用于文字检测
 ```js
    <!-- IE9 以下不支持 -->
    $(obj).on('input',function(){})
    <!-- IE支持 -->
    $(obj).on('propertychange',function(){})
 ```
-> 1. onchange 
+> 1. onchange  用于上传图片
 onchange 事件会在域的内容改变时触发。支持的标签input,textarea,select,keygen。
 注意：在元素的值改变了且失去焦点时触发（两次的值一样不会触发）。
 缺陷：通过js代码改变DOM的值不会触发，解决在js代码里改值了调用其change 的function() 或者调.change()方法。
@@ -29,7 +29,7 @@ JQuery:
 $("#cc").change(function(){});
 ```
 
-> 2. onpropertychange
+> 2. onpropertychange 用于文字检测
 onpropertychange会实时触发，会在元素的属性改变时就触发事件。当元素disable=true时不会触发。
 缺陷：只在IE 下支持，其他浏览器不支持，用oninput来解决。
 

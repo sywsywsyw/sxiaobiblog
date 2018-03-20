@@ -11,11 +11,22 @@ categories: PHP
 
 ## 部分常用php代码
 
-> <php>print_r($info);exit;</php>  打印数据但是会打断页面其他信息加载
+> 打印数据但是会打断页面其他信息加载
 
-> <php>print_r($info);</php>  打印数据不会打断页面其他信息加载
+```
+<php>print_r($info);exit;</php>  
+```
+> 打印数据不会打断页面其他信息加载
 
-> <php>echo json_encode($info);</php>  json数据
+```
+<php>print_r($info);</php>  
+```
+
+> json数据
+
+```
+<php>echo json_encode($info);</php> 
+```
 
 ## php标签的说明
 
