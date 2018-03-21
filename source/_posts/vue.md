@@ -13,8 +13,6 @@ http://blog.csdn.net/wdy_2099/article/details/76997888?locationNum=5&fps=1
 
 $ vue init webpack name
 
-
-
 $ node -v
 
 1）安装淘宝cnpm
