@@ -55,6 +55,43 @@ body{font-family:Helvetica;}
 http://www.lanrenmb.com/yidongyunying/shoujijianzhan/1292.html
 https://segmentfault.com/a/1190000006110417
 
+
+## 利用@media screen实现网页布局的自适应
+
+优点: 适应各种窗口大小。只需在CSS中添加@media screen属性,自动根据浏览器宽度判断并输出不同的长宽值
+
+1280分辨率以上（大于1200px）
+
+```bash
+@media screen and (min-width:1200px){
+    
+}
+```
+
+1100分辨率（大于960px，小于1199px）
+
+```bash
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+    
+}
+```
+
+880分辨率（大于768px，小于959px）
+
+```bash
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    
+}
+```
+
+720分辨率（大于480px，小于767px）
+```bash
+@media only screen and (min-width: 480px) and (max-width: 767px){
+    
+}
+```
+
+
 ## rem两种方式
 
 ## 第一种

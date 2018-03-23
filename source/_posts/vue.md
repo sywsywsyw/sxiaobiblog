@@ -9,6 +9,22 @@ categories: vue
 
 <!-- more -->
 
+报错 eslint 检查出错  
+
+> 在vue项目中关闭ESLint方法：找到build文件夹--->webpack.base.conf.js---->module
+
+```bash
+Failed to load the ESLint library for the document c:\Users\SUI\Desktop\vue0307\qqmiuscvue\menu\src\main.js
+
+To use ESLint please install eslint by running 'npm install eslint' in the workspace folder menu
+or globally using 'npm install -g eslint'. You need to reopen the workspace after installing eslint.
+
+If you are using yarn instead of npm set the setting `"eslint.packageManager": "yarn"`
+
+Alternatively you can disable ESLint for the workspace folder menu by executing the 'Disable ESLint' command.
+```
+
+
 http://blog.csdn.net/wdy_2099/article/details/76997888?locationNum=5&fps=1
 
 $ vue init webpack name
