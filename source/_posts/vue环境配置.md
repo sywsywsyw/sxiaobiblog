@@ -1,5 +1,5 @@
 ---
-title: vue
+title: vue环境
 date: 2018-03-07 21.58
 tags: 笔记
 categories: vue
@@ -8,6 +8,21 @@ categories: vue
 --------------------------------------------------------------------------------
 
 <!-- more -->
+
+## 环境安装
+
+* 必须拥有node 和 npm  -v查看版本号
+
+全局安装 vue-cli
+
+$ npm install -g(--global) vue-cli
+
+$ vue init webpack vueapp
+
+$ npm install
+
+$ npm run dev 启用一个server
+
 
 http://www.runoob.com/vue2/vue-install.html
 
