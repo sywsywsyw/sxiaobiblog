@@ -1,8 +1,8 @@
 ---
-title: vue问题
+title: js
 date: 2018-03-07 21.58
 tags: 笔记
-categories: vue
+categories: js
 ---
 
 --------------------------------------------------------------------------------
@@ -67,5 +67,29 @@ if (is_global.toLowerCase() == "g") {
 result = result.replace(/\s/g, "  ");
 }
 return result;
+}
+```
+
+## 打印原型链
+```
+var cc = '1';
+console.log(cc.__proto__)
+```
+
+### JS判断字符串是否为空或是否全为空格
+```
+var test = "   \n   ";
+//var test = "      ";
+if(test.match(/^\s+$/)){
+    console.log("all space or \\n")
+}
+if(test.match(/^[ ]+$/)){
+    console.log("all space")
+}
+if(test.match(/^[ ]*$/)){
+    console.log("all space or empty")
+}
+if(test.match(/^\s*$/)){
+    console.log("all space or \\n or empty")
 }
 ```

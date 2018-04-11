@@ -1,5 +1,5 @@
 ---
-title: video在IOS和安卓的属性
+title: video在iOS和安卓的属性
 date: 2017-01-17T00:00:00.000Z
 tags: [微信,video]
 categories: VIDEO
@@ -21,7 +21,7 @@ categories: VIDEO
 
 3. `x5-video-orientation` 视频方向。取值分别为`'landscape'`、`'portrait'`或者`'landscape|portrait'`，分别对应横屏、竖屏及自动旋转（这个应该用的少）。
 
-4. `x5-playsinline` 类似ios播放但是不能覆盖内容
+4. `x5-playsinline` 类似iOS播放但是不能覆盖内容
 
 不过有一点需要注意的是，这些都是x5的私有属性，仅适用于Android平台。而跟iOS平台相关的，则是这几个属性：
 
@@ -65,7 +65,7 @@ categories: VIDEO
 
 2. 在QQ浏览器Android版本中,当浏览器版本>=7.1时开始支持 UA示例：User­Agent: Mozilla/5.0 (Linux; U; Android 4.4.4; zh­cn; OPPO R7 Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 Chrome/37.0.0.0 MQQBrowser/7.1 Mobile Safari/537.36
 
-在ios和安卓手机里的微信下播放视频时，会遇到不少问题，例如需要手动点击，视频才会播放，并且视频会跳出微信框，出现控制条，如果视频不是腾讯视频，播放完毕会出现腾讯视频的广告推送等问题
+在iOS和安卓手机里的微信下播放视频时，会遇到不少问题，例如需要手动点击，视频才会播放，并且视频会跳出微信框，出现控制条，如果视频不是腾讯视频，播放完毕会出现腾讯视频的广告推送等问题
 
 解决办法：给video标签加一些属性，调用h5原生video。
 
@@ -77,9 +77,9 @@ categories: VIDEO
   src="video/01.mp4"
   poster="images/1.jpg" /*视频封面*/
   preload="auto"
-  webkit-playsinline="true" /*这个属性是ios 10中设置可以
+  webkit-playsinline="true" /*这个属性是iOS 10中设置可以
                      让视频在小窗内播放，也就是不是全屏播放*/  
-  playsinline="true"  /*IOS微信浏览器支持小窗内播放*/
+  playsinline="true"  /*iOS微信浏览器支持小窗内播放*/
   x-webkit-airplay="allow"
   x5-video-player-type="h5"  /*启用H5播放器,是wechat安卓版特性*/
   x5-video-player-fullscreen="true" /*全屏设置，
@@ -98,7 +98,7 @@ categories: VIDEO
 
 这里就要补充下，如果是想做全屏直播或者全屏H5体验的用户，ISO需要设置删除 webkit-playsinline 标签，因为你设置 false 是不支持的 ，安卓则不需要，因为默认全屏。但这时候全屏是有播放控件的，无论你有没有设置control。 做直播的可能用得着播放控件，但是全屏H5是不需要的，那么去除全屏播放时候的控件，需要以下设置：同层播放。
 
-**x-webkit-airplay="allow"**暂时无法确切的知道其作用，但是小编猜测，这个属性应该是使此视频支持ios的AirPlay功能。使用AirPlay可以直接从使用iOS的设备上的不同位置播放视频、音乐还有照片文件，也就是说通过AirPlay功能可以实现影音文件的无线播放，当然前提是播放的终端设备也要支持相应的功能。
+**x-webkit-airplay="allow"**暂时无法确切的知道其作用，但是小编猜测，这个属性应该是使此视频支持iOS的AirPlay功能。使用AirPlay可以直接从使用iOS的设备上的不同位置播放视频、音乐还有照片文件，也就是说通过AirPlay功能可以实现影音文件的无线播放，当然前提是播放的终端设备也要支持相应的功能。
 
 **x5-video-player-type****：**启用同层H5播放器，就是在视频全屏的时候，div可以呈现在视频层上，也是WeChat安卓版特有的属性。同层播放别名也叫做沉浸式播放，播放的时候看似全屏，但是已经除去了control和微信的导航栏，只留下"X"和"<"两键。目前的同层播放器只在Android（包括微信）上生效，暂时不支持iOS。至于为什么同层播放只对安卓开放，是因为安卓不能像ISO一样局域播放，默认的全屏会使得一些界面操作被阻拦，如果是全屏H5还好，但是做直播的话，诸如弹幕那样的功能就无法实现了，所以这时候同层播放的概念就解决了这个问题。不过在测试的过程中发现，不同版本的ISO和安卓效果略有不同。
 

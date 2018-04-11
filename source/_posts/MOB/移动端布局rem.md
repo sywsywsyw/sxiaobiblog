@@ -25,7 +25,7 @@ categories: MOB
 
 我们在一起看看三大主流系统他们字体到底支持哪些呢？
 
-ios 系统
+iOS 系统
  
 默认中文字体是Heiti SC
 默认英文字体是Helvetica
@@ -234,15 +234,15 @@ https://segmentfault.com/a/1190000006110417
 　　minimum-scale：允许用户缩放到的最小比例
 　　maximum-scale：允许用户缩放到的最大比例
 　　user-scalable：用户是否可以手动缩放
-　　**2、IOS中Safari允许全屏浏览：**
+　　**2、iOS中Safari允许全屏浏览：**
 　　meta content=yesname=apple-mobile-web-app-capable
-　　**3、IOS中Safari顶端状态条样式：**
+　　**3、iOS中Safari顶端状态条样式：**
 　　meta content=blackname=apple-mobile-web-app-status-bar-style
-　　**4、IOS中Safari设置保存到桌面图标**
+　　**4、iOS中Safari设置保存到桌面图标**
 　　需要在网站的根目录下存放favicon图标，防止404请求(使用fiddler可以监听到)
 　　link rel=apple-touch-icon href=icon.png
 　　**5、忽略将页面中的数字识别为电话号码**
-　　一般情况下，IOS和Android系统都会默认某长度内的数字为电话号码
+　　一般情况下，iOS和Android系统都会默认某长度内的数字为电话号码
 　　**二、取消表单元素在点击态时的边框以及半透明灰色背景**
 　　css 代码片段
 　　input， textarea， button， a
@@ -258,7 +258,7 @@ https://segmentfault.com/a/1190000006110417
 　　运行代码复制代码保存代码提示：1、可先改代码再运行 2、支持Zen coding 3、当代码框处于激活状态下按 CTRL+F11 键可全屏!
 　　**五、定义字体**
 　　如无特殊需求，手机端无需定义中文字体，使用系统默认；
-　　英文字体和数字字体可使用 Helvetica ，三种系统（ios、android、winphone）都支持。
+　　英文字体和数字字体可使用 Helvetica ，三种系统（iOS、android、winphone）都支持。
 　　css 代码片段
 　　body
 　　运行代码复制代码保存代码提示：1、可先改代码再运行 2、支持Zen coding 3、当代码框处于激活状态下按 CTRL+F11 键可全屏!

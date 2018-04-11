@@ -37,7 +37,7 @@ categories: JS/JQ
   console.time('aa')
 ```
 
-5.判断是ios手机还是andorid手机 进行控制"关注按钮"的位置 解决安卓手机视频最优先
+5.判断是iOS手机还是andorid手机 进行控制"关注按钮"的位置 解决安卓手机视频最优先
 
 ```javascript
   var ua = navigator.userAgent.toLowerCase();

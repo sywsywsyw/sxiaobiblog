@@ -8,7 +8,7 @@ categories: VIDEO
 
 <!-- more -->
 "controls": true， //是否显示控制条
-"autoplay": true， //是否自动播放(ios不支持自动播放)
+"autoplay": true， //是否自动播放(iOS不支持自动播放)
 
 /*预加载选项*/
 "preload": "auto",
