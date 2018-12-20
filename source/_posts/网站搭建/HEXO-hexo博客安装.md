@@ -211,7 +211,7 @@ $ npm install hexo-deployer-git --save
 
 ```bash
 $ hexo generate
-$ hexo deploy
+$ hexo eploydeploy
 ```
 如果 hexo deploy 报错，请在Git Bash里边打开重新走上面两步
 
