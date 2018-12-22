@@ -36,7 +36,7 @@ titlecase: false #标题转换成大写 # Transform title into titlecase
 external_link: true #新标签页里打开连接 # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true #文章资源文件夹
 relative_link: false
 future: true
 highlight: #语法高亮
