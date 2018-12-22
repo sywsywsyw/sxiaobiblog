@@ -2,7 +2,7 @@
 title: scroll取消默认滚动条
 date: 2016-01-30
 tags: CSS
-categories: css
+categories: CSS
 ---
 ------
 
