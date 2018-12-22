@@ -21,7 +21,7 @@ categories:
 
 ## 1.创建标准页面
 
-创建标准xhtml页面
+创建标准xhtml页面。
 
 ```
 输入： html:xxs
