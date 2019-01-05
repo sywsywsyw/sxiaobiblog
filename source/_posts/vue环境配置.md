@@ -15,9 +15,9 @@ categories: Vue
 
 全局安装 vue-cli
 
-$ npm install -g(--global) vue-cli
+$ npm install -g vue-cli 
 
-$ vue init webpack vueapp
+$ vue init webpack vuecliTest
 
 $ npm install
 
@@ -55,18 +55,18 @@ $ cnpm run dev    运行第一个程序:运行成功后会在浏览器中直接�
 ? Author (sywsywsyw <347363545@qq.com>)
 ? Author sywsywsyw <347363545@qq.com>
 ? Vue build standalone
-? Install vue-router? (Y/n) y
-? Install vue-router? Yes
-? Use ESLint to lint your code? (Y/n) y
-? Use ESLint to lint your code? Yes
-? Pick an ESLint preset (Use arrow keys)
+? Install vue-router? (Y/n) y   路由
+? Install vue-router? Yes   
+? Use ESLint to lint your code? (Y/n) no   ESlint规范  
+? Use ESLint to lint your code? no 
+? Pick an ESLint preset (Use arrow keys)  no
 ? Pick an ESLint preset Standard
-? Set up unit tests (Y/n) y
-? Set up unit tests Yes
+? Set up unit tests (Y/n) no
+? Set up unit tests no
 ? Pick a test runner (Use arrow keys)
 ? Pick a test runner jest
-? Setup e2e tests with Nightwatch? (Y/n) y
-? Setup e2e tests with Nightwatch? Yes
+? Setup e2e tests with Nightwatch? (Y/n) no   单元测试
+? Setup e2e tests with Nightwatch? no
 ? Should we run `npm install` for you after the project has been created? (reco
 ? Should we run `npm install` for you after the project has been created? (reco
 mmended) npm
@@ -110,6 +110,43 @@ Documentation can be found at https://vuejs-templates.github.io/webpack
 ？我们应该运行` NPM安装`您后，项目被创建？（Reco
 新公共管理的介绍）
 ```
+
+build 文件夹   webpack配置文件
+config 文件夹   项目开发配置
+node_modules 文件夹 npm包管理
+src 文件夹   源代码
+static 文件夹  静态文件目录 
+
+.
+|-- build                            // 项目构建(webpack)相关代码
+|   |-- build.js                     // 生产环境构建代码
+|   |-- check-version.js             // 检查node、npm等版本
+|   |-- dev-client.js                // 热重载相关
+|   |-- dev-server.js                // 构建本地服务器
+|   |-- utils.js                     // 构建工具相关
+|   |-- webpack.base.conf.js         // webpack基础配置
+|   |-- webpack.dev.conf.js          // webpack开发环境配置
+|   |-- webpack.prod.conf.js         // webpack生产环境配置
+|-- config                           // 项目开发环境配置
+|   |-- dev.env.js                   // 开发环境变量
+|   |-- index.js                     // 项目一些配置变量
+|   |-- prod.env.js                  // 生产环境变量
+|   |-- test.env.js                  // 测试环境变量
+|-- src                              // 源码目录
+|   |-- components                     // vue公共组件
+|   |-- store                          // vuex的状态管理
+|   |-- App.vue                        // 页面入口文件
+|   |-- main.js                        // 程序入口文件，加载各种公共组件
+|-- static                           // 静态文件，比如一些图片，json数据等
+|   |-- data                           // 群聊分析得到的数据用于数据可视化
+|-- .babelrc                         // ES6语法编译配置
+|-- .editorconfig                    // 定义代码格式
+|-- .gitignore                       // git上传需要忽略的文件格式
+|-- README.md                        // 项目说明
+|-- favicon.ico 
+|-- index.html                       // 入口页面
+|-- package.json                     // 项目基本信息
+.
 
 
 出现报错
