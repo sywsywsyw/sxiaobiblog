@@ -15,7 +15,7 @@ timezone:         #时区
 # URL #链接格式
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://sywsywsyw.github.io/sxiaobiblog #网址
-root: /  #"/"根目录 "/hexo/"子目录
+root: /sxiaobiblog/  #"/"根目录 "/hexo/"子目录
 permalink: :year/:month/:day/:title/ #文章的链接格式
 permalink_defaults:
 
