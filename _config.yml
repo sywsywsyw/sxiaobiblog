@@ -71,7 +71,7 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy: #部署, sywsywsyw是我的用户名, 同时发布GitHub
   type: git
-  repository: git@github.com:sywsywsyw/sywsywsyw.github.io
+  repository: git@github.com:sywsywsyw/sywsywsyw.github.io.git
   branch: gh-pages
 
 #头像
