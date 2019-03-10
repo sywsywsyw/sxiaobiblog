@@ -1,26 +1,23 @@
 ---
-title: hexo博客搭建
+title: hexo
 date: 2016-08-13
 tags: hexo
 categories: HEXOS
 ---
 ------
 
-# 想知道怎么快速搭建一个属于自己的技术博客？还不快点击进来。
+# hexo博客搭建
 
 <!-- more -->
 
-# 一、 前言
-灰爷借鉴亚林的，但是我是借鉴灰爷的，版权所有，归灰爷。
-
-如果是小小白，可以先花时间去了解下：
+##如果是小小白，可以先花时间去了解下：
 * [Git](http://git-scm.com/book/zh/v2)
 * [GitHub](https://github.com/)
 * [GitHub Pages](https://pages.github.com/)
 * [Hexo](https://hexo.io/zh-cn/)
 * [Markdown](http://www.appinn.com/markdown/#autoescape)
 
-# 二、必要配置
+## 二、必要配置
 ## 2.1 GitHub Pages仓库。
 ### 2.1.1 在Github中创建一个仓库命名为blog。
 
@@ -380,3 +377,207 @@ PS: 我是在gh-pages分支上改的，所以提交代码时会提示github上�
 
 1. 使用git clone git@github.com:gxhpersonal/blog.git拷贝仓库（默认分支为master）；
 2. 在本地新拷贝的blog文件夹下通过Git bash依次执行下列指令：npm install hexo、npm install、npm install hexo-deployer-git（记得，不需要hexo init这条指令）。
+
+
+
+
+## hexo疑难问题
+
+# 解决hexo d命令提交部署博客发生的TaskCanceledException异常
+
+今天使用hexo d命令部署博客的时候发生了下面的异常：
+
+```bash
+#     Fatal: TaskCanceledException encountered.
+#    ▒▒ȡ▒▒һ▒▒▒▒▒▒
+# bash: /dev/tty: No such device or address
+# error: failed to execute prompt script (exit code 1)
+# fatal: could not read Username for 'https://github.com': Invalid argument
+# FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
+# Error: Fatal: TaskCanceledException encountered.
+#    ��ȡ��һ��������
+# bash: /dev/tty: No such device or address
+# error: failed to execute prompt script (exit code 1)
+# fatal: could not read Username for 'https://github.com': Invalid argument
+#
+#     at ChildProcess.<anonymous> (E:\gitRep\hellofriday.github.com\node_modules\hexo-util\lib\spawn.js:37:17)
+#     at emitTwo (events.js:87:13)
+#     at ChildProcess.emit (events.js:172:7)
+#     at ChildProcess.cp.emit (E:\gitRep\hellofriday.github.com\node_modules\cross-spawn\lib\enoent.js:40:29)
+#     at maybeClose (internal/child_process.js:818:16)
+#     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+```
+
+重新安装上传插件，为了能够使Hexo部署到GitHub上，需要安装一个插件：
+
+```bash
+$ npm install hexo-deployer-git --save
+```
+
+然后，执行下列指令即可完成部署：
+
+```bash
+$ hexo generate
+$ hexo deploy
+```
+
+# 确认安装成功后出现 `command not found`
+
+```bash
+bash: hexo: command not found
+```
+
+则代表没有配置环境变量 请去 node.js 执行 npm install -g hexo-cli 如果已经安装成功会提示出来路径 C:\Users\SUI\AppData\Roaming\npm\node_modules\hexo-cli\bin\ 然后右键我的电脑 把路径填入环境变量---->用户---->path 然后重新在gitbash执行 hexo init 如果不行 请重启电脑再次执行
+
+```bash
+$ npm install
+```
+
+# 更改next样式
+
+必须进入 `F:\github\sxiaobiblog\themes\next\source\css`更改.styl文件 而不是在生成的目录 css中直接更改
+
+# 解决hexo 分类文件设置为 HEXO 出现路径报错问题
+
+人家不然用这个文件分类那就别用，换成HEXOS不就好了啊。
+
+# hexo目录乱码问题
+
+今天设置目录老是乱码 错误： ![错误](/images/hexo乱码目录.png)![错误](/images/hexo乱码目录md.png)
+
+正确: ![正确](/images/hexo目录正常.png)![正确](/images/hexo目录正常md.png)
+
+对的 你没看错 hexo的标题不能进行跳级 比较严格
+
+# hexo图片路径问题
+
+我以前把图片放到`F:\github\hexo\.deploy_git\images`路径里面和网站设置的头像等等放一起，忽然有了`TaskCanceledException异常`问题，然后重新安装了上传git插件发现可能图片丢失了。
+
+官方文档： 资源（Asset）代表 source 文件夹中除了文章以外的所有文件，例如图片、CSS、JS 文件等。比方说，如果你的Hexo项目中只有少量图片，那最简单的方法就是将它们放在 source/images 文件夹中。然后通过类似于 `![](/images/image.jpg)`的方法访问它们。 <https://hexo.io/zh-cn/docs/asset-folders.html>
+
+# 资源不一致报错
+
+![错误](/images/git报错.png)
+
+原因： GitHub远程仓库中的README.md文件不在本地仓库中。 因为我手动在github创建了一个README.md文件
+
+解决方案：
+
+```bash
+$ git pull --rebase origin master
+```
+
+
+
+
+## hexo功能优化
+
+### 给博客设置个人域名
+
+获取ip,如果你手上恰好有一个为自己购买的域名，那正适合你刚刚搭建好的博客。
+我的域名是在[aliyun.com](https://netcn.console.aliyun.com/core/domain/list)上购买的，在我搭建这个博客时候就想，我应该有一个自己的域名，换了很多组合选了一个还算满意的。当你看到这里的时候，如果也有冲动，那赶紧去看看吧，说不定过两天就没有了呢
+
+首先，需要知道你的博客所在的服务器地址
+
+```bash
+$ ping arobot.github.io
+```
+得到我的博客在`151.101.73.147`上面，记下这个ip，会在后面用到。
+
+### 设置域名解析
+
+进入阿里云的云解析，可以为你购买的域名添加解析。
+
+![](/images/hexo网站解析.png)
+
+域名解析
+
+| 选项 | 描述 |
+| --- | --- |
+| 记录类型 | 选择`A` |
+| 主机记录 | 配置两项。一项填写`@`;另一项填写`www` |
+
+其他的选择默认就行，配置好的结果如下
+
+![](https://raw.githubusercontent.com/arobot/arobot.github.io/master/images/hexo_2/dns_result.jpg)
+
+配置结果
+
+完成了域名的解析工作之后，在博客的`source`文件下新建文件名为`CNAME`的文件，将你的域名不加协议填写进去。例如`sxiaobi.com`。
+
+个性化域名的配置就完成了，将博客部署上去就能够通过自己的域名链接过来。
+
+或者可以在项目文件夹中添加自己的网址
+
+![](/images/hexo自定义域名.png)
+
+！注意事项
+> 如果启用了自定义域名，则项目文件不能是 sywsywsyw.github.io  必须换个名字
+  否则会出现各种乱七八糟的报错
+
+官方文档:(https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/)
+
+## hexo新增搜索功能
+NexT主题支持集成 Swiftype、 微搜索、Local Search 和 Algolia,Swiftype和Algolia都只有一段时间的试用期，可以采用Hexo提供的Local Search,原理是通过hexo-generator-search插件在本地生成一个search.xml文件，搜索的时候从这个文件中根据关键字检索出相应的链接。
+<a id="more"></a>
+
+### 安装步骤
+
+#### 安装 hexo-generator-search
+
+在站点的根目录下执行以下命令：
+
+$ npm install hexo-generator-search --save |
+
+##### 安装 hexo-generator-searchdb
+
+在站点的根目录下执行以下命令：
+
+$ npm install hexo-generator-searchdb --save |
+
+#### 启用搜索
+
+编辑 站点配置文件，新增以下内容到任意位置：
+
+search:
+path: search.xml
+field: post
+format: html
+limit: 10000
+
+### 介绍其他两个插件
+
+#### 给博客添加feed
+
+安装hexo-generator-feed
+
+$ npm install hexo-generator-feed --save |
+
+配置到站点配置文件_config.yml
+
+#### Plugins: http://hexo.io/plugins/
+
+#### RSS订阅
+plugin:
+- hexo-generator-feed
+
+##### Feed Atom
+feed:
+type: atom
+path: atom.xml
+limit: 20 |
+
+最后，在你next主题下的_config.yml下，添加RSS订阅链接即可：
+
+rss: /atom.xml |
+
+#### 给博客生成一个站点地图
+
+安装hexo-generator-seo-friendly-sitemap
+
+$ npm install hexo-generator-seo-friendly-sitemap --save |
+
+在站点配置文件_config.yml 中添加
+
+sitemap:
+path: sitemap.xml
