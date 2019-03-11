@@ -7,7 +7,7 @@ categories: JS/JQ
 ------
 
 <!-- more -->
-# jQuery
+# JQ
 
 ### 前端开发在开始写代码之前，一般首先要解决的两个问题
 
