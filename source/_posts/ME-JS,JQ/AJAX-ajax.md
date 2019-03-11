@@ -1,14 +1,245 @@
 ---
-title: ajax4种方式
+title: ajax
 date: 2016-07-19
 tags: ajax
-categories: AJAX
+categories: JS/JQ
 ---
 ------
 
-# $.ajax(),$.getjson(),$.get(),$.post()的区别和差异
+AJAX 是与服务器交换数据并更新部分网页的艺术，是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。
 
 <!-- more -->
+
+## ajax 原理
+
+
+
+### 创建 XMLHttpRequest 对象
+
+```js
+var obj = new XMLHttpRequest();
+```
+### 向服务器发送请求
+
+> 如需将请求发送到服务器，我们使用 XMLHttpRequest 对象的 open() 和 send() 方法：
+
+```js
+xmlhttp.open("GET","test1.txt",true);
+xmlhttp.send();
+```
+| 方法        | 描述    |
+| :----:      | :----:  |
+| open(method,url,async)        | 规定请求的类型、URL 以及是否异步处理请求。</br> method：请求的类型；GET 或 POST </br>url：文件在服务器上的位置 </br>async：true（异步）或 false（同步）     |
+| send(string)        |     将请求发送到服务器。</br> string：仅用于 POST 请求      |
+
+###  open需要三个参数
+
+* 第一个参数定义发送请求所使用的方法（GET 还是 POST）
+
+> GET 还是 POST？
+> 与 POST 相比，GET 更简单也更快，并且在大部分情况下都能用。
+> 然而，在以下情况中，请使用 POST 请求：
+> * 无法使用缓存文件（更新服务器上的文件或数据库）
+> * 向服务器发送大量数据（POST 没有数据量限制）
+> * 发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠
+
+
+* 第二个参数规定服务器端脚本的 URL(该文件可以是任何类型的文件，比如 .txt 和 .xml，或者服务器脚本文件，比如 .asp 和 .php （在传回响应之前，能够在服务器上执行任务）)。
+
+* 第三个参数规定应当对请求进行异步地处理(true（异步）或 false（同步）)。
+
+> 异步 - True 或 False？
+
+> 对于 web 开发人员来说，发送异步请求是一个巨大的进步。很多在服务器执行的任务都相当费时。AJAX 出现之前，这可能会引起应用程序挂起或停止。
+
+> 我们不推荐使用 async=false，但是对于一些小型的请求，也是可以的。
+请记住，JavaScript 会等到服务器响应就绪才继续执行。如果服务器繁忙或缓慢，应用程序会挂起或停止。
+
+> send() 方法可将请求送往服务器。
+
+> onreadystatechange 属性存有处理服务器响应的函数。
+
+> readyState 属性存有服务器响应的状态信息。每当 readyState 改变时，onreadystatechange 函数就会被执行。
+
+> readyState状态值
+>> * 0: 请求未初始化
+>> * 1: 服务器连接已建立
+>> * 2: 请求已接收
+>> * 3: 请求处理中
+>> * 4: 请求已完成，且响应已就绪
+
+> status状态
+
+> 200: "OK"
+> 404: 未找到页面
+
+## 原生ajax写法
+
+```js
+var Ajax={
+    get: function (url,fn){
+        var obj=new XMLHttpRequest();  // XMLHttpRequest对象用于在后台与服务器交换数据          
+        obj.open('GET',url,true);
+        obj.onreadystatechange=function(){
+            if (obj.readyState == 4 && obj.status == 200 || obj.status == 304) { // readyState==4说明请求已完成
+                fn.call(this, obj.responseText);  //从服务器获得数据
+            }
+        };
+        obj.send(null);
+    },
+    post: function (url, data, fn) {
+        var obj = new XMLHttpRequest();
+        obj.open("POST", url, true);
+        obj.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); // 发送信息至服务器时内容编码类型
+        obj.onreadystatechange = function () {
+            if (obj.readyState == 4 && (obj.status == 200 || obj.status == 304)) {  // 304未修改
+                fn.call(this, obj.responseText);
+            }
+        };
+        obj.send(data);
+    }
+}
+```
+
+http://www.w3school.com.cn/ajax/index.asp
+
+### Ajax中同步和异步的概念
+ var xhr=new XMLHttpRequest()
+ xhr.open('get','/robot.txt',true)
+ xhr.send()
+ document.body.innerHTML +=xhr.response;
+
+
+
+ var xhr=new XMLHttpRequest();  
+ xhr.addEventListener('readystatechange',function(){  //检测到状态改变
+            // console.log(xhr.response)
+            if( this.readyState !== 4){  状态改变
+                return;
+            }
+            if( this.status === 200 || this.status === 304){
+                document.body.innerHTML += xhr.response
+            }
+         })
+        xhr.open('get','/robot.txt',true);
+        xhr.send();
+ x 随意  ML  标记语言  HTTP 超文本传输协议  Request 请求
+
+执行队列
+
+异步
+
+可执行 待执行
+
+## ajax问题
+
+### 怎么使用ajax上传图片
+
+* 建议图片一定通过异步上传。就是单独开一个接口。避免上传图片
+```js
+// 获取其他表单数据
+var form=document.forms[0];
+var formData = new FormData(form);   //这里连带form里的其他参数也一起提交了,如果不需要提交其他参数可以直接FormData无参数的构造函数
+//convertBase64UrlToBlob函数是将base64编码转换为Blob
+formData.append("imageName",convertBase64UrlToBlob(base64Codes));  //append函数的第一个参数是后台获取数据的参数名,和html标签的input的name属性功能相同
+
+/**
+ * 将以base64的图片url数据转换为Blob
+ * @param urlData
+ *            用url方式表示的base64图片数据
+ */
+function convertBase64UrlToBlob(urlData){
+
+    var bytes=window.atob(urlData.split(',')[1]);        //去掉url的头，并转换为byte
+
+    //处理异常,将ascii码小于0的转换为大于0
+    var ab = new ArrayBuffer(bytes.length);
+    var ia = new Uint8Array(ab);
+    for (var i = 0; i < bytes.length; i++) {
+        ia[i] = bytes.charCodeAt(i);
+    }
+
+    return new Blob( [ab] , {type : 'image/png'});
+}
+
+//创建FormData对象
+var data = new FormData();
+//为FormData对象添加数据
+var file = $('#inputfile')[0].files[0];
+data.append('upload_file', file); //第一个参数为参数名，第二个为参数值
+console.log(data.get('imageName'));
+$.ajax({
+    url: "http://www.baidu.com", //请求的url地址
+    type: "POST", //请求方式 GET
+    data: data, //参数值
+    cache: false,
+    contentType: false,     // 告诉jQuery不要去处理发送的数据
+    processData: false,     // 告诉jQuery不要去设置Content-Type请求头
+    beforeSend: function () {//请求前的处理
+        alert("正在加载");
+    },
+    success: function (req) { //请求成功时处理
+        console.log(req);
+    },
+    complete: function () { //请求完成的处理
+        alert("修改完成");
+    },
+    error: function (req) { //请求出错处理
+        console.log(req);
+    }
+});
+```
+
+
+### ajax请求返回状态为200但还是进入error事件
+
+* 最近遇到一个问题，发送一个ajax请求，请求成功了，并且放回状态为200，但是就是不进入success事件，添加error事件竟进入了error事件。
+```js
+$.ajax({  
+    url:$WEB_ROOT_PATH+"/dataLevel/dataLevelCtrl.htm?BLHMI=findBasicDataLevel",  
+    type:"post",  
+    dataType:"json",  
+    async:false,  
+    success:function(data){  
+        var dataScore = data;  
+    },error:function(){  
+        alert("出错啦！");  
+    }  
+});  
+```
+* 出错原因：dataType:"json",而后台返回的数据不符合json规范。
+解决方法：先将dataType设置为text，这样就可以进入success方法了，查看data数据究竟是什么。
+我的data为：｛"success":success｝，可以看出第二个success没有引号包裹，不符合json规范，故而不能转换为json对象。
+之后的解决方法就很好办了。一种是修改后台返回值，二种是直接解析text返回的值。
+
+### [PHP Ajax 跨域问题最佳解决方案](http://www.runoob.com/w3cnote/php-ajax-cross-border.html)
+
+* 本文通过设置**Access-Control-Allow-Origin**来实现跨域。
+例如：客户端的域名是client.runoob.com，而请求的域名是server.runoob.com。
+如果直接使用ajax访问，会有以下错误：
+XMLHttpRequest cannot load http://server.runoob.com/server.php. No 'Access-Control-Allow-Origin' header is present on the requested resource.Origin 'http://client.runoob.com' is therefore not allowed access.
+#### 1、允许单个域名访问
+指定某域名（http://client.runoob.com）跨域访问，则只需在http://server.runoob.com/server.php文件头部添加如下代码：
+header('Access-Control-Allow-Origin:http://client.runoob.com');
+#### 2、允许多个域名访问
+指定多个域名（http://client1.runoob.com、http://client2.runoob.com等）跨域访问，则只需在http://server.runoob.com/server.php文件头部添加如下代码：
+$origin = isset($_SERVER['HTTP_ORIGIN'])? $_SERVER['HTTP_ORIGIN'] : ''; $allow_origin = array(  
+    'http://client1.runoob.com',  
+    'http://client2.runoob.com'  
+);  
+if(in_array($origin, $allow_origin)){
+     header('Access-Control-Allow-Origin:'.$origin);      
+}
+#### 3、允许所有域名访问
+允许所有域名访问则只需在http://server.runoob.com/server.php文件头部添加如下代码：
+header('Access-Control-Allow-Origin:*');
+
+
+
+## ajax4种方式
+
+### $.ajax(),$.getjson(),$.get(),$.post()的区别和差异
+
 
 ### $.ajax()
 
@@ -133,7 +364,8 @@ $.get(
 )
 ```
 
-### 参数
+
+## 参数
 
 <dt>options</dt>
 

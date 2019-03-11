@@ -1,5 +1,5 @@
 ---
-title: Atom编辑器安装及使用基础
+title: Atom编辑器
 date: 2016-08-23T00:00:00.000Z
 tags: atom
 categories: 工具
@@ -242,3 +242,56 @@ Atom 的主题是分为UI主题和语法主题，默认情况下软件已经提�
 [![原文:Atom - 介绍和使用方法（好用的文本编辑器，代码提示高亮、Markdown）](http://www.hangge.com/blog_uploads/201701/2017013111460736360.png)](http://www.hangge.com/blog/cache/detail_1149.html)
 
 原文出自：[www.hangge.com](http://www.hangge.com/) 转载请保留原文链接：<http://www.hangge.com/blog/cache/detail_1149.html>
+
+
+
+### 快速打开命令行
+    ctrl+shift+p
+    http://blog.csdn.net/hunyxv/article/details/52549153
+### 代码兼容性
+    https://atom.io/packages/autoprefixer
+
+### 自动保存
+  OS X: cmd-,, Windows & Linux: Ctrl-,
+  https://atom.io/packages/autosave
+
+version control with git and github
+
+tracks changes to your code as you work.Branch,commit,push,and pull widthout leaving the comfort of you editor. collaborate with other developers on GitHub.
+
+版本控制与git和github
+
+跟踪您的代码的变化，在您工作时。分配，提交，推送和拉扯，没有离开您的编辑器的舒适。 与GitHub上的其他开发人员合作。
+
+当打开一个或多个目录时,你可以:
+* 通过Ctrl+T或Ctrl+P来搜索目录中的文件
+* 通过Ctrl+B来搜索一个当前打开的文件
+* 通过Ctrl+Shift+B来搜索一个新建的或更改过的文件
+
+
+atom 扩展插件报错
+解决办法：https://github.com/atom/apm/issues/322
+```bash
+Updating to “file-icons@2.1.17” failed.Hide output…
+gyp info it worked if it ends with ok
+gyp info using node-gyp@3.4.0
+gyp info using node@6.9.5 | win32 | x64
+gyp http GET https://atom.io/download/electron/v1.6.16/iojs-v1.6.16.tar.gz
+gyp WARN install got an error, rolling back install
+gyp ERR! install error 
+gyp ERR! stack Error: connect ETIMEDOUT 54.231.120.19:443
+gyp ERR! stack     at Object.exports._errnoException (util.js:1022:11)
+gyp ERR! stack     at exports._exceptionWithHostPort (util.js:1045:20)
+gyp ERR! stack     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1087:14)
+gyp ERR! System Windows_NT 10.0.16299
+gyp ERR! command "C:\\Users\\SUI\\AppData\\Local\\atom\\app-1.24.0\\resources\\app\\apm\\bin\\node.exe" "C:\\Users\\SUI\\AppData\\Local\\atom\\app-1.24.0\\resources\\app\\apm\\node_modules\\node-gyp\\bin\\node-gyp.js" "install" "--runtime=electron" "--target=1.6.16" "--dist-url=https://atom.io/download/electron" "--arch=x64" "--ensure"
+gyp ERR! cwd C:\Users\SUI\.atom
+gyp ERR! node -v v6.9.5
+gyp ERR! node-gyp -v v3.4.0
+gyp ERR! not ok 
+
+Compiler tools not found
+Packages that depend on modules that contain C/C++ code will fail to install.
+Read here for instructions on installing Python and Visual Studio.
+Run apm install --check after installing to test compiling a native module.
+```

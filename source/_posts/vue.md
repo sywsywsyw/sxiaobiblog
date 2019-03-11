@@ -1,5 +1,5 @@
 ---
-title: vue环境
+title: vue
 date: 2018-03-07 21.58
 tags: 笔记
 categories: Vue
@@ -14,6 +14,96 @@ categories: Vue
 声明式渲染 - 组件系统 - 客户端路由 - 大规模状态管理 - 构建工具
 
 <!-- more -->
+
+## vue语法
+
+#### vue实例常用选项
+
+var vm = new Vue({
+  // 1. 实例挂载目标
+  el: '#app',
+  // 2. 设置数据对象
+  data: {},
+  // 3. 计算属性
+  computed: {},
+  // 4. 过滤器
+  filters:{},
+  // 5. 方法
+  methods:{},
+  // 6. 监听器
+  watch:{},
+  // 7. 局部注册组件(子组件)
+  components:{}
+})
+
+#### 文件说明
+dev-server.js 里面 的 port变量 就是可以修改的端口号
+assets 文件中 放 css 图片素材
+components
+main.js 当前文件的逻辑入口
+app.vue 根组件 里面有 <template> <script> <style> 三个部分和小程序很像
+
+#### 逻辑语法
+```
+export default {   给外部使用
+  name: 'test' 当前组件的名字
+  data(){
+    return {
+      title : 'Hellow Vue.js!'
+    }
+  }
+
+}
+
+import test form './components/test'  引入
+
+<style lang="css" scoped>  设置 scoped 只会影响当前内容的属性
+</style>
+```
+
+
+#### 获取数据的方法
+
+```
+模板绑定 <p>{{title}}</p>
+指令获取 <p v-text="titile"></p>
+```
+
+#### 模板语法
+
+```
+v-if
+v-else
+v-for="item in items" 前面是变量  后面是数组
+```
+
+#### 事件绑定
+
+```
+v-on 包含很多个事件  js有的 都可以
+v-on:click=""
+v-on:keyup v-on:keyup.enter
+computed 计算属性
+```
+
+
+## 常用插件
+
+axios // axios的http请求模块
+https://www.npmjs.com/package/axios
+vue-scroller //滚动组件（下拉加载）
+https://www.npmjs.com/package/vue-scroller
+vue-awesome-swiper // 轮播图
+安装地址　https://www.npmjs.com/package/vue-awesome-swiper
+演示地址　https://surmon-china.github.io/vue-awesome-swiper/
+博客　https://segmentfault.com/a/1190000010142118
+npm install less less-loader --save-dev
+https://www.cnblogs.com/zhuzhenwei918/p/6870340.html?utm_source=itdadao&utm_medium=referral
+http://www.jb51.net/article/112143.htm
+
+
+
+
 
 
 ## 环境安装
@@ -156,7 +246,24 @@ static 文件夹  静态文件目录
 .
 
 
-出现报错
+## vue问题
+
+#### 这个傻逼问题的出现是什么呢？
+
+```
+vue.esm.js?efeb:591 [Vue warn]: Unknown custom element: <m> - did you register the component correctly? For recursive components, make sure to provide the "name" option.
+
+found in
+
+---> <Ranklist> at src\components\Ranklist.vue
+       <App> at src\App.vue
+         <Root>
+```
+![Alt text](./1522940794079.png)
+看这 不规范的html标签直接报错！！！！！ 还是要规范写代码啊
+![Alt text](./1522940849546.png)
+
+#### 出现报错
 ```
 > onevue@1.0.0 dev C:\Users\SUI\Desktop\vue0307\onevue
 > webpack-dev-server --inline --progress --config build/webpack.dev.conf.js
@@ -180,7 +287,7 @@ npm ERR!     C:\Users\SUI\AppData\Roaming\npm-cache\_logs\2018-03-07T12_22_01_31
 2 输入 netstat   -ano|findstr  8080 ，找到占用进程的pid.
 3 输入命令taskkill  /pid  4708  /f  ，结束该进程。//假如 4708是查询到的pid
 
-报错 eslint 检查出错  
+#### 报错 eslint 检查出错  
 
 > 在vue项目中关闭ESLint方法：找到build文件夹--->webpack.base.conf.js---->module
 
