@@ -8,90 +8,6 @@ categories: MOB
 --------------------------------------------------------------------------------
 
 <!-- more -->
-## 移动端html5手机网站如何定义字体font-family
-
-很多懒友在使用自定义字体时候，很容易像PC端那样定义，其实安卓和ISO系统，对中文字体是不支持，所以定义以后看到效果不是直接定义字体效果，如果需要定义
-大家会想到 @font-face 定义为微软雅黑字体并存放到 web 服务器上，在需要使用时被自动下载
-@font-face {
-    font-family: 'MicrosoftYaHei';
-    src: url('MicrosoftYaHei.eot'); /* IE9 Compat Modes */
-    src: url('MicrosoftYaHei.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-             url('MicrosoftYaHei.woff') format('woff'), /* Modern Browsers */
-             url('MicrosoftYaHei.ttf')  format('truetype'), /* Safari, Android, iOS */
-             url('MicrosoftYaHei.svg#MicrosoftYaHei') format('svg'); /* Legacy iOS */
-   }
- 
-问题虽然解决了，但是这样操作很消耗用户流量，也对页面打开造成了很大延迟。
-
-我们在一起看看三大主流系统他们字体到底支持哪些呢？
-
-iOS 系统
- 
-默认中文字体是Heiti SC
-默认英文字体是Helvetica
-默认数字字体是HelveticaNeue
-无微软雅黑字体
- 
-android 系统
- 
-默认中文字体是Droidsansfallback
-默认英文和数字字体是Droid Sans
-无微软雅黑字体
- 
-winphone 系统 （已弃用）
- 
-默认中文字体是Dengxian(方正等线体)
-默认英文和数字字体是Segoe
-无微软雅黑字体
- 
-总结：
-各个手机系统有自己的默认字体，一般不支持我们常用字体，例如微软雅黑等；
-如无特殊需求，手机端无需定义中文字体，使用系统默认即可。
-英文字体和数字字体可使用 Helvetica ，三种系统都支持。
-
-/* 移动端定义字体的代码 */
-body{font-family:Helvetica;}
-
-http://www.lanrenmb.com/yidongyunying/shoujijianzhan/1292.html
-https://segmentfault.com/a/1190000006110417
-
-
-## 利用@media screen实现网页布局的自适应
-
-优点: 适应各种窗口大小。只需在CSS中添加@media screen属性,自动根据浏览器宽度判断并输出不同的长宽值
-
-1280分辨率以上（大于1200px）
-
-```bash
-@media screen and (min-width:1200px){
-    
-}
-```
-
-1100分辨率（大于960px，小于1199px）
-
-```bash
-@media screen and (min-width: 960px) and (max-width: 1199px) {
-    
-}
-```
-
-880分辨率（大于768px，小于959px）
-
-```bash
-@media screen and (min-width: 768px) and (max-width: 959px) {
-    
-}
-```
-
-720分辨率（大于480px，小于767px）
-```bash
-@media only screen and (min-width: 480px) and (max-width: 767px){
-    
-}
-```
-
-
 ## rem两种方式
 
 ## 第一种
@@ -284,3 +200,86 @@ https://segmentfault.com/a/1190000006110417
 　　document.body.addEventListener('touchstart'， function () );  
 　　运行代码复制代码保存代码提示：1、可先改代码再运行 2、支持Zen coding 3、当代码框处于激活状态下按 CTRL+F11 键可全屏!
  
+
+ ## 移动端html5手机网站如何定义字体font-family
+
+很多懒友在使用自定义字体时候，很容易像PC端那样定义，其实安卓和ISO系统，对中文字体是不支持，所以定义以后看到效果不是直接定义字体效果，如果需要定义
+大家会想到 @font-face 定义为微软雅黑字体并存放到 web 服务器上，在需要使用时被自动下载
+@font-face {
+    font-family: 'MicrosoftYaHei';
+    src: url('MicrosoftYaHei.eot'); /* IE9 Compat Modes */
+    src: url('MicrosoftYaHei.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+             url('MicrosoftYaHei.woff') format('woff'), /* Modern Browsers */
+             url('MicrosoftYaHei.ttf')  format('truetype'), /* Safari, Android, iOS */
+             url('MicrosoftYaHei.svg#MicrosoftYaHei') format('svg'); /* Legacy iOS */
+   }
+ 
+问题虽然解决了，但是这样操作很消耗用户流量，也对页面打开造成了很大延迟。
+
+我们在一起看看三大主流系统他们字体到底支持哪些呢？
+
+iOS 系统
+ 
+默认中文字体是Heiti SC
+默认英文字体是Helvetica
+默认数字字体是HelveticaNeue
+无微软雅黑字体
+ 
+android 系统
+ 
+默认中文字体是Droidsansfallback
+默认英文和数字字体是Droid Sans
+无微软雅黑字体
+ 
+winphone 系统 （已弃用）
+ 
+默认中文字体是Dengxian(方正等线体)
+默认英文和数字字体是Segoe
+无微软雅黑字体
+ 
+总结：
+各个手机系统有自己的默认字体，一般不支持我们常用字体，例如微软雅黑等；
+如无特殊需求，手机端无需定义中文字体，使用系统默认即可。
+英文字体和数字字体可使用 Helvetica ，三种系统都支持。
+
+/* 移动端定义字体的代码 */
+body{font-family:Helvetica;}
+
+http://www.lanrenmb.com/yidongyunying/shoujijianzhan/1292.html
+https://segmentfault.com/a/1190000006110417
+
+
+## 利用@media screen实现网页布局的自适应
+
+优点: 适应各种窗口大小。只需在CSS中添加@media screen属性,自动根据浏览器宽度判断并输出不同的长宽值
+
+1280分辨率以上（大于1200px）
+
+```bash
+@media screen and (min-width:1200px){
+    
+}
+```
+
+1100分辨率（大于960px，小于1199px）
+
+```bash
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+    
+}
+```
+
+880分辨率（大于768px，小于959px）
+
+```bash
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    
+}
+```
+
+720分辨率（大于480px，小于767px）
+```bash
+@media only screen and (min-width: 480px) and (max-width: 767px){
+    
+}
+```

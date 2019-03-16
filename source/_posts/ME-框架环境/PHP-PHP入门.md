@@ -2,7 +2,7 @@
 title: php入门
 date: 2016-08-07
 tags: php
-categories: PHP
+categories: 环境框架语言
 ---
 ------
 

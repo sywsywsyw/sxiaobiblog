@@ -1,8 +1,8 @@
 ---
-title: hexo
+title: Hexo博客
 date: 2016-08-13
 tags: hexo
-categories: HEXOS
+categories: 环境框架语言
 ---
 ------
 

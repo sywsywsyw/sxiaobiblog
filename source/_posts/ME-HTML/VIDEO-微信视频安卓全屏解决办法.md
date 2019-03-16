@@ -2,7 +2,7 @@
 title: 微信视频安卓全屏怎麼解决
 date: 2017-01-18
 tags: [微信,video]
-categories: VIDEO
+categories: HTML
 ---
 ------
 
@@ -198,6 +198,13 @@ player.addEventListener('x5videoenterfullscreen', function() {
 *   关于同层播放器的支持情况，[官方文档](http://link.zhihu.com/?target=https%3A//x5.tencent.com/tbs/guide/video.html)有详细描述，最新的微信、QQ以及QQ浏览器都能支持，但是**仅限Android平台**。
 *   虽然同层播放器可以解决遮盖video元素的问题，但这毕竟还是X5 Only的技术。如果页面要在非腾讯系的产品中打开，那就要注意处理兼容问题。
 *   同层播放器之前的元素，要用绝对定位或固定定位才能展示出来；而其后的元素，只要往下偏移（播放器元素「object-position」指定的偏移）并且提高层级，就与未播放时无异了。
+
+## 华为手机微信端播放视频使用同层播放画面黑屏怎么解决？
+问题反馈：<http://bbs.mb.qq.com/thread-1524201-1-1.html#2155836>
+
+华为机先点击了input框然后再点击播放视频，黑屏的bug，有没有解决方案?
+解决方案：<http://res.imtt.qq.com/qqbrowser/js/test-x5-video-player-type.html>
+早已解决 代码里加canvas标签就可以了 之前没发现同层的例子里就加了canvas 但是还不知道原理。。。
 
 ## 同类文章
 

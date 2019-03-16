@@ -99,6 +99,17 @@ categories: HTML
 
 7.怎么打出来©
 
-```javascript
+```html
   <a href="">©</a>
 ```
+8.img的src如果加载失败，在chrome会有一个边框？可以在src为空的时候隐藏，动态添加以后img就会出现。
+```css
+img[src=""]{
+    opacity: 0;
+}
+```
+9.如何设置textarea光标默认为第一行第一个字符?
+```html
+<textarea name="textareaname" rows="XX" cols="XX" ></textarea>
+```
+这样就ok了，`<textarea></textarea>`这两个中间不要有空格或是其他的字符

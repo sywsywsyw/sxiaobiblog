@@ -2,7 +2,7 @@
 title: vue
 date: 2018-03-07 21.58
 tags: 笔记
-categories: Vue
+categories: 环境框架语言
 ---
 
 为什么要用vue?
