@@ -41,3 +41,8 @@ C:\Program Files (x86)\Jenkins\secrets\initialAdminPassword
 
 #### 8. jenkins自动化部署vue
 <https://blog.csdn.net/jonsonler/article/details/81317352>
+<https://blog.csdn.net/ansu2009/article/details/83584796>
+
+
+#### 9.使用 Jenkins 构建 Coding 项目
+<https://blog.csdn.net/zxb730916/article/details/80913579>
