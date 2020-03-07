@@ -6,6 +6,7 @@ categories: 2020Note
 ---
 
 #### 1. 安装yarn
+
 ```
 npm install -g yarn --registry=https://registry.npm.taobao.org
 ```
