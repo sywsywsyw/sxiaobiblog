@@ -62,8 +62,9 @@ cd ../
 <https://blog.csdn.net/zxb730916/article/details/80913579>
 
 
-#### 10.本机Jenkins实现外网访问 外网访问内网Jenkins
+#### 10.本机Jenkins实现外网访问 外网访问内网Jenkins  用于设置coding WebHook
 需要下载java环境
 <https://www.cnblogs.com/wisdom-projects/p/11184983.html>
+本机访问链接<http://holer.org:65530/job/test/configure>
 
 
