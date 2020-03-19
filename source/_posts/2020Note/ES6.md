@@ -63,3 +63,44 @@ console.log(a,b,c,d,e,f,g)
 
 > 何时用单引号，何时用双引号??？
 > 虽然在JavaScript当中，双引号和单引号都可以表示字符串, 为了避免混乱，我们建议在HTML中使用双引号，在JavaScript中使用单引号，但为了兼容各个浏览器，也为了解析时不会出错，定义JSON对象时，最好使用双引号
+
+#### 3. 字符串
+- 字符串模板
+```javascript
+let tt = 123;
+let aa = `sxiaobi${tt}`;
+console.log(aa);
+// sxiaobi123
+```
+`支持嵌套html标签、支持简单运算`
+
+- 字符串查找 includesOf  
+```javascript
+let findStr = 'sx';
+let string = 'sxiaobi'
+console.log(string.includes(findStr))
+// true
+// es5
+console.log(string.indexOf(findStr)>-1)
+```
+- 查找字符串首 有没有  startsWith
+```javascript
+let findStr = 'sx';
+let string = 'sxiaobi'
+console.log(string.startsWith(findStr))
+// true
+```
+- 判断字符串尾部是否存在 endsWith
+```javascript
+let findStr = 'bi';
+let string = 'sxiaobi'
+console.log(string.endsWith(findStr))
+// true
+```
+- 字符串复制 repeat
+```javascript
+let str = '1';
+let strRepeat = str.repeat(5);
+console.log(strRepeat);
+// 11111
+```
