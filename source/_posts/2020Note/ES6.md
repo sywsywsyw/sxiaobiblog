@@ -188,4 +188,32 @@ console.log(Number.MIN_SAFE_INTEGER)
 console.log(Number.isSafeInteger(11110))
 // true
 ```
-？
+#### 6. 数组的方法
+- Array.from() JOSN对象转数组
+```js
+let obj = {
+   '0':'sun',
+   '1':'xiao',
+   '2':'bi',
+   length:3
+}
+console.log(Array.from(obj))
+// ['sun','xiao','bi']
+```
+- Array.of() 类数组对象转为数据，支持数字、字符串 
+```js
+console.log(Array.of(1,2,3,4))
+// [1,2,3,4]
+let str = 'sun,xiao,bi';
+console.log(Array.of(str));
+// ['sun','xiao','bi']
+```
+实例方法
+- arr.find()   
+```js
+
+```
+- 
+```js
+
+```
