@@ -5,6 +5,7 @@ tags: note
 categories: 2020Note
 ---
 
+
 ### 1. var、const、let的区别
 - var 全局变量
 - let  局部变量
@@ -268,11 +269,112 @@ add(1)
 //    at add (<anonymous>:3:14)
 //    at <anonymous>:7:1
 ```
-- 严格模式可以在函数体内使用 ``
+- 严格模式可以在函数体内使用 `use strict`
+> es5 中严格模式必须声明在页面头部
 ```js
-
+function add(a,b){
+   `use strict`
+   return a+b;
+}
+console.log(add(1,2));
+// 3
 ```
+- 箭头函数  `()=>{}`
+>`箭头函数没有自己的this, 它的this是继承而来; 默认指向在定义它时所处的对象(宿主对象)`
+> 严格模式下 this 指向 undefined
+> 一般 全局下 指向 window
+> 对象的方法中调用指向 调用该方法的对象
+> 构造函数里的this 指向创建出来的实例
+>> `改变this指向的方法`
+>> call， call(thisScope, arg1, arg2, arg3...)  传入多个参数  立即执行
+>> apply， apply(thisScope,[arg1,arg2,arg3])  传入一个数组 立即执行
+>> bind， bind(thisScope,arg1,arg2,arg3)   返回一个函数，需要自己执行
+
 ```js
-
+add = (a,b) => a+b;
+add(1,2)
+// 3
 ```
-#### 8. 
+#### 8.  ES6中的函数结构和数组补漏
+- `函数对象结构`
+```js
+let obj = {
+   name:'sxiaobi',
+   age: 26
+}
+function jg({name,age}){
+   console.log(name,age)
+}
+// 'sxiaobi' 26
+jg(obj)
+```
+- `函数数组结构`
+```js
+let arr = [1,2,3];
+function jg(a,b,c){
+  console.log(a,b,c)
+}
+// 1 2 3
+jg(...arr)
+```
+- `in`的用法 判断对象或者数组是否有某个值
+```js
+let obj = {
+   name:'sxiaobi',
+   age: 26
+}
+console.log('name' in obj) 
+// true
+```
+- 数组的遍历方法
+- - `forEach`
+```js
+let arr = ['sxiaobi','男','中国'];
+arr.forEach((val,index)=>{
+   console.log(index,val)
+})
+```
+- - `map`
+```js
+let arr = ['sxiaobi','男','中国'];
+arr.map((val,index)=>{
+   console.log(index,val)
+})
+```
+- - `filter`
+```js
+let arr = ['sxiaobi','男','中国'];
+arr.filter((val,index)=>{
+   console.log(index,val)
+})
+```
+- - `some`
+```js
+let arr = ['sxiaobi','男','中国'];
+arr.some((val,index)=>{
+   console.log(index,val)
+})
+```
+- - `for of`
+```js
+let arr = ['sxiaobi','男','中国'];
+for( let [index,val] of arr.entries()){
+   console.log(index,val)
+}
+```
+- - `for in`
+```js
+let arr = ['sxiaobi','男','中国'];
+for( let index in arr){
+  console.log(index)
+  console.log(arr[index])
+}
+```
+- - `for 循环`
+```js
+let arr = ['sxiaobi','男','中国'];
+for( let i=0;i<arr.length;i++){
+  console.log(i)
+  console.log(arr[i])
+}
+```
