@@ -378,3 +378,39 @@ for( let i=0;i<arr.length;i++){
   console.log(arr[i])
 }
 ```
+#### 9. ES6中的对象
+- `key`值的使用，用于对象未知键名处理
+```js
+let keyName = "name";
+let obj = {
+    [key]:'sxiaobi'
+}
+console.log(obj)
+// { name:'sxiaobi'}
+```
+- `Object.is()` 对比两个类型
+```js
+let objOne = {name:'sun'};
+let objTwo = {name:'wei'};
+console.log(objOne.name===objTwo.name);
+console.log(Object.is(objOne.name,objTwo.name))
+```
+> is 与 === 的区别
+> is 是严格比较，===是同值比较
+```js
+console.log(-0===+0) // true
+console.log(Object.is(-0,+0))  // false
+console.log(NaN===NaN); // false
+console.log(Object.is(NaN,NaN)); // true
+```
+- `Object.assign(target, …sources) `  target: 目标对象,sources: 源对象。 用于将所有可枚举属性的值从一个或多个源对象复制到目标对象。它将返回目标对象。
+```js
+var aa = {aa:'sun'};
+var bb = {bb:'xiao'};
+var cc = {cc:'bi'};
+let dd = Object.assign(aa,bb,cc)
+console.log(aa) // {aa: "sun", bb: "xiao", cc: "bi"}
+console.log(bb) // {bb: "xiao"}
+console.log(cc) // {cc: "bi"}
+console.log(dd) // {aa: "sun", bb: "xiao", cc: "bi"}
+```
