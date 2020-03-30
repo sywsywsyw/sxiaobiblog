@@ -261,6 +261,26 @@ console.log(res)  // [1, 2, "1", null, undefined,NaN]
 var newarr=[...new Set(arr)]
 console.log(newarr) // [1, 2, "1", null, undefined,NaN]
 ```
+- 数组对象的去重 `reduce`
+> reduce() 方法接收一个函数作为累加器，数组中的每个值（从左到右）开始缩减，最终计算为一个值。
+reduce() 可以作为一个高阶函数，用于函数的 compose。
+注意: reduce() 对于空数组是不会执行回调函数的。
+```js
+let person = [
+     {id: 0, name: "小明"},
+     {id: 1, name: "小张"},
+     {id: 2, name: "小李"},
+     {id: 3, name: "小孙"},
+     {id: 1, name: "小周"},
+     {id: 2, name: "小陈"},  
+];
+let obj = {};
+let peon = person.reduce((cur,next)=>{
+   obj[next.id]? "":obj[next.id] = true&& cur.push(next);
+   return cur;
+},[]) // 设置cur的默认类型为初始值空的数组
+console.log(peon)
+```
 #### 7. 箭头函数和扩展
 - `默认值`
 ```js
