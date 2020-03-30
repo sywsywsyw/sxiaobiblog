@@ -247,6 +247,20 @@ for(let i in arr){
   // 这的i的类型是字符串
 }
 ```
+- 数组的`去重`
+==filter - 无法识别NaN== 
+```js
+var arr=[1,2,1,'1',null,null,undefined,undefined,NaN,NaN]
+var arr2 = arr.filter((x,index,self)=>self.indexOf(x)===index);
+console.log(arr2) // [1, 2, "1", null, undefined]
+```
+```js
+var arr=[1,2,1,'1',null,null,undefined,undefined,NaN,NaN]
+var res=Array.from(new Set(arr));//{1,2,"1",null,undefined,NaN}
+console.log(res)  // [1, 2, "1", null, undefined,NaN]
+var newarr=[...new Set(arr)]
+console.log(newarr) // [1, 2, "1", null, undefined,NaN]
+```
 #### 7. 箭头函数和扩展
 - `默认值`
 ```js
@@ -295,8 +309,8 @@ add = (a,b) => a+b;
 add(1,2)
 // 3
 ```
-#### 8.  ES6中的函数结构和数组补漏
-- `函数对象结构`
+#### 8.  ES6中的函数解构和数组补漏
+- `函数对象解构`
 ```js
 let obj = {
    name:'sxiaobi',
@@ -308,7 +322,7 @@ function jg({name,age}){
 // 'sxiaobi' 26
 jg(obj)
 ```
-- `函数数组结构`
+- `函数数组解构`
 ```js
 let arr = [1,2,3];
 function jg(a,b,c){
@@ -341,12 +355,32 @@ arr.map((val,index)=>{
    console.log(index,val)
 })
 ```
-- - `filter`
+- - `filter` 数组过滤
+- - - 循环
 ```js
 let arr = ['sxiaobi','男','中国'];
 arr.filter((val,index)=>{
    console.log(index,val)
 })
+```
+- - - 判断数组是否存在某个值，存在返回当前值，不存在返回空数组
+```js
+var newarr = [
+  { num: 1, val: 'ceshi', flag: 'aa' },
+  { num: 2, val: 'ceshi2', flag: 'aa2'  }
+]
+console.log(newarr.filter(item=>item.num===1))
+```
+- - - 去除空、undefined、null
+```js
+var newArr = [1,2,3,4,null,'',undefined,5,6,7,8];
+console.log(newArr.filter(item=>item)); // [1, 2, 3, 4, 5, 6, 7, 8]
+```
+- - - 去除不符合规则的数据
+```js
+var newArr = [1,2,3,4,5,6];
+console.log(newArr.filter(item=>item<4)); // [1,2,3]
+
 ```
 - - `some`
 ```js
@@ -413,4 +447,134 @@ console.log(aa) // {aa: "sun", bb: "xiao", cc: "bi"}
 console.log(bb) // {bb: "xiao"}
 console.log(cc) // {cc: "bi"}
 console.log(dd) // {aa: "sun", bb: "xiao", cc: "bi"}
+```
+
+### 10. Symbol()
+> 基本数据类型：`String`、`Boolean`、`Number`、`undefined`、`null`、`Symbol`
+> 引用数据类型：`Object`、`Array`、`Function`
+- Symbol的打印
+```js
+var txt = Symbol('sxiaobi');
+console.log(txt);
+console.log(txt.toString());
+```
+> 这时候我们仔细看控制台是有区别的，没有toString的是红字，toString的是黑字。
+- Symbol在对象中的应用
+```js
+var jspang = Symbol();
+var obj={
+    [jspang]:'sxiaobi'
+}
+console.log(obj[jspang]);
+obj[jspang]='web';
+console.log(obj[jspang]);
+```
+- Symbol对象元素的保护作用
+在对象中有很多值，但是循环输出时，并不希望全部输出，那我们就可以使用Symbol进行保护。
+没有进行保护的写法：
+```js
+var obj = {name:'sxiaobi',age:'28',sex:'男'};
+for( let item in obj ){
+   console.log(obj[item])
+}
+// sxiaobi  28  男
+```
+现在我不想别人知道我的年龄，这时候我就可以使用Symbol来进行循环保护。
+```js
+var obj =  {name:'sxiaobi',sex:'男'};
+var age = Symbol();
+obj[age] = '28';
+for( let item in obj ){
+   console.log(obj[item])
+}
+// sxiaobi  男
+```
+#### 11. Set和weakSet数据结构
+es6新增的数据结构
+> 数据结构是计算机存储、组织数据的方式，是相互之间存在一种或多种特定关系的数据元素的集合，包括逻辑结构和物理结构。
+> 数据类型是指数据的类型，是一个值的集合和定义在这个值集上的一组操作的总称。
+
+- set 去重，返回一个set对象
+```js
+let arr = [...new Set([1,2,3,4,1,2,3,4])]
+console.log(arr)
+// [1,2,3,4]
+```
+但是不支持重复的object.
+
+- 基本使用
+```js
+let arr = new Set([1,2,3]);
+arr.add(4);
+console.log(arr);  // 1,2,3,4
+console.log(arr.has(4)); // true
+arr.delete(4);
+console.log(arr); // 1,2,3
+console.log(arr.has(4)); // false
+arr.clear();  // undefined
+```
+- [实际例子](https://blog.csdn.net/u012664198/article/details/97387872)
+```js
+let myArray=[1,2,2,3,3,4]
+            let mySet=new Set(myArray);
+            myArray=[...mySet];
+            console.log("---数组去重---");
+            console.log(myArray);//(4) [1, 2, 3, 4]
+            
+            let s1=new Set([1,2,3]);
+            let s2=new Set([2,3,4,5]);
+ 
+            console.log("---并集---");
+            let unionSet=new Set([...s1,...s2]);
+            console.log(unionSet);
+ 
+            console.log("---交集---");
+            let intersect=new Set([...s1].filter(x=>s2.has(x)));
+            console.log(intersect);//Set(2) {2, 3}
+ 
+            console.log("---差集---");
+            let difference=new Set([...s1].filter(x=>!s2.has(x)));
+            console.log(difference);//Set(1) {1}
+```
+#### 12. map数据结构
+- 基本使用
+```js
+let mapJg = new Map();
+mapJg.set('key','val');
+console.log(mapJg) // Map(1) {"key" => "value"}
+console.log(mapJg.has('key')) // true
+console.log(mapJg.size) // 1
+mapJg.delete('key');
+console.log(mapJg.has('key')) // false
+mapJg.clear();  // undefined
+```
+- map结构和数组结构的转换
+```js
+let map = new Map([
+  [1, 'one'],
+  [2, 'two'],
+  [3, 'three'],
+])
+[...map.keys()]// [1, 2, 3]
+[...map.values()]// ['one', 'two', 'three']
+[...map.entries()]// [[1,'one'], [2, 'two'], [3, 'three']]
+[...map]// [[1,'one'], [2, 'two'], [3, 'three']]
+```
+- [实际例子](https://www.jianshu.com/p/e6bc5a770b7a)
+```js
+var errors = new Map([
+    [400, 'InvalidParameter'],
+    [404, 'Not found'],
+    [500, 'InternalError']
+]);
+for( let [val,index] of errors.entries()){
+   console.log(val)
+   console.log(index)
+}
+// 400
+// InvalidParameter
+// 404
+// Not found
+// 500
+// InternalError
 ```
