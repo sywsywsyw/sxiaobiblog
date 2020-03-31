@@ -6,12 +6,13 @@ categories: 2020Note
 ---
 
 
-### 1. var、const、let的区别
+
+#### 1. var、const、let的区别
 - var 全局变量
 - let  局部变量
 - const 常量 一般用于属性名，用于从常量命名开始的那一刻就不想让改变的属性名。
 
-### 2. 变量的解构赋值
+#### 2. 变量的解构赋值
 1. `数组解构`
 - 左右两边需要解构相同
 ```js
@@ -469,7 +470,7 @@ console.log(cc) // {cc: "bi"}
 console.log(dd) // {aa: "sun", bb: "xiao", cc: "bi"}
 ```
 
-### 10. Symbol()
+#### 10. Symbol()
 > 基本数据类型：`String`、`Boolean`、`Number`、`undefined`、`null`、`Symbol`
 > 引用数据类型：`Object`、`Array`、`Function`
 - Symbol的打印
@@ -598,3 +599,179 @@ for( let [val,index] of errors.entries()){
 // 500
 // InternalError
 ```
+#### 13. Proxy函数预处理
+> 类似vue的生命周期、钩子函数，就是指操作一个对象或方法的时候，运行之前操作一些数据，运行完成操作一些数据。Proxy的存在就是为了让我们为函数加上这样的钩子函数，所以我们可以简单的理解为函数或对象的生命周期。
+==需要重点学习、此处先简单记录一些==
+- 基本用法
+此处第一个括号是原数据、方法的主体，后者是预处理函数get,set.写钩子函数的地方。
+```js
+let proxyTest = new Proxy({},{});
+```
+- get(target,key,property)  target得到的目标值，key目标的键名值，property这个不常用。
+- set(target,key,value,reciver); target得到的目标值，key目标的键名值，value的要改变的值，receiver改变的原始值。
+```js
+let obj = {
+   name: 'test'
+}
+let proxyTest = new Proxy(obj,{
+   get:function(target,key,property){
+       console.log(target);
+       console.log(key);
+       console.log(property);
+       return target[key];
+   },
+   set:function(target,key,value,reciver){
+       console.log(target);
+       console.log(key);
+       console.log(value);
+       console.log(reciver);
+       return target[key] = value;
+   }
+});
+console.log(proxyTest.name,'第一次');  // test 第一次
+proxyTest.name='change';
+console.log(proxyTest.name,'第二次')   // change 第二次
+```
+- apply的使用，apply的作用是调用内部的方法。它使用在方法体是一个匿名函数时
+```js
+let target = function () {
+    return 'I am sxiaobi';
+};
+var handler = {
+    apply(target, ctx, args) {
+        console.log('do apply');
+        return Reflect.apply(...arguments);
+    }
+}
+
+var pro = new Proxy(target, handler);
+console.log(pro());   
+// do apply
+// I am sxiaobi
+```
+#### 14. promise对象的使用
+>  解决了回调地狱的问题。多层代码嵌套回调，不利于维护和二次开发。
+- 多层嵌套
+```js
+let state = 1;
+function step1(resolve,reject){
+   console.log('相亲');
+   if( state == 1 ){
+     resolve('相亲成功--约会')
+   }else{
+     reject('相亲失败--跳河')
+   }
+}
+function step2(resolve,reject){
+   console.log('恋爱');
+   if( state == 1 ){
+     resolve('恋爱成功--见家长')
+   }else{
+     reject('恋爱失败--重新相亲')
+   }
+}
+function step3(resolve,reject){
+   console.log('结婚');
+   if( state == 1 ){
+     resolve('结婚成功--生子')
+   }else{
+     reject('结婚失败--离婚')
+   }
+}
+new Promise(step1).then((val)=>{
+   console.log(val);
+   return new Promise(step2)
+}).then((val)=>{
+   console.log(val);
+   return new Promise(step3)
+}).then((val)=>{
+   console.log(val);
+}).catch((val)=>{
+   console.log(val);
+   console.log('第一步就死求了')
+})let state = 1;
+function step1(resolve,reject){
+   console.log('相亲');
+   if( state == 1 ){
+     resolve('相亲成功--约会')
+   }else{
+     reject('相亲失败--跳河')
+   }
+}
+function step2(resolve,reject){
+   console.log('恋爱');
+   if( state == 1 ){
+     resolve('恋爱成功--见家长')
+   }else{
+     reject('恋爱失败--重新相亲')
+   }
+}
+function step3(resolve,reject){
+   console.log('结婚');
+   if( state == 1 ){
+     resolve('结婚成功--生子')
+   }else{
+     reject('结婚失败--离婚')
+   }
+}
+new Promise(step1).then((val)=>{
+   console.log(val);
+   return new Promise(step2)
+}).then((val)=>{
+   console.log(val);
+   return new Promise(step3)
+}).then((val)=>{
+   console.log(val);
+}).catch((val)=>{
+   console.log(val);
+   console.log('有出错就死求了')
+})
+```
+#### 15. class类的使用
+> 我们经常使用对象或者方法模拟类的使用。为了优雅，es6之后为我们引入了类。
+- 基本使用
+```js
+class apiList{
+     getInfo(val){
+       console.log(val);
+       return val;
+     }
+     getReadList(val){
+       console.log(this.getInfo(val)+':'+'阅读历史')
+     }
+}
+let api = new apiList;
+api.getInfo('account:347363545')  // account:347363545
+api.getReadList('account:347363545') // account:347363545:阅读历史
+```
+这里需要注意的是两个方法中间不要写逗号了，还有这里的this指类本身，还有要注意return 的用法。
+- 类的传参 `constructor()`
+```js
+class apiList{
+     constructor(a,b){
+         this.a=a;
+         this.b=b;
+     }
+     add(){
+        return this.a+this.b;
+     }
+}
+let api = new apiList(1,2);
+console.log(api.add());  // 3
+```
+- class的`继承` extends
+```js
+class apiList{
+     constructor(a,b){
+         this.a=a;
+         this.b=b;
+     }
+     add(){
+        return this.a+this.b;
+     }
+}
+class newApiList extends apiList{}
+let newApi = new newApiList(6,8);
+console.log(newApi.add()) // 14
+```
+#### 16.模块化操作
