@@ -5,12 +5,12 @@ tags: note
 categories: 2020Note
 ---
 
-
-
 #### 1. var、const、let的区别
 - var 全局变量
 - let  局部变量
 - const 常量 一般用于属性名，用于从常量命名开始的那一刻就不想让改变的属性名。
+
+<!-- more -->
 
 #### 2. 变量的解构赋值
 1. `数组解构`
@@ -775,3 +775,60 @@ let newApi = new newApiList(6,8);
 console.log(newApi.add()) // 14
 ```
 #### 16.模块化操作
+- export   模块化的输出
+- import   模块化的引入
+
+export可以让我们把变量，函数，对象进行模块话，提供外部调用接口，让外部进行引用。先来看个最简单的例子，把一个变量模块化。我们新建一个temp.js文件，然后在文件中输出一个模块变量。
+```js
+export var a = 'jspang';
+```
+然后可以在index.js中以import的形式引入。
+```js
+import {a} from './temp.js';
+console.log(a);
+```
+- 多变量的输出
+```js
+var a = 'one';
+var b = 'two';
+var c = 'three';
+export {a,b,c};
+export function add(a,b){
+    return a+b;
+}
+```
+as的用法 有些时候我们并不想暴露模块里边的变量名称，而给模块起一个更语义话的名称，这时候我们就可以使用as来操作。
+```js
+var a = 'one';
+var b = 'two';
+var c = 'three';
+export {
+    x as a,
+    y as b,
+    z as c
+}
+```
+```js
+import {x,y,z} from './temp.js';
+console.log(x,y,z);
+```
+export default的使用 加上default相当是一个默认的入口。在一个文件里export default只能有一个,而export可以有多个。我们来对比一下export和export default的区别
+- export 
+```js
+export var a ='test';
+export function add(a,b){
+    return a+b;
+}
+```
+```js
+import {a,add} from './temp.js';
+```
+- exprot default
+```js
+export default function add(a,b){
+    return a+b;
+}
+```
+```js
+import api from './temp.js';
+```
