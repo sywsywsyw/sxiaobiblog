@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next mist" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="微信，博客，小笔，hexo,NexT">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2">
+
+
+
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML-dom">
+<meta property="og:url" content="http://sywsywsyw.github.io/sxiaobiblog/2016/01/01/ME-HTML/HTML-dom/index.html">
+<meta property="og:site_name" content="Painter Sun">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-03-20T06:40:10.460Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML-dom">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://sywsywsyw.github.io/sxiaobiblog/2016/01/01/ME-HTML/HTML-dom/">
+
+
+
+
+
+  <title>HTML-dom | Painter Sun</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Painter Sun</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">种一棵树最好的时间是十年前，其次是现在。</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://sywsywsyw.github.io/sxiaobiblog/2016/01/01/ME-HTML/HTML-dom/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Painter Sun">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Painter Sun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">HTML-dom</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-01-01T00:00:00+08:00">
+                2016-01-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTML/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2016/01/01/ME-HTML/HTML-dom/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2016/01/01/ME-HTML/HTML-dom/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<a id="more"></a>
+<p>#DOM是什么</p>
+<p>Document  Object Modal(文档对象模型)</p>
+<p>我们在页面中看到的 div,span,p,h1 等等元素或文字<br>在 javascript 眼中都是一个对象</p>
+<h1 id="从一个web应用的开发说起"><a href="#从一个web应用的开发说起" class="headerlink" title="从一个web应用的开发说起"></a>从一个web应用的开发说起</h1><p>第一步，从页面中去选取一个元素出来<br>当我们的代码在浏览器中去运行时，<br>浏览器已经帮我们创建了很多对象，<br>对象中有很多方法，可供我们使用<br>这些东西都在一个叫做window的全局变量里</p>
+<p>window对象中的属性，可以省略window. 去调用<br>eg: window.setTimeout</p>
+<p>选取元素，我们从window.document开始</p>
+<h2 id="选取元素的方式"><a href="#选取元素的方式" class="headerlink" title="选取元素的方式"></a>选取元素的方式</h2><p>快速从document中取出一个DOM对象的办法</p>
+<ul>
+<li>document.body</li>
+<li>document.head</li>
+<li>document.title</li>
+<li><p>document.documentElement 代表了整个html标签的一个DOM对象</p>
+</li>
+<li><p>document.querySelector()</p>
+</li>
+<li><p>document.getElementById()返回值单个</p>
+</li>
+<li><p>document.querySelectorAll()</p>
+</li>
+<li>document.getElementsByClassName()</li>
+<li>document.getElementsByTagName()</li>
+<li>document.getElementsByName()</li>
+</ul>
+<p>这些方法的返回结果是什么？<br>前两个的返回结果是一个代表了页面中元素的对象  我们把他叫做DOM对象<br>后四个的返回结果是一个类数组对象，对象中用     我们把他叫做DOM集合<br>var obj={<br>    0:Dom对象,<br>    0:Dom对象,<br>    ……<br>    length:12<br>}</p>
+<h2 id="DOM对象中的常见的属性和方法"><a href="#DOM对象中的常见的属性和方法" class="headerlink" title="DOM对象中的常见的属性和方法"></a>DOM对象中的常见的属性和方法</h2><h3 id="object"><a href="#object" class="headerlink" title="object"></a>object</h3><ul>
+<li>toString()</li>
+<li>valueOf()       内部的方法</li>
+</ul>
+<h3 id="EventTarget"><a href="#EventTarget" class="headerlink" title="EventTarget"></a>EventTarget</h3><ul>
+<li>addEventListener()</li>
+<li>removeEventListener()</li>
+<li>dispatchEvent()</li>
+</ul>
+<h3 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h3><p>所有的DOM对象都是一个’节点‘这三个属性用来描述节点</p>
+<ul>
+<li>nodeName</li>
+<li>nodeType</li>
+<li>nodeValue</li>
+</ul>
+<p>我们能从每个DOM对象身上取到自己的相邻或父节点或子节点</p>
+<ul>
+<li>ChildNode     返回值DOM对象</li>
+<li>firstChild      返回值DOM对象</li>
+<li><p>lastChild       返回值DOM对象</p>
+</li>
+<li><p>parentElement</p>
+</li>
+<li><p>parentNode</p>
+</li>
+<li><p>previousSibling</p>
+</li>
+<li>removeChild()</li>
+</ul>
+<p>取节点的文本内容（会过滤掉标签）</p>
+<ul>
+<li>textContent</li>
+</ul>
+<p>每个DOM对象中都提供了一些操作节点的方法</p>
+<p>通常采用 父DOM对象.xxx （DOM)这种方式</p>
+<ul>
+<li>appendChild()       box.appendChild(el).style.color = ‘red’  返回值为一个DOM对象所以可以继续使用DOM里面的方法</li>
+<li>insertBefore()       返回值 为你插入的那个DOM对象</li>
+<li>replaceChild()       返回值 替换成的那个DOM对象</li>
+<li>removeChild()        返回值 移除成的那个DOM对象  var tmp = box.removeChild(el)</li>
+<li>haChildNodes()    </li>
+<li><p>contains()        （true,flase）查看<code>节点</code>是否包括另外一个节点？可以做唯一的标识符</p>
+</li>
+<li><p>cloneNode()       (true复制全部，false复制结构)</p>
+</li>
+<li><p>hasChildNodes()    返回值 布尔类型  el.children.length</p>
+</li>
+<li>contains()         返回值 布尔类型</li>
+<li><p>cloneNode()        返回值 DOM对象(true,false)</p>
+</li>
+<li><p>childNodes()</p>
+</li>
+<li>replaceChild()</li>
+</ul>
+<h3 id="Element-元素"><a href="#Element-元素" class="headerlink" title="Element(元素)"></a>Element(元素)</h3><p><code>元素</code>和<code>节点</code>的区别<br>不带标签的，比如div内容的文字，比如注释，它们只是节点，不是元素</p>
+<ul>
+<li>children  取一个DOM对象的所有子元素  DOM集合</li>
+<li>firstElementChild</li>
+<li><p>lastElementChild</p>
+</li>
+<li><p>nextElementSibling</p>
+</li>
+<li>previousElementSibling</li>
+</ul>
+<p>对元素属性的操作 （HTML元素的属性 就是头标签里的那些k=””中的k)</p>
+<ul>
+<li>classList      操作类</li>
+<li>className      可读写</li>
+<li>id             可读写</li>
+<li>getAttribute()   </li>
+<li>setAttribute()  没有返回值，只是做一个操作</li>
+<li>hasAttribute()  判断元素标签中有没有某个属性</li>
+<li><p>removeAttribute() 没有返回值，只是做一个操作</p>
+</li>
+<li><p>outerHTML</p>
+</li>
+<li>tagName</li>
+</ul>
+<p>获取该元素的视察坐标(和offset区别)或者和其他位置相关信息的坐标</p>
+<ul>
+<li>getBoundingClientRect() 返回值是{top:x,left:x,bottom:1,width:1,height:1};<br>el.getBoundingClientRect.top</li>
+<li>scrollLeft 相对于父元素滚动的距离</li>
+<li>scrollTop  相对于父元素滚动的距离</li>
+<li>clientWidth 一般用来结合document.documentElementl.clienWidth</li>
+<li>clientHeight</li>
+</ul>
+<p>从某个DOM对象开始，可以缩小范围纠结去查找元素</p>
+<ul>
+<li>getElementsByClassName()</li>
+<li>getElementsByTagName()</li>
+<li>querySelector()</li>
+<li>querySelectorAll()</li>
+</ul>
+<h3 id="HEMLElement"><a href="#HEMLElement" class="headerlink" title="HEMLElement"></a>HEMLElement</h3><ul>
+<li>innerHTML  可读写的 能设置某个DOM对象内部的html结构</li>
+<li>innerText   剥离标签直接获取取文本</li>
+</ul>
+<p>实时获取元素信息</p>
+<ul>
+<li>offsetHeight   前四个返回不带<code>px</code>具体的数值</li>
+<li>offsetWidth</li>
+<li>offsetTop</li>
+<li>offsetLeft</li>
+<li>offsetParent  获取具有定位属性的元素 返回值DOM对象</li>
+</ul>
+<p>操作行内样式</p>
+<ul>
+<li>style         可读写 读的时候实时获取元素行内样式的值，不会去计算 Css文件中定义属性</li>
+</ul>
+<h3 id="HTML-xxx-Element"><a href="#HTML-xxx-Element" class="headerlink" title="HTML xxx Element"></a>HTML xxx Element</h3><ul>
+<li>value</li>
+<li>checked</li>
+<li>src</li>
+</ul>
+<h2 id="添加事件的两种方式及其区别"><a href="#添加事件的两种方式及其区别" class="headerlink" title="添加事件的两种方式及其区别"></a>添加事件的两种方式及其区别</h2><p>事件 事件对象 添加事件的方式 不同方式之间的区别<br>阻止事件默认行为 阻止事件流 事件委托</p>
+<p>我们给DOM对象的onclick属性赋值，值为一个函数<br>这次赋值和普通 的对象赋值不太一样<br>js会告诉浏览器，密切关注这个元素，如果有人点击它<br>帮我把这个函数运行一下，<br>运行函数的时候给我传一个参数，参数为一个对象<br>对象中要详细的记录这次点击的一些信息 这个对象被称为事件对象</p>
+<p>```javascript</p>
+<p>// 使用 onxxx</p>
+<p>var el=document.getElementById(‘box’)<br>el.style.color=’red’;<br>el.onclick=(function(){<br>    return function(){</p>
+<pre><code>}
+</code></pre><p>})();</p>
+<p>// 使用addEventListener</p>
+<p>el.addEventListener(‘’,function(){<br>   console.log(e)<br>},flase)</p>
+<p>区别：</p>
+<ol>
+<li>一些H5事件并没有onxxx这个版本</li>
+<li>onxxx 再赋值一次，会覆盖上次赋值的那个 函数，addEventListener 没有这个问题。它可以给事件添加多个函数，事件触发的时候 按照添加顺序，逐个调用处理函数</li>
+</ol>
+<p>移除事件 取消事件注册</p>
+<ol>
+<li>onxxx<br>this.onxxx=null;</li>
+<li>addEventListener<br>var clickHandler = function(e){<pre><code>console.log(e)
+this.style.background = &apos;red&apos;;
+this.removeEventListener(&apos;click&apos;,clickHandler);
+</code></pre>  }<br>  yi.addEventListener(‘click’,clickHandler)</li>
+</ol>
+<h3 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h3><p>//不要给自定义事件阻止冒泡  e.stopPropagation()<br>//鼠标按住5秒触发一个事件<br>eg: var fiveonclick= new Event(‘fiveonclick’)<br>    yi.addEventListener(‘mousedown’,function(){<br>        console.log(‘5秒事件触发了’)<br>        clearInterval(timerId)<br>    })<br>    var timerId;<br>    yi.addEventListener(‘mousedown’,function(){<br>        var i=0;<br>        timerId=setInterval(function(){<br>            i +=1;<br>            if( i === 5 ){<br>                yi.dispatchEvent(fiveonclick)<br>                yi.style.background=’red’<br>                }<br>        },1000)<br>     })<br>    yi.dispatchEvent(fiveonclick);</p>
+<p>//三次点击函数<br>    var onclickwu=function(el,fn){<br>        var clickwu = new Event(‘clickwu’)<br>        el.addEventListener(‘clickwu’,function(e){<br>            //不要给自定义事件阻止冒泡<br>            fn.call(el,e);<br>        })<br>        var i=0;<br>        el.addEventListener(‘click’,function(e){<br>            e.stopPropagation();<br>            i += 1;<br>            if( i === 3 ){<br>                el.dispatchEvent(clickwu)<br>                el.style.background=’blue’<br>            }<br>        })<br>        el.addEventListener(‘click’,function(e){<br>            // console.log(1)<br>            e.stopPropagation();<br>        })<br>        // el.addEventListener(‘click’,function(e){<br>        //     console.log(1);<br>        //     e.stopPropagation();<br>        // });<br>    }<br>    onclickwu(yi,function(){<br>        alert(1)<br>    })<br>    onclickwu(er,function(){<br>        alert(2)<br>    })<br>    onclickwu(san,function(){<br>        alert(3)<br>    })<br>//长按事件函数<br>// el对象 fn替换的this c控制时间<br>eg:var changan=function(el,fn,c){<br>        var changan= new Event(‘changan’)<br>        el.addEventListener(‘changan’,function(e){<br>            fn()<br>        })<br>        var timerId;<br>        el.addEventListener(‘mousedown’,function(){<br>            var i=0;<br>            setInterval(function(){<br>                i += 1;<br>                if( i === c ){<br>                    el.dispatchEvent(changan)<br>                    el.style.background=’red’<br>                }<br>            },1000)<br>        })<br>        document.addEventListener(‘mouseup’,function(){<br>            console.log(‘5秒事件触发了’)<br>            clearInterval(timerId)<br>        })</p>
+<pre><code>}
+
+ changan(yi,function(){
+     alert(1)},5)
+</code></pre><p>click dblclick  threeclick</p>
+<p>var threeclick = new Event(‘threeclick’);  //用变量存储下来<br>var box=document.querySelector(‘.box’);<br>box.addEventListener(‘threeclick’,function(){<br>    console.log(‘threeclick’)<br>})<br>box.addEventListener(‘click’,(function(){<br>        var cishu=0;<br>        return function(){<br>            cishu += 1;<br>            if( cishu ===3){<br>                box.dispatchEvent(threeclick)<br>            }<br>            setTimeout(function(){<br>        cishu=0;<br>    },500)<br>        }<br>    })())<br>box.dispatchEvent(threeclick);   //dispatchEvent 分发</p>
+<h3 id="阻止事件冒泡和事件"><a href="#阻止事件冒泡和事件" class="headerlink" title="阻止事件冒泡和事件"></a>阻止事件冒泡和事件</h3><ol>
+<li>从页面结构上调整,让元素之间不再是包含关系</li>
+<li>使用事件对象身上的stopPropagation去阻止它<br>box.addEventListener(‘click’,function(e){<pre><code>console.log(1);
+e.stopPropagation();
+</code></pre> });<br>eg:<br>yi.addEventListener(‘click’,function(e){<pre><code>console.log(1);
+e.stopPropagation();
+</code></pre> });<br> er.addEventListener(‘click’,function(){<pre><code>console.log(2);
+</code></pre> });<br> san.addEventListener(‘click’,function(){<pre><code>console.log(3);
+</code></pre> });</li>
+</ol>
+<h2 id="阻止事件的默认行为"><a href="#阻止事件的默认行为" class="headerlink" title="阻止事件的默认行为"></a>阻止事件的默认行为</h2><pre><code>document.addEventListener(&apos;dblclick&apos;,function(e){
+    e.preventDefault();
+})
+</code></pre><p>//从事件的根源去阻止它</p>
+<pre><code>document.addEventListener(&apos;mousedown&apos;,function(e){
+    e.preventDefault();
+})
+    document.addEventListener(&apos;keydown&apos;,function(e){
+        e.preventDefault();
+    })
+    document.querySelector(&apos;input&apos;).addEventListener(&apos;mousedown&apos;,function(){
+        e.preventDefault();
+    })
+</code></pre><h3 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h3><p>当我们把函数X作为参数传给函数Y函数Y内部有对函数X的调用我们把函数X叫做回调函数</p>
+<p>##遍历一个函数<br>var arr=[1,2,3,4,5]<br>arr.forEach(function(v){<br>    console.log(v)<br>})<br>如果就是数组，我们遍历的时候可以使用<br>var arr = [1,2,3,4,5]<br>arr.forEach(function(v){<br>    console.log(v)<br>})<br>如果是类数组对象，我们遍历的时候可以使用<br>var arr=[];<br>forEach = arr.forEach;<br>filter = arr.filter<br>var els = document.querySelectorAll(‘div’)<br>forEach.call(els,function(v){<br>    console.log(v)  //v就是dom集合中的dom对象<br>})<br>arr.filter(function(v){<br>    return v.id = id<br>    //filter 条件为真保存下来如果满足就放到新数组中 要不就不操作<br>})</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/01/01/ME-HTML/HTML-html5/" rel="next" title="HTML标签学习">
+                <i class="fa fa-chevron-left"></i> HTML标签学习
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/01/01/ME-HTML/HTML-form/" rel="prev" title="form">
+                form <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <img class="site-author-image" itemprop="image" src="/images/avator.png" alt="Painter Sun">
+          
+            <p class="site-author-name" itemprop="name">Painter Sun</p>
+            <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives">
+            
+                <span class="site-state-item-count">70</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/yourname" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>GitHub</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#从一个web应用的开发说起"><span class="nav-number">1.</span> <span class="nav-text">从一个web应用的开发说起</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#选取元素的方式"><span class="nav-number">1.1.</span> <span class="nav-text">选取元素的方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM对象中的常见的属性和方法"><span class="nav-number">1.2.</span> <span class="nav-text">DOM对象中的常见的属性和方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#object"><span class="nav-number">1.2.1.</span> <span class="nav-text">object</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EventTarget"><span class="nav-number">1.2.2.</span> <span class="nav-text">EventTarget</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Node"><span class="nav-number">1.2.3.</span> <span class="nav-text">Node</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Element-元素"><span class="nav-number">1.2.4.</span> <span class="nav-text">Element(元素)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HEMLElement"><span class="nav-number">1.2.5.</span> <span class="nav-text">HEMLElement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML-xxx-Element"><span class="nav-number">1.2.6.</span> <span class="nav-text">HTML xxx Element</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加事件的两种方式及其区别"><span class="nav-number">1.3.</span> <span class="nav-text">添加事件的两种方式及其区别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义事件"><span class="nav-number">1.3.1.</span> <span class="nav-text">自定义事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阻止事件冒泡和事件"><span class="nav-number">1.3.2.</span> <span class="nav-text">阻止事件冒泡和事件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阻止事件的默认行为"><span class="nav-number">1.4.</span> <span class="nav-text">阻止事件的默认行为</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#回调函数"><span class="nav-number">1.4.1.</span> <span class="nav-text">回调函数</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2016 &mdash; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Painter Sun</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cytcPpAsu';
+      var conf = '0c6448a3466642354028801bc68fb5dc';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+  
+
+
+
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.2"></script>
+
+
+  
+
+</body>
+</html>

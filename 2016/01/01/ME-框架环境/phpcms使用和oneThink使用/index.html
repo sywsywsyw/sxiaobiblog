@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next mist" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="phpcms,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2">
+
+
+
+
+
+
+<meta name="keywords" content="phpcms">
+<meta property="og:type" content="article">
+<meta property="og:title" content="phpcms使用和oneThink使用">
+<meta property="og:url" content="http://sywsywsyw.github.io/sxiaobiblog/2016/01/01/ME-框架环境/phpcms使用和oneThink使用/index.html">
+<meta property="og:site_name" content="Painter Sun">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-03-20T06:40:10.490Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="phpcms使用和oneThink使用">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://sywsywsyw.github.io/sxiaobiblog/2016/01/01/ME-框架环境/phpcms使用和oneThink使用/">
+
+
+
+
+
+  <title>phpcms使用和oneThink使用 | Painter Sun</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Painter Sun</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">种一棵树最好的时间是十年前，其次是现在。</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://sywsywsyw.github.io/sxiaobiblog/2016/01/01/ME-框架环境/phpcms使用和oneThink使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Painter Sun">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Painter Sun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">phpcms使用和oneThink使用</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-01-01T08:54:53+08:00">
+                2016-01-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/环境框架语言/" itemprop="url" rel="index">
+                    <span itemprop="name">环境框架语言</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2016/01/01/ME-框架环境/phpcms使用和oneThink使用/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2016/01/01/ME-框架环境/phpcms使用和oneThink使用/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<a id="more"></a>
+<h1 id="oneThink简单而强大的内容管理框架-让WEB开发更快速"><a href="#oneThink简单而强大的内容管理框架-让WEB开发更快速" class="headerlink" title="oneThink简单而强大的内容管理框架,让WEB开发更快速!"></a>oneThink简单而强大的内容管理框架,让WEB开发更快速!</h1><blockquote>
+<p>thinkphp网站搭建过程</p>
+</blockquote>
+<h2 id="准备开发"><a href="#准备开发" class="headerlink" title="准备开发"></a>准备开发</h2><p>  下载官方软件v1.0正式版 <a href="http://www.onethink.cn/" target="_blank" rel="noopener">http://www.onethink.cn/</a><br>  下载本地服务器wampserver <a href="http://www.wampserver.com/" target="_blank" rel="noopener">http://www.wampserver.com/</a></p>
+<h2 id="开发步骤"><a href="#开发步骤" class="headerlink" title="开发步骤"></a>开发步骤</h2><ul>
+<li>解压v1.0安装包将<code>www</code>文件目录的所有文件copy到<code>C:\wamp64\www</code>或<code>C:\wamp32\www</code>目录中</li>
+<li>启动wampserver等待指示灯有红变绿 黄色不行</li>
+<li>进入<a href="http://localhost/phpmyadmin/index.php?token=6de2f4e9ae5b49d31d01b84dd98ed44d" target="_blank" rel="noopener">http://localhost/phpmyadmin/index.php?token=6de2f4e9ae5b49d31d01b84dd98ed44d</a> 账号root 密码为空 新建一个数据库后面需要用到</li>
+<li>启动浏览器输入localhost执行安装步骤<blockquote>
+<p>如果一直无法进入下一步说明cookie出错了，打开<code>C:\wamp64\www\Application\Install\Controller\InstallController.class.php</code>注释掉92行和103行代码，如果还是不行请删除<code>C:\wamp64\www\Runtime</code>所有文件夹，如果不行 重复此步骤或者去百度。<br>执行第三步之后出现<code>&quot;Access denied for user &#39;admin&#39;@&#39;localhost&#39; (using password: YES)&quot;</code>说明数据库用户名不对，wampserver默认用户名 root 密码不用填</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="部署阿里云"><a href="#部署阿里云" class="headerlink" title="部署阿里云"></a>部署阿里云</h2><p>开发步骤与上面相同，数据库账号密码以及数据库名称统一更换为阿里云的账户名称。</p>
+<h3 id="其他后台模板安装与之一样"><a href="#其他后台模板安装与之一样" class="headerlink" title="其他后台模板安装与之一样"></a>其他后台模板安装与之一样</h3><p> 1.将phpcmsv9.zip解压 然后将install_package 下面的所有东西拷贝到www目录 2.打开localhost/index.html 3.安装过程中 第3步选择全新安装 第5步选择 账户 root root root 空 email1@2.com 一个是L一个是1 4.后台管理 phpcms phpcms</p>
+<p>phpcms的安装</p>
+<ol>
+<li>将phpcmsv9.zip解压 然后将install_package 下面的所有东西拷贝到www目录</li>
+<li>打开localhost/index.html</li>
+<li>安装过程中 第3步选择全新安装 第5步选择 账户 root root root 空 email1@2.com 一个是L一个是1</li>
+<li>后台管理 phpcms phpcms</li>
+</ol>
+<p>后台入口：localhost/admin.php 前台入口：localhost/index.php</p>
+<h1 id="phpcms使用"><a href="#phpcms使用" class="headerlink" title="phpcms使用"></a>phpcms使用</h1><p>localhost/admin.php</p>
+<h2 id="什么是内容管理系统？"><a href="#什么是内容管理系统？" class="headerlink" title="什么是内容管理系统？"></a>什么是内容管理系统？</h2><p>用来制作动态网站的一个系统 phpcmsv9 把index.php公开给用户去访问 index.php是一段程序 这段程序根据得到的参数决定把哪个页面发送给用户 这段程序会在web服务器上寻找html和脚本,图片，拼接起来发送给用户</p>
+<h2 id="html文件在哪里"><a href="#html文件在哪里" class="headerlink" title="html文件在哪里?"></a>html文件在哪里?</h2><p>phpcms/templates(模板)/default/content/</p>
+<h2 id="脚本和图片在哪里"><a href="#脚本和图片在哪里" class="headerlink" title="脚本和图片在哪里?"></a>脚本和图片在哪里?</h2><p>statics/css statics/js statics/image</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">引入js,css,image</span><br><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"&#123;CSS_PATH&#125;xxx/yyy.css"</span>&gt;</span><br><span class="line">&lt;script src=<span class="string">"&#123;JS_PATH&#125;xxx/yyy.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"logo"</span>&gt;</span><br><span class="line">    &lt;img src=<span class="string">"&#123;IMG_PATH&#125;xxx/yyy.png"</span> alt=<span class="string">""</span>&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>body&gt;</span><br><span class="line">.log&#123;</span><br><span class="line">    background-image:url(<span class="regexp">/statics/im</span>ages/xxx/a.png)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="如果想改样式和结构怎么？"><a href="#如果想改样式和结构怎么？" class="headerlink" title="如果想改样式和结构怎么？"></a>如果想改样式和结构怎么？</h2><p>header.html+ index.html + footer.html 修改header.html body以下都注释掉</p>
+<style>
+</style>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"1_header"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- nav-site --&gt;</span></span><br><span class="line">    &#123;pc&#125;</span><br><span class="line">    &#123;loop&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    &#123;/pc&#125;</span><br><span class="line">    &#123;/loop&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">```html</span><br><span class="line"></span><br><span class="line">### 栏目页( 有子栏目的栏目)</span><br><span class="line">图片模型 category_picture.html</span><br><span class="line">文章模型 category.html</span><br><span class="line">商品模型 category_shangpin.html</span><br><span class="line">教师模型 category_jiaoshi.html</span><br><span class="line"></span><br><span class="line">### 栏目页(没有子栏目的栏目)</span><br><span class="line">图片模型 list_picture.html</span><br><span class="line">文章模型 list.html</span><br><span class="line">商品模型 list_shangpin.html</span><br><span class="line">教师模型 list_jiaoshi.html</span><br><span class="line"></span><br><span class="line">### 内容页</span><br><span class="line">图片模型 show_picture.html</span><br><span class="line">文章模型 show.html</span><br><span class="line">商品模型 show_shangpin.html</span><br><span class="line">教师模型 show_jiaoshi.html  </span><br><span class="line"></span><br><span class="line">## index.html -&gt; category.html -&gt; list.html -&gt; show.html</span><br><span class="line"></span><br><span class="line">```html</span><br><span class="line">取一级栏目</span><br><span class="line">&#123;pc:content action="category" catid="0"&#125;</span><br><span class="line">&#123;loop $data $r&#125;</span><br><span class="line">&#123;/loop&#125;</span><br><span class="line">&#123;/pc&#125;</span><br><span class="line"><span class="comment">&lt;!-- &lt;div class="l_header"&gt;</span></span><br><span class="line"><span class="comment">    &lt;ul&gt;</span></span><br><span class="line"><span class="comment">        &lt;li&gt;&lt;a href="&#123;siteurl($siteid)&#125;"&gt;首页&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="comment">        &#123;pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"&#125;</span></span><br><span class="line"><span class="comment">        &#123;loop $data $r&#125;</span></span><br><span class="line"><span class="comment">        &lt;li&gt;&lt;a href="&#123;$r[url]&#125;"&gt;&#123;$r[catname]&#125;&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="comment">        &#123;/loop&#125;</span></span><br><span class="line"><span class="comment">        &#123;/pc&#125;</span></span><br><span class="line"><span class="comment">    &lt;/ul&gt;</span></span><br><span class="line"><span class="comment">&lt;/div&gt; --&gt;</span></span><br><span class="line">取某个一级栏目下的二级栏目</span><br><span class="line">&#123;pc:content action="category" catid="$catid"&#125;</span><br><span class="line">&#123;loop $data $r&#125;</span><br><span class="line">&#123;/loop&#125;</span><br><span class="line">&#123;/pc&#125;</span><br><span class="line"><span class="comment">&lt;!-- &lt;div class="main"&gt;</span></span><br><span class="line"><span class="comment">    &lt;ul&gt;</span></span><br><span class="line"><span class="comment">    &#123;pc:content action="category" catid="$catid"&#125;</span></span><br><span class="line"><span class="comment">    &#123;loop $data $r&#125;</span></span><br><span class="line"><span class="comment">    &lt;li&gt;&lt;a href="&#123;$r[url]&#125;"&gt;&lt;span&gt;&#123;$r[catname]&#125;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="comment">    &#123;/loop&#125;</span></span><br><span class="line"><span class="comment">    &#123;/pc&#125;</span></span><br><span class="line"><span class="comment">    &lt;/ul&gt;</span></span><br><span class="line"><span class="comment">&lt;/div&gt; --&gt;</span></span><br><span class="line">取栏目下的内容</span><br><span class="line">&#123;pc:content action="lists" catid="$catid"&#125;</span><br><span class="line">&#123;loop $data $r&#125;</span><br><span class="line">&#123;/loop&#125;</span><br><span class="line">&#123;/pc&#125;</span><br><span class="line"><span class="comment">&lt;!-- &lt;div class="main"&gt;</span></span><br><span class="line"><span class="comment">    &lt;ul&gt;</span></span><br><span class="line"><span class="comment">        &#123;pc:content action="lists" catid="$catid"&#125;</span></span><br><span class="line"><span class="comment">        &#123;loop $data $r&#125;</span></span><br><span class="line"><span class="comment">        &lt;li&gt;&lt;a href="&#123;$r[url]&#125;"&gt;&lt;span&gt;&#123;$r[title]&#125;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="comment">        &#123;/loop&#125;</span></span><br><span class="line"><span class="comment">        &#123;/pc&#125;</span></span><br><span class="line"><span class="comment">    &lt;/ul&gt;</span></span><br><span class="line"><span class="comment">&lt;/div&gt; --&gt;</span></span><br><span class="line">取内容中的标题和文章 &#123;title&#125; &#123;content&#125;</span><br><span class="line"><span class="comment">&lt;!-- &lt;div class="main"&gt;</span></span><br><span class="line"><span class="comment">        &lt;div class="biaoti"&gt;&lt;h1&gt;&#123;$title&#125;&lt;/h1&gt;&lt;/div&gt;        </span></span><br><span class="line"><span class="comment">        &lt;div class="neirong"&gt;&lt;span&gt;&#123;$content&#125;&lt;/span&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="comment">&lt;/div&gt; --&gt;</span></span><br></pre></td></tr></table></figure>
+<p>从推荐位取东西 {pc:content action=”position” posid=”1”} {loop $data $r} {/loop} {/pc}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;php print_r(get_defined_vars() )&#125;  </span><br><span class="line">//输出页面中所有能使用的变量</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;php print_r($r)&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="在每个页面中我们能使用哪些php变量"><a href="#在每个页面中我们能使用哪些php变量" class="headerlink" title="在每个页面中我们能使用哪些php变量"></a>在每个页面中我们能使用哪些php变量</h2><p>index.html $CATEGORYS;</p>
+<p>category.html $CATEGORYS $catid= 点击的当前一级栏目的id list.html $CATEGORYS $catid= 点击的当前栏目的id show.html $CATEGORYS $catid= 这个内容属于的那个栏目的id 数据模型中的字段 {title} {content}</p>
+<p>moreinfo=”1” 取更多内容 thumb 缩略图 description 描述 {template “content”,”header”}</p>
+<p>list {$r[title]} {$r[thumb]} {$r[url]} show {$title} {$url} {$thumb}</p>
+<p>lis.hide().eq(this).show()</p>
+<p>建立模型</p>
+<ol>
+<li>新建三个 category_xxx.html list_xxx.html show_xxx.html</li>
+<li>模型管理–&gt;添加模型–&gt;添加字段</li>
+<li>添加栏目 添加内容</li>
+<li>pc atcion=lists moreinfo=”1”</li>
+</ol>
+<p>index.php =&gt; h+index+f</p>
+<p>创建模型,添加字段</p>
+<p>nav-list {$r[catdir]} {if $r[catid] == $catid}active{/if} {$r[catdir]}</p>
+<p>catud=”$CATEGORYS[catid][‘parentid’]} 取父元素</p>
+<p>.center{ width:980px; margin:0 auto; boreder:1px solid black; } .center:after{ clear:both; display:block; } .header{ height:100px; background:red; }</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/phpcms/" rel="tag"># phpcms</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/01/01/ME-HTML/HTML-form/" rel="next" title="form">
+                <i class="fa fa-chevron-left"></i> form
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/01/30/ME-HTML/CSS-scroll取消默认滚动条/" rel="prev" title="scroll取消默认滚动条">
+                scroll取消默认滚动条 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <img class="site-author-image" itemprop="image" src="/images/avator.png" alt="Painter Sun">
+          
+            <p class="site-author-name" itemprop="name">Painter Sun</p>
+            <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives">
+            
+                <span class="site-state-item-count">70</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/yourname" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>GitHub</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#oneThink简单而强大的内容管理框架-让WEB开发更快速"><span class="nav-number">1.</span> <span class="nav-text">oneThink简单而强大的内容管理框架,让WEB开发更快速!</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备开发"><span class="nav-number">1.1.</span> <span class="nav-text">准备开发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发步骤"><span class="nav-number">1.2.</span> <span class="nav-text">开发步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署阿里云"><span class="nav-number">1.3.</span> <span class="nav-text">部署阿里云</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#其他后台模板安装与之一样"><span class="nav-number">1.3.1.</span> <span class="nav-text">其他后台模板安装与之一样</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#phpcms使用"><span class="nav-number">2.</span> <span class="nav-text">phpcms使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是内容管理系统？"><span class="nav-number">2.1.</span> <span class="nav-text">什么是内容管理系统？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#html文件在哪里"><span class="nav-number">2.2.</span> <span class="nav-text">html文件在哪里?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#脚本和图片在哪里"><span class="nav-number">2.3.</span> <span class="nav-text">脚本和图片在哪里?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如果想改样式和结构怎么？"><span class="nav-number">2.4.</span> <span class="nav-text">如果想改样式和结构怎么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在每个页面中我们能使用哪些php变量"><span class="nav-number">2.5.</span> <span class="nav-text">在每个页面中我们能使用哪些php变量</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2016 &mdash; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Painter Sun</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cytcPpAsu';
+      var conf = '0c6448a3466642354028801bc68fb5dc';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+  
+
+
+
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.2"></script>
+
+
+  
+
+</body>
+</html>

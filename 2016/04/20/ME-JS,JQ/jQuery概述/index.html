@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next mist" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="jq,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2">
+
+
+
+
+
+
+<meta name="keywords" content="jq">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery概述">
+<meta property="og:url" content="http://sywsywsyw.github.io/sxiaobiblog/2016/04/20/ME-JS,JQ/jQuery概述/index.html">
+<meta property="og:site_name" content="Painter Sun">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-03-20T06:40:10.471Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jQuery概述">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://sywsywsyw.github.io/sxiaobiblog/2016/04/20/ME-JS,JQ/jQuery概述/">
+
+
+
+
+
+  <title>jQuery概述 | Painter Sun</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Painter Sun</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">种一棵树最好的时间是十年前，其次是现在。</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://sywsywsyw.github.io/sxiaobiblog/2016/04/20/ME-JS,JQ/jQuery概述/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Painter Sun">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Painter Sun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">jQuery概述</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-20T22:31:36+08:00">
+                2016-04-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JS-JQ/" itemprop="url" rel="index">
+                    <span itemprop="name">JS/JQ</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2016/04/20/ME-JS,JQ/jQuery概述/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2016/04/20/ME-JS,JQ/jQuery概述/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<a id="more"></a>
+<h1 id="JQ"><a href="#JQ" class="headerlink" title="JQ"></a>JQ</h1><h3 id="前端开发在开始写代码之前，一般首先要解决的两个问题"><a href="#前端开发在开始写代码之前，一般首先要解决的两个问题" class="headerlink" title="前端开发在开始写代码之前，一般首先要解决的两个问题"></a>前端开发在开始写代码之前，一般首先要解决的两个问题</h3><h4 id="1-解决js标准本身的兼容性问题-es5shim-js"><a href="#1-解决js标准本身的兼容性问题-es5shim-js" class="headerlink" title="1.解决js标准本身的兼容性问题 es5shim.js"></a>1.解决js标准本身的兼容性问题 es5shim.js</h4><h4 id="2-解决DOM扩展部分的兼容性问题-jQuery库"><a href="#2-解决DOM扩展部分的兼容性问题-jQuery库" class="headerlink" title="2.解决DOM扩展部分的兼容性问题 jQuery库"></a>2.解决DOM扩展部分的兼容性问题 jQuery库</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//第一个引入的js库用来解决兼容性问题.</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"jquery.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"header.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"footer.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>分开引用的js文件一定要解决的一个问题<br>不能污染全局作用域</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> getEle = <span class="function"><span class="keyword">function</span>(<span class="params">selector</span>)</span>&#123; <span class="comment">//定义一个变量 参数为selector</span></span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">document</span>.querySelector)&#123; <span class="comment">//判断有没有这个方法</span></span><br><span class="line"><span class="keyword">return</span> <span class="built_in">document</span>.querySelector(selector)</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="built_in">console</span>.warnning(<span class="string">'浏览器不支持'</span>);</span><br><span class="line"><span class="built_in">console</span>.error(<span class="string">'请更换浏览器'</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var el = getElement(&apos;.abc&apos;)</span><br><span class="line">var getElement = function()&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面的这种写法的两个问题<br>1.用户需要学习一门全新的语法<br>2.用户需要避开那个库中的所有全局变量</p>
+<p>DOM对象的存储方式 是怎么存储的?</p>
+<p>可以使用查询console.dir()</p>
+<p>DOM集合的存储方式 是怎么存储的?</p>
+<p>可以使用查询console.dir()</p>
+<p>jQuery对象的存储方式 是怎么存储的?</p>
+<p>可以使用查询console.dir()</p>
+<p>在Obj对象中存储了100+方法</p>
+<!-- console.dir( $('.item')) -->
+<h2 id="jQuery-实现原理"><a href="#jQuery-实现原理" class="headerlink" title="jQuery 实现原理"></a>jQuery 实现原理</h2><p>1.new的时候究竟发生了什么？<br>2.对象的原型链<br>3.函数对象身上一个属性(prototype)和一个方法(call)<br>4.this的指向</p>
+<p>jq中的大多数方法都会返回一个jq集合<br>5. 操作集合的方法就是原集合<br>6. 对集合做过过滤或者导致集合改变的一些方法返回改变后的是Query集合<br>7. $ .append 这一类方法，当涉及到创建dom对象时，他们会返回创建完成后的一个Jquery 集合<br>所以在jq中经常使用链式调用<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#one h1'</span>)</span><br><span class="line">.width(<span class="number">100</span>)</span><br><span class="line">.height(<span class="number">200</span>)</span><br><span class="line">.css(&#123;<span class="attr">color</span>:<span class="string">'red'</span>&#125;)</span><br><span class="line">.position();在这里终止</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span>(<span class="params">selector</span>)</span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>)</span><br><span class="line"><span class="keyword">var</span> els = <span class="built_in">document</span>.querySelectorAll(selector)</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;els.length;i++)&#123;</span><br><span class="line"><span class="keyword">this</span>[i] = els[i]</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">this</span>.length = els.length</span><br><span class="line">&#125;</span><br><span class="line">add.prototype.addClass = <span class="function"><span class="keyword">function</span>(<span class="params">str</span>)</span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(add)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>)</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">this</span>.length;i++)&#123;</span><br><span class="line"><span class="keyword">this</span>[i].classList.add(str)</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">add.prototype.removeClass = <span class="function"><span class="keyword">function</span>(<span class="params">str</span>)</span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(add)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>)</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">this</span>.length;i++)&#123;</span><br><span class="line"><span class="keyword">this</span>[i].classList.remove(str)</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> $ = <span class="function"><span class="keyword">function</span>(<span class="params">selector</span>)</span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">new</span> add(selector)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">window</span>.$ = $;</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+<p>DOM对象<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> el = &#123;</span><br><span class="line">offsetWidth:<span class="number">12</span>,</span><br><span class="line">_proto_: (HTMLDivElement)</span><br><span class="line">title:<span class="string">'aa'</span>;</span><br><span class="line">_proto_: HTMLElement</span><br><span class="line">src:<span class="string">'xxx.png'</span></span><br><span class="line">_proto_:Element</span><br><span class="line">getAttribute:fn,</span><br><span class="line">_proto_:Node</span><br><span class="line">nodeName:<span class="string">"IMG"</span>,</span><br><span class="line">_proto_</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>DOM集合<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> els = &#123;</span><br><span class="line"><span class="number">0</span>:el,</span><br><span class="line"><span class="number">1</span>:el,</span><br><span class="line"><span class="number">2</span>:el,</span><br><span class="line"><span class="number">3</span>:el,</span><br><span class="line">length:<span class="number">4</span>,</span><br><span class="line">_proto_:(并没有多少有价值的方法或属性)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>jQuery对象<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> jQuery = &#123;</span><br><span class="line"><span class="number">0</span>:div,</span><br><span class="line"><span class="number">1</span>:div,</span><br><span class="line"><span class="number">2</span>:div,</span><br><span class="line">length:<span class="number">3</span>,</span><br><span class="line">_proto__:</span><br><span class="line">addClass:fn,</span><br><span class="line">removeClass:fn,</span><br><span class="line">toggleClass:fn,</span><br><span class="line">css:fn,</span><br><span class="line">prop:fn</span><br><span class="line">...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>jQuery 是一个javascript库，<br>库，仓库，可以简单理解成一堆以某种方式组织起来的，方便，易用的函数的集合</p>
+<p>jQuery库的优点<br>1、全面解决PC端的兼容性优点<br>2、语法精炼，性能好，插件库庞大，非常多。</p>
+<p>jQuery版本号之间的区别<br>1.xx-&gt;1.12 支持IE6-8<br>2.0 彻底放弃了对IE&lt;10的支持，转向移动端</p>
+<p>$ 函数能接受的参数类型以及对应的返回值</p>
+<ul>
+<li>null jQuery</li>
+<li>数组 对象</li>
+<li>选择器</li>
+<li>html标签</li>
+<li>DOM对象</li>
+<li>DOM集合</li>
+<li>函数</li>
+</ul>
+<p>// javascript中构建一个对象的4种方式<br>// 1. 字面量的形式<br>var obj = {<br>“a”:12,<br>“b”:234<br>}<br>// 根据字面量的形式创建的对象<br>// 原型就是 Obj.prototype 这个对象<br>// 功能性较少<br>// 2.构造函数<br>var obj2 = new Object()<br>obj2.a = 12;<br>//一般不用 太麻烦<br>// 3.利用 Obj.create() 方法<br>// 从一个已有的对象开始构建新的对象<br>var mao = {<br>zhuazi:4,<br>erduo:1,<br>nao:function(){<br>}<br>}<br>var bosimao = Object.create(mao);<br>bosimao.dianjiaojian = function(){<br>}<br>// 4. 用new 关键字来构造对象<br>var mao = function(){<br>this.zhuazi = 4;<br>this.erduo = 1;<br>}<br>// 每个函数对象身上都有一个其他对象不具备的属性，叫做’prototype’<br>var bosimao = new mao()<br>// 1.构建一个空对象()<br>// 2.mao.call({}) 把mao那个函数作为这个空对象的临时方法调用了一次<br>// {zhuazi:4,erduo:1}<br>// 3.把mao那个函数对象身上的prototype那个属性拿来，作为自己原型链上的一条<br>// 4.返回最终的对象</p>
+<p>##jquery中的方法</p>
+<p>1.直接出现在是Query函数对象身上，是一些基础性质的工具函数<br>2.出现在jqery.fn函数对象的原型解放链上，用来批量或单个操作jquery集合中的dom对象</p>
+<p>大部分方法重载很严重<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'li'</span>).css(<span class="string">'width'</span>); <span class="comment">//取出选中集合中第一个元素和宽度 +px</span></span><br><span class="line">$(<span class="string">'li'</span>).css(<span class="string">'width'</span>,<span class="number">200</span>); <span class="comment">//设置集合中所有的元素的宽度为200px</span></span><br><span class="line">$(<span class="string">'li'</span>).css(&#123;<span class="attr">width</span>:<span class="number">200</span>,<span class="attr">height</span>:<span class="number">300</span>;border:<span class="string">'1px solid black'</span>&#125;);</span><br><span class="line"><span class="comment">// 给选中的集合中所有的元素，加上对象中的所有样式</span></span><br><span class="line">给集合中每一个的元素添加<span class="string">'width'</span>这个属性，意味着jquery会对集合中的每一个元素调用用户传入的回调函数，一个是当前元素在集合中在集合中的位置，（<span class="number">0</span>，<span class="number">1</span>，<span class="number">2</span>，<span class="number">3</span>，<span class="number">4</span>），另外一个是当前元素现在的<span class="string">'width'</span>值</span><br><span class="line">$(<span class="string">'li'</span>).css(<span class="string">'width'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="built_in">Math</span>.random()</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'green'</span>]</span><br><span class="line">$(<span class="string">'li'</span>).css(&#123;</span><br><span class="line">width:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span> <span class="built_in">Math</span>.random();&#125;</span><br><span class="line">height:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span> <span class="built_in">Math</span>.random();&#125;</span><br><span class="line">backgroundColor:<span class="function"><span class="keyword">function</span>(<span class="params">i</span>)</span>&#123;<span class="keyword">return</span> <span class="built_in">Math</span>.colors(i);&#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">jQuery库设计理念</span><br><span class="line"><span class="number">1.</span>解决兼容性问题</span><br><span class="line"><span class="number">2.</span>让从页面中查找元素变得更多轻松</span><br><span class="line"><span class="number">3.</span>提供很多内置方法，使对dom集合的操作 变得更轻松</span><br><span class="line"></span><br><span class="line">css</span><br><span class="line"></span><br><span class="line">addClass 这些方法通过内置的遍历去操作每一个dom元素 jQuery 不希望我们在循环中使用这些内置方法</span><br><span class="line"><span class="number">1.</span>给集合中的每一个dom元素设置同样的值或行为</span><br><span class="line"><span class="number">2.</span>给集合中的每一个dom对象设置不同的值或行为</span><br><span class="line"><span class="string">``</span><span class="string">`javascript</span></span><br><span class="line"><span class="string">var els = document.querySelectorAll('.item');</span></span><br><span class="line"><span class="string">for(var i=0;i&lt;els.length;i++)&#123;</span></span><br><span class="line"><span class="string">$(els[i].addClass('aa'));</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">var colors = ['red','blue','green','yellow','pink','red','blue','green']</span></span><br><span class="line"><span class="string">$('.main-content article').css('backgroundColor',function(i,w)&#123;</span></span><br><span class="line"><span class="string">return colors[i]</span></span><br><span class="line"><span class="string">&#125;)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">$('li').attr('data-id')</span></span><br><span class="line"><span class="string">$('li').attr('data-id','12')</span></span><br><span class="line"><span class="string">$('li').attr('data-id',function()&#123;return Math.random();&#125;)</span></span><br><span class="line"><span class="string">$('li').attr(&#123;data-id:12,data-src:'img.png'&#125;)</span></span><br><span class="line"><span class="string">$('li').attr(&#123;</span></span><br><span class="line"><span class="string">data-id:function()&#123;</span></span><br><span class="line"><span class="string">return Math.random()&#125;</span></span><br><span class="line"><span class="string">data-src:'img.png'</span></span><br><span class="line"><span class="string">&#125;)</span></span><br><span class="line"><span class="string">以空格分开的字符串</span></span><br></pre></td></tr></table></figure></p>
+<p>节点的操作</p>
+<p>*.clone() 拷贝后得到对象父元素的信息</p>
+<p>on 添加事件的重载</p>
+<p>$(‘.item’).on(‘click’,function(){<br>console.log(1)}<br>//一次绑定的多个事件 用一个处理函数<br>$(‘.item’).on(‘click mouseleave mouseenter’,clickHandler)</p>
+<p>//一个事件绑定不同处理函数<br>var fn1 = function(){}<br>var fn2 = function(){}<br>var fn3 = function(){}<br>$(‘.item’).on({‘click’:fn1,<br>‘mouseleave’:fn2,<br>‘mouseenter’:fn3})绑定3个不同的事件<br>})<br>//事件的委托方式<br>$(‘#ul’).on(‘click’,’li’,function(){</p>
+<p>})<br>//事件的委托另外的方式<br>$(‘#ul’).delegate(‘li’,’click’,function(){</p>
+<p>})<br>jQuery添加事件的注意事项</p>
+<p>1. on()的几种添加方式</p>
+<ul>
+<li>一次绑定多个事件，用同一个处理函数</li>
+<li>一次绑定多个事件，用不同的处理函数<br>2. 事件委托的添加方式(只能使用 on 和 delegate 方法)<br>3. mouseover mouseout 方法由于事件冒泡带来多次触发 一般我们使用 mouseenter 和 mouseleave 以及 hover (hover 是对 mouseenter 和<br>mouseleave)<br>4. focus blur = focusin focusout 同上 后面的两个不会冒泡<br>5. ready() 事件一般用 $(function(){})来代替<br>内部的处理方式是 document.addEventListener(‘DOMContentLoaded’);如果文档结构(不包含图片，脚步等)已经加载完成，直接运行函数<br>如果还没有加载完成 把函数绑定到’DOMContentLoaded’<br>6. trigger()会模仿浏览器触发事件(会冒泡) triggerHandler (不会冒泡)<br>7. 所有事件添加函数的返回值要绑定事件的那个jQuery对象，所以可以继续链式调用<br>$(‘.item’).click(function(){console.log(1).css()})</li>
+</ul>
+<p>jQuery中的事件对象</p>
+<p>继承 原生的事件对象 e.keyCode e.altKey e.target e.clientX</p>
+<ul>
+<li>e.currentTarget</li>
+<li>e.data</li>
+</ul>
+<p>var xs = function(){<br>var dict = {x:1,y:2}<br>$($0).on(‘click’,dict,function(e){<br>e.preventDefault();<br>console.log(e.data);<br>})<br>setInterval(function(){<br>dict = {x:Math.random(),y:Math.random()};<br>},1000)<br>}</p>
+<p>$(‘li’).on(‘click’,{x:1,y:2},function(e){<br>console.log(e.data)<br>})<br>$(‘li’).click({x:1,y:2},function(e){<br>console.log(e.data)<br>})</p>
+<ul>
+<li>e.namespace<br>$(‘li’).on({‘click’:function(){consoel.log(1);},<br>{‘click.lunbo’:function(e){console.log(2,e.namepace);}}<br>)<br>$(‘li’).trigger(‘click.lunbo’)</li>
+</ul>
+<p>var dict = {39:’xia’,40:’you’}<br>$(document).on(‘click’,dict,function(){<br>console.log(e.data)<br>})<br>$($0).on(‘click.lunbo’,function(){<br>console.log(e.namespace)<br>});</p>
+<p>停止当前队列的四种方式<br>.stop()不加参数是停止当前的进行的下一个<br>.stop(true)第一个是否清除队列<br>.stop(true,true) 不加就没效果 不清除队列 第一个是否清除队列 第二个是否到达最终状态<br>.finish 停止整个动画 到动画的最终状态 不带队列<br>.delay() 一个延迟<br>.clearQueue 清楚后续动画，但不影响当前</p>
+<p>$.fx.off = true 关掉所有的动画<br>$.fx.interval = 13 默认每隔13毫秒执行一次动画</p>
+<p>异步编程需要注意的问题：<br>1.理清代码的执行时间线;</p>
+<h3 id="同步"><a href="#同步" class="headerlink" title="同步"></a>同步</h3><ul>
+<li>正常的函数</li>
+<li>正常的赋值</li>
+<li>正常的逻辑运算，普通运算<br>```</li>
+</ul>
+<p>###</p>
+<ul>
+<li>事件</li>
+<li>动画（setInterval setTimeout）</li>
+<li>Ajax(发送网络请求) 都会把我们带入异步</li>
+</ul>
+<p>get获取一些安全性低的东西</p>
+<p>post 弄一些安全性高的东西</p>
+<p>Math.max(3,4,5)</p>
+<p>Math.max.call(null,3,4,5)</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/jq/" rel="tag"># jq</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/03/ME-工具/快速生成html标签/" rel="next" title="sublime快速生成html标签(emmet语法)">
+                <i class="fa fa-chevron-left"></i> sublime快速生成html标签(emmet语法)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/05/26/ME-MOB/移动端布局rem/" rel="prev" title="移动端布局 字体选择 rem">
+                移动端布局 字体选择 rem <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <img class="site-author-image" itemprop="image" src="/images/avator.png" alt="Painter Sun">
+          
+            <p class="site-author-name" itemprop="name">Painter Sun</p>
+            <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives">
+            
+                <span class="site-state-item-count">70</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/yourname" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>GitHub</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JQ"><span class="nav-number">1.</span> <span class="nav-text">JQ</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前端开发在开始写代码之前，一般首先要解决的两个问题"><span class="nav-number">1.0.1.</span> <span class="nav-text">前端开发在开始写代码之前，一般首先要解决的两个问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-解决js标准本身的兼容性问题-es5shim-js"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">1.解决js标准本身的兼容性问题 es5shim.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-解决DOM扩展部分的兼容性问题-jQuery库"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">2.解决DOM扩展部分的兼容性问题 jQuery库</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery-实现原理"><span class="nav-number">1.1.</span> <span class="nav-text">jQuery 实现原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#同步"><span class="nav-number">1.1.1.</span> <span class="nav-text">同步</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2016 &mdash; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Painter Sun</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cytcPpAsu';
+      var conf = '0c6448a3466642354028801bc68fb5dc';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+  
+
+
+
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.2"></script>
+
+
+  
+
+</body>
+</html>

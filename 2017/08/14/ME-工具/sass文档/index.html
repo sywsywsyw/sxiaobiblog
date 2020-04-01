@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next mist" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="图片上传,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2">
+
+
+
+
+
+
+<meta name="keywords" content="图片上传">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sass文档">
+<meta property="og:url" content="http://sywsywsyw.github.io/sxiaobiblog/2017/08/14/ME-工具/sass文档/index.html">
+<meta property="og:site_name" content="Painter Sun">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-03-20T06:40:10.482Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="sass文档">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://sywsywsyw.github.io/sxiaobiblog/2017/08/14/ME-工具/sass文档/">
+
+
+
+
+
+  <title>sass文档 | Painter Sun</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Painter Sun</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">种一棵树最好的时间是十年前，其次是现在。</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://sywsywsyw.github.io/sxiaobiblog/2017/08/14/ME-工具/sass文档/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Painter Sun">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Painter Sun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">sass文档</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-14T22:42:27+08:00">
+                2017-08-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2017/08/14/ME-工具/sass文档/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2017/08/14/ME-工具/sass文档/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<a id="more"></a> <a href="http://nate-river.github.io/blog/" target="_blank" rel="noopener">nate-river</a><br><br># <strong>Sass</strong><br><br>May 8, 2016<br><br>## <strong>1. Sass简介</strong><br><br>Sass 是一种css预处理器,CSS 预处理器定义了一种新的语言，其基本思想是，用一种专门的编程语言，为 CSS 增加了一些编程的特性，将 CSS 作为目标生成文件，然后开发者就只要使用这种语言进行编码工作。<br><br>除了sass还有一些其他常见的预处理语言<br><br>LESS<br><br>Stylus<br><br>Sass 有时候也被称为 SCSS,两者之间不同之处有以下两点：<br><br>文件扩展名不同，Sass 是以”.sass”后缀为扩展名，而 SCSS 是以”.scss”后缀为扩展名<br><br>语法书写方式不同，Sass 是以严格的缩进式语法规则来书写，不带大括号({})和分号(;)，而 SCSS 的语法书写和我们的 CSS 语法书写方式非常类似。<br><br>来看一个示例：<br><br>/ <em>Sass 语法</em> /$font-stack: Helvetica, sans-serif$primary-color: #333body<br><br>font: 100% $font-stack<br><br>color: $primary-color<br><br>/ <em>Scss 语法</em> /$font-stack: Helvetica, sans-serif;$primary-color: #333;body {<br><br>font: 100% $font-stack;<br><br>color: $primary-color;}<br><br>编译出来的 CSS<br><br>body {<br><br>font: 100% Helvetica, sans-serif;<br><br>color: #333;}<br><br>scss文件中可以完全像写正常的css那样去写.<br><br>## <strong>2. sass安装</strong><br><br>npm install -g node-sass<br><br>node-sass -w xxx.scss xxx.css –style expanded<br><br>node-sass 参数:<br><br>-w, –watch Watch a directory or file<br><br>-r, –recursive Recursively watch directories or files<br><br>-o, –output Output directory<br><br>-x, –omit-source-map-url Omit source map URL comment from output<br><br>-i, –indented-syntax Treat data from stdin as sass code (versus scss)<br><br>-q, –quiet Suppress log output except on error<br><br>-v, –version Prints version info<br><br>–output-style CSS output style (nested | expanded | compact | compressed)<br><br>–indent-type Indent type for output CSS (space | tab)<br><br>–indent-width Indent width; number of spaces or tabs (maximum value: 10)<br><br>–linefeed Linefeed style (cr | crlf | lf | lfcr)<br><br>–source-comments Include debug info in output<br><br>–source-map Emit source map<br><br>–source-map-contents Embed include contents in map<br><br>–source-map-embed Embed sourceMappingUrl as data URI<br><br>–source-map-root Base path, will be emitted in source-map as is<br><br>–include-path Path to look for imported files<br><br>–follow Follow symlinked directories<br><br>–precision The amount of precision allowed in decimal numbers<br><br>–importer Path to .js file containing custom importer<br><br>–functions Path to .js file containing custom functions<br><br>–help Print usage info<br><br>## <strong>3. Sass的基本特性</strong><br><br>### <strong>变量</strong><br><br>$brand-primary : darken(#428bca, 6.5%) !default;<br><br>$btn-primary-color : #fff !default;<br><br>$btn-primary-bg : $brand-primary !default;<br><br>$btn-primary-border : darken($btn-primary-bg, 5%) !default;<br><br>.btn-primary {<br><br>background-color: $btn-primary-bg;<br><br>color: $btn-primary-color;<br><br>border: 1px solid $btn-primary-border;}<br><br>$baseLineHeight: 2;<br><br>$baseLineHeight: 1.5 !default;<br><br>body{<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">line-height: $baseLineHeight;&#125;</span><br></pre></td></tr></table></figure>
+<p>/ <em>局部变量</em> /$color: orange !default;.block {</p>
+<p>color: $color;}em {</p>
+<p>$color: red;</p>
+<p>a {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">color: $color;</span><br></pre></td></tr></table></figure>
+<p>}}span {</p>
+<p>color: $color;}</p>
+<h3 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a><strong>嵌套</strong></h3><p>nav {</p>
+<p>a {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">color: red;</span><br><span class="line"></span><br><span class="line">header &amp; &#123;</span><br><span class="line"></span><br><span class="line">  color:green;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>} }</p>
+<p>.box {</p>
+<p>border: {</p>
+<p>top: 1px solid red;</p>
+<p>bottom: 1px solid green;</p>
+<p>}}</p>
+<p>.clearfix{</p>
+<p>&amp;:before,</p>
+<p>&amp;:after {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">content:&quot;&quot;;</span><br><span class="line"></span><br><span class="line">display: table;</span><br></pre></td></tr></table></figure>
+<p>}</p>
+<p>&amp;:after {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">clear:both;</span><br><span class="line"></span><br><span class="line">overflow: hidden;</span><br></pre></td></tr></table></figure>
+<p>}}</p>
+<p>不要无节制嵌套,一切都根据实际情况判断</p>
+<h3 id="混合宏"><a href="#混合宏" class="headerlink" title="混合宏"></a><strong>混合宏</strong></h3><p>@mixin border-radius{</p>
+<p>-webkit-border-radius: 5px;</p>
+<p>border-radius: 5px;}button{</p>
+<p>@include border-radius;}</p>
+<p>@mixin border-radius($radius:5px){</p>
+<p>-webkit-border-radius: $radius;</p>
+<p>border-radius: $radius;}.nav{</p>
+<p>@include border-radius;}.box{</p>
+<p>@include border-radius(3px);}</p>
+<p>@mixin center($width,$height){</p>
+<p>width: $width;</p>
+<p>height: $height;</p>
+<p>position: absolute;</p>
+<p>top: 50%;</p>
+<p>left: 50%;</p>
+<p>margin-top: -($height) / 2;</p>
+<p>margin-left: -($width) / 2;}.box-center {</p>
+<p>@include center(500px,300px);}</p>
+<p>@mixin box-shadow($shadows…){</p>
+<p>@if length($shadows) &gt;= 1 {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-webkit-box-shadow: $shadows;</span><br><span class="line"></span><br><span class="line">box-shadow: $shadows;</span><br></pre></td></tr></table></figure>
+<p>} @else {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$shadows: 0 0 2px rgba(#000,.25);</span><br><span class="line"></span><br><span class="line">-webkit-box-shadow: $shadow;</span><br><span class="line"></span><br><span class="line">box-shadow: $shadow;</span><br></pre></td></tr></table></figure>
+<p>}}.box {</p>
+<p>@include box-shadow(0 0 1px rgba(#000,.5),0 0 2px rgba(#000,.2));}</p>
+<p>混合宏会生成冗余代码</p>
+<h3 id="扩展-继承"><a href="#扩展-继承" class="headerlink" title="扩展/继承"></a><strong>扩展/继承</strong></h3><p>.btn {</p>
+<p>border: 1px solid #ccc;</p>
+<p>padding: 6px 10px;</p>
+<p>font-size: 14px;}</p>
+<p>.btn-primary {</p>
+<p>background-color: #f36;</p>
+<p>color: #fff;</p>
+<p>@extend .btn;}</p>
+<p>.btn-second {</p>
+<p>background-color: orange;</p>
+<p>color: #fff;</p>
+<p>@extend .btn;}</p>
+<p>不会生成冗余代码</p>
+<h3 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a><strong>占位符</strong></h3><p>%mt5 {</p>
+<p>margin-top: 5px;}%pt5{</p>
+<p>padding-top: 5px;}.btn {</p>
+<p>@extend %mt5;</p>
+<p>@extend %pt5;}</p>
+<p>mt5 和 pt5 并不会生成最终代码</p>
+<h3 id="插值"><a href="#插值" class="headerlink" title="插值#{}"></a><strong>插值#{}</strong></h3><p>允许在#{}内部解析变量</p>
+<p>$properties: (margin, padding);@mixin set-value($side, $value) {</p>
+<p>@each $prop in $properties {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#&#123;$prop&#125;-#&#123;$side&#125;: $value;</span><br></pre></td></tr></table></figure>
+<p>}}.login-box {</p>
+<p>@include set-value(top, 14px);}</p>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a><strong>注释</strong></h3><p>类似 CSS 的注释方式，使用 “/ <em>“开头，结属使用 “</em>/ “</p>
+<p>类似 JavaScript 的注释方式，使用”//“</p>
+<p>两者区别，前者会在编译出来的 CSS 显示，后者在编译出来的 CSS 中不会显示</p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a><strong>数据类型</strong></h3><p>Sass 和 JavaScript 语言类似，也具有自己的数据类型，在 Sass 中包含以下几种数据类型：</p>
+<p>数字: 如，1、 2、 13、 10px；</p>
+<p>字符串：有引号字符串或无引号字符串，如，”foo” ‘bar’ baz；</p>
+<p>颜色：如，blue, #04a3f9, rgba(255,0,0,0.5);</p>
+<p>布尔型：如，true, false；</p>
+<p>空值：如，null；</p>
+<p>值列表：用空格或者逗号分开，如，1.5em 1em 0 2em , Helvetica, Arial, sans-serif</p>
+<h3 id="运算"><a href="#运算" class="headerlink" title="运算"></a><strong>运算</strong></h3><p>.box {</p>
+<p>width: 20px + 8in;}$full-width: 960px;$sidebar-width: 200px;.content {</p>
+<p>width: $full-width - $sidebar-width;}.box {</p>
+<p>width: 10px * 2;}.box {</p>
+<p>width: (100px / 2); }p {</p>
+<p>font: 10px/8px; // 纯 CSS，不是除法运算 $width: 1000px;</p>
+<p>width: $width/2; // 使用了变量，是除法运算 width: round(1.5)/2; // 使用了函数，是除法运算 height: (500px/2); // 使用了圆括号，是除法运算 margin-left: 5px + 8px/2px; // 使用了加（+）号，是除法运算}.box {</p>
+<p>width: ((220px + 720px) - 11 * 20 ) / 12 ; }p {</p>
+<p>color: #010203 + #040506;</p>
+<p>background-color: #010203 * 2;}</p>
+<p>$content: “Hello” + “” + “Sass!”;.box:before {</p>
+<p>content: “ #{$content} “;}</p>
+<h2 id="4-Sass高级特性"><a href="#4-Sass高级特性" class="headerlink" title="4. Sass高级特性"></a><strong>4. Sass高级特性</strong></h2><h3 id="if"><a href="#if" class="headerlink" title="@if"></a><strong>@if</strong></h3><p>@mixin blockOrHidden($boolean:true) {</p>
+<p>@if $boolean {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">display: block;</span><br></pre></td></tr></table></figure>
+<p>}</p>
+<p>@else {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">display: none;</span><br></pre></td></tr></table></figure>
+<p>}}.block {</p>
+<p>@include blockOrHidden;}.hidden{</p>
+<p>@include blockOrHidden(false);}</p>
+<h3 id="for"><a href="#for" class="headerlink" title="@for"></a><strong>@for</strong></h3><p>@for $i from</p>
+<start> through <end>@for $i from <start> to <end>@for $i from 1 through 3 {</end></start></end></start>
+
+<p>.item-#{$i} { width: 2em * $i; }}@for $i from 1 to 3 {</p>
+<p>.item-#{$i} { width: 2em * $i; }}</p>
+<p>$grid-prefix: span !default;$grid-width: 60px !default;$grid-gutter: 20px !default;</p>
+<p>%grid {</p>
+<p>float: left;</p>
+<p>margin-left: $grid-gutter / 2;</p>
+<p>margin-right: $grid-gutter / 2;}@for $i from 1 through 12 {</p>
+<p>.#{$grid-prefix}#{$i}{</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">width: $grid-width * $i + $grid-gutter * ($i - 1);</span><br><span class="line"></span><br><span class="line">@extend %grid;</span><br></pre></td></tr></table></figure>
+<p>} }</p>
+<h3 id="each"><a href="#each" class="headerlink" title="@each"></a><strong>@each</strong></h3><p>$list: adam john wynn mason kuroir; //$list 就是一个列表@mixin author-images {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@each $author in $list &#123;</span><br><span class="line"></span><br><span class="line">    .photo-#&#123;$author&#125; &#123;</span><br><span class="line"></span><br><span class="line">        background: url(&quot;/images/avatars/#&#123;$author&#125;.png&quot;) no-repeat;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;&#125;.author-bio &#123;</span><br><span class="line"></span><br><span class="line">@include author-images;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5-Sass中的函数"><a href="#5-Sass中的函数" class="headerlink" title="5. Sass中的函数"></a><strong>5. Sass中的函数</strong></h3><p>@function double($n) {</p>
+<p>@return $n * 2;}#sidebar {</p>
+<p>width: double(5px);}</p>
+<p>全部的内置函数</p>
+<p>字符串函数</p>
+<p>unquote</p>
+<p>quote</p>
+<p>To-upper-case</p>
+<p>To-lower-case</p>
+<p>percentage</p>
+<p>.footer{</p>
+<p>width : percentage(.2)}</p>
+<p>round</p>
+<p>ceil</p>
+<p>floor</p>
+<p>abs</p>
+<p>min</p>
+<p>max</p>
+<p>random</p>
+<p>列表函数</p>
+<p>length 取列表数据的长度</p>
+<p>nth (10px 20px 30px, 1) 会取值</p>
+<p>join join(10px 20px, 30px 40px)</p>
+<p>append append(10px 20px ,30px)</p>
+<p>zip zip(1px 2px 3px,solid dashed dotted,green blue red)</p>
+<p>index index(1px solid red, solid)</p>
+<p>type-of type-of(100)</p>
+<p>unit 取单位</p>
+<p>unitless 判断一个值是否带有单位</p>
+<p>comparable 判断两个数是否可以进行加减合并</p>
+<p>if(true,1px,2px)</p>
+<ul>
+<li>Maps 函数</li>
+</ul>
+<p>map-get</p>
+<p>map-has-key</p>
+<p>map-keys</p>
+<p>map-values</p>
+<p>map-merge</p>
+<p>map-remove</p>
+<p>keywords</p>
+<p>$map: (</p>
+<p>$key1: value1,</p>
+<p>$key2: value2,</p>
+<p>$key3: value3)</p>
+<p>$map: (</p>
+<p>key1: value1,</p>
+<p>key2: (</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">key-1: value-1,</span><br><span class="line"></span><br><span class="line">key-2: value-2,</span><br></pre></td></tr></table></figure>
+<p>),key3: value3);</p>
+<p>$theme-color: (</p>
+<p>default: (</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">bgcolor: #fff,</span><br><span class="line"></span><br><span class="line">text-color: #444,</span><br><span class="line"></span><br><span class="line">link-color: #39f</span><br></pre></td></tr></table></figure>
+<p>),</p>
+<p>primary:(</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">bgcolor: #000,</span><br><span class="line"></span><br><span class="line">text-color:#fff,</span><br><span class="line"></span><br><span class="line">link-color: #93f</span><br></pre></td></tr></table></figure>
+<p>),</p>
+<p>negative: (</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">bgcolor: #f36,</span><br><span class="line"></span><br><span class="line">text-color: #fefefe,</span><br><span class="line"></span><br><span class="line">link-color: #d4e</span><br></pre></td></tr></table></figure>
+<p>));</p>
+<p>/ <em>map-get</em> /$social-colors: (</p>
+<p>dribble: #ea4c89,</p>
+<p>facebook: #3b5998,</p>
+<p>github: #171515,</p>
+<p>google: #db4437,</p>
+<p>twitter: #55acee);.btn-dribble{</p>
+<p>color: map-get($social-colors,facebook);}/ <em>没有值不会报错</em> /.btn-weibo{</p>
+<p>font-size: 12px;</p>
+<p>color: map-get($social-colors,weibo);}</p>
+<p>/ <em>map中的容错函数</em> /@function colors($color){</p>
+<p>@if not map-has-key($social-colors,$color){</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@warn &quot;No color found for `#&#123;$color&#125;` in $social-colors map. Property omitted.&quot;;</span><br></pre></td></tr></table></figure>
+<p>}</p>
+<p>@return map-get($social-colors,$color);}.btn-dribble {</p>
+<p>color: colors(dribble);}</p>
+<p>/ <em>each 遍历 map</em> /@each $name in map-keys($social-colors){</p>
+<p>.btn-#{$name}{</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">color: colors($name);</span><br></pre></td></tr></table></figure>
+<p>}}@for $i from 1 through length(map-keys($social-colors)){</p>
+<p>.btn-#{nth(map-keys($social-colors),$i)} {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">color: colors(nth(map-keys($social-colors),$i));</span><br></pre></td></tr></table></figure>
+<p>}}</p>
+<p>map-values($social-colors)/<em>得到所有的值</em>/</p>
+<p>$color: (</p>
+<p>text: #f36,</p>
+<p>link: #f63,</p>
+<p>border: #ddd,</p>
+<p>backround: #fff);$typo:(</p>
+<p>font-size: 12px,</p>
+<p>line-height: 1.6);$newcolor = map-merge($color, $typo);</p>
+<p>/ <em>得到新值</em> /$map:map-remove($social-colors,dribble);</p>
+<ul>
+<li><p>颜色函数</p>
+<ul>
+<li>rgb</li>
+<li>rgba</li>
+<li>red</li>
+<li>green</li>
+<li>blue</li>
+</ul>
+</li>
+</ul>
+<p>mix 混合两种颜色 第三个参数为第一种颜色的比例 mix(blue,red,20%)</p>
+<ul>
+<li>lighten lighten(red, 20%);</li>
+</ul>
+<p>darken darken(red,30%);</p>
+<ul>
+<li>saturate 改变颜色的饱和度参数单位为百分比 saturate(blue,20%)</li>
+</ul>
+<p>desaturate</p>
+<p>adjust-hue 通过调整色相 adjust-hue(blue,30deg)</p>
+<ul>
+<li>grayscale 直接让饱和度为0 grayscale(blue);</li>
+<li>alpha 获取透明度</li>
+<li>opacity 获取透明度</li>
+<li>rgba</li>
+<li>opacify 增加透明度</li>
+<li>fade-in 增加透明度</li>
+<li>transparentize 减少透明度</li>
+<li>fade-out 减少透明度</li>
+</ul>
+<p>-<br> …<br><br>-</p>
+<p>-<br> … -</p>
+<p>-<br> … -</p>
+<p>-<br> … -</p>
+<p>-<br> … -</p>
+<p>-<br> … -</p>
+<p>$redBase: #DC143C;$orangeBase: saturate(lighten(adjust_hue($redBase, 39), 5), 7);//#f37a16$yellowBase: saturate(lighten(adjust_hue($redBase, 64), 6), 13);//#fbdc14$greenBase: desaturate(darken(adjust_hue($redBase, 102), 2), 11);//#73c620$blueBase: saturate(darken(adjust_hue($redBase, 201), 2), 1);//#12b7d4$purpleBase: saturate(darken(adjust_hue($redBase, 296), 2), 1);//#a012d4$blackBase: #777;$bgc: #fff;</p>
+<p>//定义颜色变暗的 mixin@mixin swatchesDarken($color) {</p>
+<p>@for $i from 1 through 10 {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">$x:$i+11;</span><br><span class="line"></span><br><span class="line">li:nth-child(#&#123;$x&#125;) &#123;</span><br><span class="line"></span><br><span class="line">  $n:$i*5;</span><br><span class="line"></span><br><span class="line">  $bgc:darken($color,$n); //颜色变暗      background-color: $bgc;</span><br><span class="line"></span><br><span class="line">  &amp;:hover:before &#123; //hover状态显示颜色编号        content: &quot;#&#123;$bgc&#125;&quot;;</span><br><span class="line"></span><br><span class="line">    color: lighten($bgc,40);</span><br><span class="line"></span><br><span class="line">    font-family: verdana;</span><br><span class="line"></span><br><span class="line">    font-size: 8px;</span><br><span class="line"></span><br><span class="line">    padding: 2px;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>}}//定义颜色变亮的 mixin@mixin swatchesLighten($color) {</p>
+<p>@for $i from 1 through 10 {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">$x:11-$i;</span><br><span class="line"></span><br><span class="line">li:nth-child(#&#123;$x&#125;) &#123;</span><br><span class="line"></span><br><span class="line">  $n:$i*5;</span><br><span class="line"></span><br><span class="line">  $bgc:lighten($color,$n);</span><br><span class="line"></span><br><span class="line">  background-color: $bgc;</span><br><span class="line"></span><br><span class="line">  &amp;:hover:before &#123;</span><br><span class="line"></span><br><span class="line">    content: &quot;#&#123;$bgc&#125;&quot;;</span><br><span class="line"></span><br><span class="line">    color: darken($bgc,40);</span><br><span class="line"></span><br><span class="line">    font-family: verdana;</span><br><span class="line"></span><br><span class="line">    font-size: 8px;</span><br><span class="line"></span><br><span class="line">    padding: 2px;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>}}</p>
+<p>.swatches li {</p>
+<p>width: 4.7619047619%;</p>
+<p>float: left;</p>
+<p>height: 60px;</p>
+<p>list-style: none outside none;}</p>
+<p>ul.red {</p>
+<p>@include swatchesLighten($redBase);</p>
+<p>@include swatchesDarken($redBase);</p>
+<p>li:nth-child(11) {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-color: $redBase;</span><br></pre></td></tr></table></figure>
+<p>}}</p>
+<p>ul.orange {</p>
+<p>@include swatchesLighten($orangeBase);</p>
+<p>@include swatchesDarken($orangeBase);</p>
+<p>li:nth-child(11) {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-color: $orangeBase;</span><br></pre></td></tr></table></figure>
+<p>}}</p>
+<p>ul.yellow {</p>
+<p>@include swatchesLighten($yellowBase);</p>
+<p>@include swatchesDarken($yellowBase);</p>
+<p>li:nth-child(11) {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-color: $yellowBase;</span><br></pre></td></tr></table></figure>
+<p>}}</p>
+<p>ul.green {</p>
+<p>@include swatchesLighten($greenBase);</p>
+<p>@include swatchesDarken($greenBase);</p>
+<p>li:nth-child(11) {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-color: $greenBase;</span><br></pre></td></tr></table></figure>
+<p>}}</p>
+<p>ul.blue {</p>
+<p>@include swatchesLighten($blueBase);</p>
+<p>@include swatchesDarken($blueBase);</p>
+<p>li:nth-child(11) {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-color: $blueBase;</span><br></pre></td></tr></table></figure>
+<p>}}</p>
+<p>ul.purple {</p>
+<p>@include swatchesLighten($purpleBase);</p>
+<p>@include swatchesDarken($purpleBase);</p>
+<p>li:nth-child(11) {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-color: $purpleBase;</span><br></pre></td></tr></table></figure>
+<p>}}</p>
+<p>ul.black {</p>
+<p>@include swatchesLighten($blackBase);</p>
+<p>@include swatchesDarken($blackBase);</p>
+<p>li:nth-child(11) {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-color: $blackBase;</span><br></pre></td></tr></table></figure>
+<p>}}</p>
+<h3 id="6-Sass的-规则"><a href="#6-Sass的-规则" class="headerlink" title="6. Sass的@规则"></a><strong>6. Sass的@规则</strong></h3><p>@import</p>
+<p>@media</p>
+<p>.sidebar {</p>
+<p>width: 300px;</p>
+<p>@media screen and (orientation: landscape) {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">width: 500px;</span><br></pre></td></tr></table></figure>
+<p>}}@media screen {</p>
+<p>.sidebar {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@media (orientation: landscape) &#123;</span><br><span class="line"></span><br><span class="line">  width: 500px;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>}}</p>
+<p>$media: screen;$feature: -webkit-min-device-pixel-ratio;$value: 1.5;</p>
+<p>@media #{$media} and ($feature: $value) {</p>
+<p>.sidebar {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">width: 500px;</span><br></pre></td></tr></table></figure>
+<p>}}</p>
+<p>@extend</p>
+<p>@at-root</p>
+<p>@debug</p>
+<p>@warn</p>
+<ul>
+<li>@error</li>
+</ul>
+<p><a href="https://github.com/nate-river" target="_blank" rel="noopener">nate-river</a> A web fullstack developer</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/图片上传/" rel="tag"># 图片上传</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/14/ME-规范/常用代码/" rel="next" title="常用的代码">
+                <i class="fa fa-chevron-left"></i> 常用的代码
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/15/ME-工具/Node-node服务/" rel="prev" title="node 服务">
+                node 服务 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <img class="site-author-image" itemprop="image" src="/images/avator.png" alt="Painter Sun">
+          
+            <p class="site-author-name" itemprop="name">Painter Sun</p>
+            <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives">
+            
+                <span class="site-state-item-count">70</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/yourname" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>GitHub</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#嵌套"><span class="nav-number">1.</span> <span class="nav-text">嵌套</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#混合宏"><span class="nav-number">2.</span> <span class="nav-text">混合宏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展-继承"><span class="nav-number">3.</span> <span class="nav-text">扩展/继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#占位符"><span class="nav-number">4.</span> <span class="nav-text">占位符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插值"><span class="nav-number">5.</span> <span class="nav-text">插值#{}</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注释"><span class="nav-number">6.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据类型"><span class="nav-number">7.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算"><span class="nav-number">8.</span> <span class="nav-text">运算</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Sass高级特性"><span class="nav-number"></span> <span class="nav-text">4. Sass高级特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#if"><span class="nav-number">1.</span> <span class="nav-text">@if</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#for"><span class="nav-number">2.</span> <span class="nav-text">@for</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#each"><span class="nav-number">3.</span> <span class="nav-text">@each</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-Sass中的函数"><span class="nav-number">4.</span> <span class="nav-text">5. Sass中的函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-Sass的-规则"><span class="nav-number">5.</span> <span class="nav-text">6. Sass的@规则</span></a></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2016 &mdash; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Painter Sun</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cytcPpAsu';
+      var conf = '0c6448a3466642354028801bc68fb5dc';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+  
+
+
+
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.2"></script>
+
+
+  
+
+</body>
+</html>
