@@ -1,8 +1,8 @@
 ---
 title: 记录一个vue-cli3项目的搭建
-date: 2020年3月5日 22点22分
+date: 2019-04-01
 tags: note
-categories: 2020Note
+categories: 2019Note
 ---
 
 ### vue-cli3快速创建项目 https://www.jianshu.com/p/5e13bc2eb97c

@@ -7,7 +7,13 @@ categories: MOB
 
 --------------------------------------------------------------------------------
 
+
+## 移动端兼容
+//移动端适配
+<meta content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+
 <!-- more -->
+
 ## rem两种方式
 
 ## 第一种

@@ -1,7 +1,6 @@
 ---
 title: js日常笔记
-date: 2018-09-14T22:49:51.000Z
-tags: 笔记
+date: 2018-03-01
 categories: JS/JQ
 ---
 

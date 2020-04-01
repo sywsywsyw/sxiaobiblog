@@ -1,6 +1,6 @@
 ---
 title: angular
-date: 2017-08-15 09:00:26
+date: 2016-01-03
 tags: angular
 categories: 环境框架语言
 ---

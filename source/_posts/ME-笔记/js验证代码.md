@@ -1,6 +1,6 @@
 ---
-title: js部分功能代码
-date: 2018-09-14T22:49:51.000Z
+title: js验证代码
+date: 2018-03-01
 tags: 笔记
 categories: JS/JQ
 ---

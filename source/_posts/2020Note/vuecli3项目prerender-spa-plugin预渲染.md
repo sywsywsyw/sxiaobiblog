@@ -11,6 +11,7 @@ categories: 2020Note
 ```bash
 npm install prerender-spa-plugin --save
 ```
+<!-- more -->
 
 ### vue.config.js
 ```js
