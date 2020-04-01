@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://sywsywsyw.github.io/sxiaobiblog/2017/08/14/ME-规范/常用代码/index.html">
 <meta property="og:site_name" content="Painter Sun">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-04-01T03:12:17.018Z">
+<meta property="og:updated_time" content="2020-04-01T03:31:42.165Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用的代码">
 
@@ -135,17 +135,6 @@
 
 
 
-
-<script>
-    (function(){
-        if(''){
-            if (prompt('请输入文章密码') !== ''){
-                alert('密码错误！');
-                history.back();
-            }
-        }
-    })();
-</script>
 
 
   <title>常用的代码 | Painter Sun</title>
@@ -419,7 +408,10 @@
       
         <hr>
 <a id="more"></a>
+<h2 id="JQ"><a href="#JQ" class="headerlink" title="JQ"></a>JQ</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 <h2 id="移动端兼容"><a href="#移动端兼容" class="headerlink" title="移动端兼容"></a>移动端兼容</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//移动端适配</span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">content</span>=<span class="string">"width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"</span> <span class="attr">name</span>=<span class="string">"viewport"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="常见的meta"><a href="#常见的meta" class="headerlink" title="常见的meta"></a>常见的meta</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=<span class="string">"utf-8"</span>&gt;</span><br><span class="line">  &lt;!-- 优先使用 IE 最新版本和 Chrome --&gt;</span><br><span class="line">  &lt;meta http-equiv=<span class="string">"X-UA-Compatible"</span> content=<span class="string">"IE=edge,chrome=1"</span>&gt;</span><br><span class="line">  &lt;!-- 360 浏览器就会在读取到这个标签后，立即切换对应的极速核 --&gt;</span><br><span class="line">  &lt;meta name=<span class="string">"renderer"</span> content=<span class="string">"webkit"</span>&gt;</span><br><span class="line">  &lt;!-- 禁止百度转码 --&gt;</span><br><span class="line">  &lt;meta http-equiv=<span class="string">"Cache-Control"</span> content=<span class="string">"no-siteapp"</span>&gt;</span><br><span class="line">  &lt;meta name=<span class="string">"description"</span> content=<span class="string">""</span>&gt;</span><br><span class="line">  &lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span><br><span class="line"></span><br><span class="line">  &lt;title&gt;Mobile App&lt;/title&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!-- Disable tap highlight on IE --&gt;</span><br><span class="line">  &lt;meta name=<span class="string">"msapplication-tap-highlight"</span> content=<span class="string">"no"</span>&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!-- Web Application Manifest --&gt;</span><br><span class="line">  &lt;link rel=<span class="string">"manifest"</span> href=<span class="string">"manifest.json"</span>&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!-- Add to homescreen <span class="keyword">for</span> Chrome on Android --&gt;</span><br><span class="line">  &lt;meta name=<span class="string">"mobile-web-app-capable"</span> content=<span class="string">"yes"</span>&gt;</span><br><span class="line">  &lt;meta name=<span class="string">"application-name"</span> content=<span class="string">"Web Starter Kit"</span>&gt;</span><br><span class="line">  &lt;link rel=<span class="string">"icon"</span> sizes=<span class="string">"192x192"</span> href=<span class="string">"images/touch/chrome-touch-icon-192x192.png"</span>&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!-- Add to homescreen <span class="keyword">for</span> Safari on iOS --&gt;</span><br><span class="line">  &lt;meta name=<span class="string">"apple-mobile-web-app-capable"</span> content=<span class="string">"yes"</span>&gt;</span><br><span class="line">  &lt;meta name=<span class="string">"apple-mobile-web-app-status-bar-style"</span> content=<span class="string">"black"</span>&gt;</span><br><span class="line">  &lt;meta name=<span class="string">"apple-mobile-web-app-title"</span> content=<span class="string">"Web Starter Kit"</span>&gt;</span><br><span class="line">  &lt;link rel=<span class="string">"apple-touch-icon"</span> href=<span class="string">"images/touch/apple-touch-icon.png"</span>&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!-- Tile icon <span class="keyword">for</span> Win8 (144x144 + tile color) --&gt;</span><br><span class="line">  &lt;meta name=<span class="string">"msapplication-TileImage"</span> content=<span class="string">"images/touch/ms-touch-icon-144x144-precomposed.png"</span>&gt;</span><br><span class="line">  &lt;meta name=<span class="string">"msapplication-TileColor"</span> content=<span class="string">"#2F3BA2"</span>&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!-- Color the status bar on mobile devices --&gt;</span><br><span class="line">  &lt;meta name=<span class="string">"theme-color"</span> content=<span class="string">"#2F3BA2"</span>&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!-- Your styles --&gt;</span><br><span class="line">  &lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"styles/main.css"</span>&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!-- bower:css --&gt;</span><br><span class="line">  &lt;!-- endbower --&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -459,8 +451,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/08/14/ME-工具/sass学习/" rel="prev" title="sass学习">
-                sass学习 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/08/14/ME-工具/sass文档/" rel="prev" title="sass文档">
+                sass文档 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -541,7 +533,7 @@
             
               <a href="/archives">
             
-                <span class="site-state-item-count">70</span>
+                <span class="site-state-item-count">66</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -606,7 +598,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#移动端兼容"><span class="nav-number">1.</span> <span class="nav-text">移动端兼容</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JQ"><span class="nav-number">1.</span> <span class="nav-text">JQ</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#移动端兼容"><span class="nav-number">2.</span> <span class="nav-text">移动端兼容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常见的meta"><span class="nav-number">2.1.</span> <span class="nav-text">常见的meta</span></a></li></ol></li></ol></div>
             
 
           </div>
