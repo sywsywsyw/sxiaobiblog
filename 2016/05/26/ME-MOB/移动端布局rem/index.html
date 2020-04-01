@@ -93,15 +93,18 @@
 
 
 
+<meta name="description" content="移动端兼容//移动端适配">
 <meta name="keywords" content="mob">
 <meta property="og:type" content="article">
 <meta property="og:title" content="移动端布局 字体选择 rem">
 <meta property="og:url" content="http://sywsywsyw.github.io/sxiaobiblog/2016/05/26/ME-MOB/移动端布局rem/index.html">
 <meta property="og:site_name" content="Painter Sun">
+<meta property="og:description" content="移动端兼容//移动端适配">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-20T06:40:10.476Z">
+<meta property="og:updated_time" content="2020-04-01T03:13:40.333Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动端布局 字体选择 rem">
+<meta name="twitter:description" content="移动端兼容//移动端适配">
 
 
 
@@ -135,6 +138,17 @@
 
 
 
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 
 
   <title>移动端布局 字体选择 rem | Painter Sun</title>
@@ -407,6 +421,9 @@
 
       
         <hr>
+<h2 id="移动端兼容"><a href="#移动端兼容" class="headerlink" title="移动端兼容"></a>移动端兼容</h2><p>//移动端适配</p>
+<meta content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+
 <a id="more"></a>
 <h2 id="rem两种方式"><a href="#rem两种方式" class="headerlink" title="rem两种方式"></a>rem两种方式</h2><h2 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h2><p>只需在页面引入这段<strong>原生js</strong>代码就可以了</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">doc, win</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> docEl = doc.documentElement,</span><br><span class="line">        resizeEvt = <span class="string">'orientationchange'</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">'orientationchange'</span> : <span class="string">'resize'</span>,</span><br><span class="line">        recalc = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> clientWidth = docEl.clientWidth;</span><br><span class="line">            <span class="keyword">if</span> (!clientWidth) <span class="keyword">return</span>;</span><br><span class="line">            docEl.style.fontSize = <span class="number">100</span> * (clientWidth / <span class="number">750</span>) + <span class="string">'px'</span>;</span><br><span class="line">        &#125;;</span><br><span class="line">    <span class="keyword">if</span> (!doc.addEventListener) <span class="keyword">return</span>;</span><br><span class="line">    win.addEventListener(resizeEvt, recalc, <span class="literal">false</span>);</span><br><span class="line">    doc.addEventListener(<span class="string">'DOMContentLoaded'</span>, recalc, <span class="literal">false</span>);</span><br><span class="line">&#125;)(<span class="built_in">document</span>, <span class="built_in">window</span>);</span><br></pre></td></tr></table></figure>
@@ -588,7 +605,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -642,7 +659,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#rem两种方式"><span class="nav-number">1.</span> <span class="nav-text">rem两种方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一种"><span class="nav-number">2.</span> <span class="nav-text">第一种</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二种"><span class="nav-number">3.</span> <span class="nav-text">第二种</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#meta标签"><span class="nav-number">4.</span> <span class="nav-text">meta标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#移动端html5手机网站如何定义字体font-family"><span class="nav-number">5.</span> <span class="nav-text">移动端html5手机网站如何定义字体font-family</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用-media-screen实现网页布局的自适应"><span class="nav-number">6.</span> <span class="nav-text">利用@media screen实现网页布局的自适应</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#移动端兼容"><span class="nav-number">1.</span> <span class="nav-text">移动端兼容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rem两种方式"><span class="nav-number">2.</span> <span class="nav-text">rem两种方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一种"><span class="nav-number">3.</span> <span class="nav-text">第一种</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二种"><span class="nav-number">4.</span> <span class="nav-text">第二种</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#meta标签"><span class="nav-number">5.</span> <span class="nav-text">meta标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#移动端html5手机网站如何定义字体font-family"><span class="nav-number">6.</span> <span class="nav-text">移动端html5手机网站如何定义字体font-family</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用-media-screen实现网页布局的自适应"><span class="nav-number">7.</span> <span class="nav-text">利用@media screen实现网页布局的自适应</span></a></li></ol></div>
             
 
           </div>

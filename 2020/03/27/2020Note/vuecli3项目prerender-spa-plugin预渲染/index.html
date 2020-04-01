@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="==页面预渲染只支持静态内容较多的页面、如果接口多的页面建议使用ssr服务器渲染，例如nuxt== 安装1npm install prerender-spa-plugin --save vue.config.js1234567891011121314151617181920212223242526272829303132// 预渲染配置：在webpack.prod.conf文件中加入const P">
+<meta name="description" content="==页面预渲染只支持静态内容较多的页面、如果接口多的页面建议使用ssr服务器渲染，例如nuxt== 安装1npm install prerender-spa-plugin --save">
 <meta name="keywords" content="note">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vuecli3项目prerender-spa-plugin预渲染">
 <meta property="og:url" content="http://sywsywsyw.github.io/sxiaobiblog/2020/03/27/2020Note/vuecli3项目prerender-spa-plugin预渲染/index.html">
 <meta property="og:site_name" content="Painter Sun">
-<meta property="og:description" content="==页面预渲染只支持静态内容较多的页面、如果接口多的页面建议使用ssr服务器渲染，例如nuxt== 安装1npm install prerender-spa-plugin --save vue.config.js1234567891011121314151617181920212223242526272829303132// 预渲染配置：在webpack.prod.conf文件中加入const P">
+<meta property="og:description" content="==页面预渲染只支持静态内容较多的页面、如果接口多的页面建议使用ssr服务器渲染，例如nuxt== 安装1npm install prerender-spa-plugin --save">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-27T04:57:11.282Z">
+<meta property="og:updated_time" content="2020-04-01T02:44:55.761Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vuecli3项目prerender-spa-plugin预渲染">
-<meta name="twitter:description" content="==页面预渲染只支持静态内容较多的页面、如果接口多的页面建议使用ssr服务器渲染，例如nuxt== 安装1npm install prerender-spa-plugin --save vue.config.js1234567891011121314151617181920212223242526272829303132// 预渲染配置：在webpack.prod.conf文件中加入const P">
+<meta name="twitter:description" content="==页面预渲染只支持静态内容较多的页面、如果接口多的页面建议使用ssr服务器渲染，例如nuxt== 安装1npm install prerender-spa-plugin --save">
 
 
 
@@ -138,6 +138,17 @@
 
 
 
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 
 
   <title>vuecli3项目prerender-spa-plugin预渲染 | Painter Sun</title>
@@ -411,6 +422,7 @@
       
         <p>==页面预渲染只支持静态内容较多的页面、如果接口多的页面建议使用ssr服务器渲染，例如nuxt==</p>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install prerender-spa-plugin --save</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="vue-config-js"><a href="#vue-config-js" class="headerlink" title="vue.config.js"></a>vue.config.js</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 预渲染配置：在webpack.prod.conf文件中加入</span></span><br><span class="line"><span class="keyword">const</span> PrerenderSPAPlugin = <span class="built_in">require</span>(<span class="string">'prerender-spa-plugin'</span>)</span><br><span class="line"><span class="keyword">const</span> Renderer = PrerenderSPAPlugin.PuppeteerRenderer</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">"path"</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  configureWebpack: <span class="function"><span class="params">config</span> =&gt;</span> &#123;</span><br><span class="line">    config.plugins.push(</span><br><span class="line">      <span class="keyword">new</span> PrerenderSPAPlugin(&#123;</span><br><span class="line">        staticDir: path.join(__dirname, <span class="string">'./dist'</span>),</span><br><span class="line">        <span class="comment">// 需要进行预渲染的路由路径 我这里做的是首页</span></span><br><span class="line">        routes: [<span class="string">'/'</span>, <span class="string">'/aboutview'</span>, <span class="string">'/adHome'</span>, <span class="string">'/finaHome'</span>, <span class="string">'/lawHome'</span>, <span class="string">'/capitalHome'</span>, <span class="string">'/payFaceSwip'</span>, <span class="string">'/payEwm'</span>, <span class="string">'/payPos'</span>, <span class="string">'/paySweepEwm'</span>, <span class="string">'/payCashier'</span>,<span class="string">'/payCustom'</span>],</span><br><span class="line">        <span class="comment">// html文件压缩</span></span><br><span class="line">        minify: &#123;</span><br><span class="line">          minifyCSS: <span class="literal">true</span>, <span class="comment">// css压缩</span></span><br><span class="line">          removeComments: <span class="literal">true</span> <span class="comment">// 移除注释</span></span><br><span class="line">        &#125;,</span><br><span class="line">        renderer: <span class="keyword">new</span> Renderer(&#123;</span><br><span class="line">          <span class="comment">// Optional - The name of the property to add to the window object with the contents of `inject`.</span></span><br><span class="line">          injectProperty: <span class="string">'__PRERENDER_INJECTED'</span>,</span><br><span class="line">          <span class="comment">// Optional - Any values you'd like your app to have access to via `window.injectProperty`.</span></span><br><span class="line">          inject: &#123;&#125;,</span><br><span class="line">          <span class="comment">// 在 main.js 中 new Vue(&#123; mounted () &#123;document.dispatchEvent(new Event('render-event'))&#125;&#125;)，两者的事件名称要对应上。</span></span><br><span class="line">          <span class="comment">// renderAfterDocumentEvent: 'render-event'</span></span><br><span class="line">          renderer: <span class="keyword">new</span> PrerenderSPAPlugin.PuppeteerRenderer(&#123;<span class="comment">//这样写renderAfterTime生效了</span></span><br><span class="line">            renderAfterTime: <span class="number">5000</span></span><br><span class="line">          &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;)</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="main-js"><a href="#main-js" class="headerlink" title="main.js"></a>main.js</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  router,</span><br><span class="line">  store,</span><br><span class="line">  render: <span class="function"><span class="params">h</span> =&gt;</span> h(App),</span><br><span class="line">  <span class="comment">// 添加mounted，不然不会执行预编译</span></span><br><span class="line">  mounted() &#123;</span><br><span class="line">    <span class="built_in">document</span>.dispatchEvent(<span class="keyword">new</span> Event(<span class="string">'render-event'</span>))</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;).$mount(<span class="string">'#app'</span>)</span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -455,6 +467,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2099/12/31/ME-规范/掌握的知识技能/" rel="prev" title="网址大全">
+                网址大全 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -545,7 +561,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
