@@ -1,6 +1,6 @@
 ---
 title: 关于Jenkins自动化
-date: 2020年3月6日 21点55分
+date: 2020-03-04
 tags: note
 categories: 2020Note
 ---
