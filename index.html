@@ -487,6 +487,195 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://sywsywsyw.github.io/sxiaobiblog/2020/04/03/2020Note/TypeScript笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="孙小笔">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="孙小笔">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/03/2020Note/TypeScript笔记/" itemprop="url">TypeScript笔记</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-03T17:30:15+08:00">
+                2020-04-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/2020Note/" itemprop="url" rel="index">
+                    <span itemprop="name">2020Note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2020/04/03/2020Note/TypeScript笔记/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://sywsywsyw.github.io/sxiaobiblog/2020/04/03/2020Note/TypeScript笔记/" class="cy_cmt_count" data-xid="2020/04/03/2020Note/TypeScript笔记/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>typescript 是javascript的超集，是一种编程语言</p>
+<h3 id="1-typescript和javascript的区别"><a href="#1-typescript和javascript的区别" class="headerlink" title="1. typescript和javascript的区别"></a>1. typescript和javascript的区别</h3><ul>
+<li>更适合大型应用程序</li>
+<li>js的超集，类似于less,sass,  最终会转为javascript</li>
+<li>跨平台（浏览器，操作系统linux,mac）且开源</li>
+<li>开始于js,终止于js.上手成本低，易于学习</li>
+<li>重用js,可以引入js流行的库  echarts</li>
+<li>typescript 类、接口、模块，更易于组件的编写和维护</li>
+<li>ts是强类型，js是弱类型。</li>
+</ul>
+<p>为什么要学习typescript?</p>
+<blockquote>
+<p>vue、React、ng、都推荐使用typescript。</p>
+</blockquote>
+<h3 id="2-开发环境的安装"><a href="#2-开发环境的安装" class="headerlink" title="2. 开发环境的安装"></a>2. 开发环境的安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">npm -v</span><br><span class="line">node -v</span><br><span class="line">npm install typescript -g</span><br><span class="line">tsc --version</span><br><span class="line">npm init -y   //-y代表全部默认</span><br><span class="line">tsc --init   // 生成ts配置</span><br><span class="line">npm install @<span class="built_in">type</span>/node --dev-save</span><br></pre></td></tr></table></figure>
+<p>新建helloTs.ts<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> message:string = <span class="string">'helloTypeScript'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(message);</span><br></pre></td></tr></table></figure></p>
+<p>命令：helloTs.ts转为helloTs.js<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsc helloTs</span><br></pre></td></tr></table></figure></p>
+<p>使用node命令执行helloTs.js<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node helloTs.js   </span><br><span class="line">// helloTypeScript</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-变量类型"><a href="#3-变量类型" class="headerlink" title="3. 变量类型"></a>3. 变量类型</h3><p>弱类型   数据类型可以被忽略的语言。与强类型语言相反, 一个变量可以赋不同数据类型的值,允许将一块内存看做多种类型,比如直接将整型变量与字符变量相加<br>强类型   使之强制数据类型定义的语言。没有强制类型转化前,不允许两种不同类型的变量相互操作。</p>
+<ul>
+<li>undefined：undefined类型</li>
+<li>number：数值类型</li>
+<li>string: 字符串类型</li>
+<li>Boolean: 布尔类型</li>
+<li>enum：枚举类型   一般用于大写声明， 一个类的对象是有限且固定的,这种情况下我们使用枚举类就比* 较方便</li>
+<li>any：任意类型   万能类型、刚开始是数字类型，后来变成了字符串，然后又变成了，true,如果使用any类型就不会报错了。</li>
+<li>void: 空类型</li>
+<li>Array: 数组类型</li>
+<li>Tuple: 元祖类型</li>
+<li>Null: 空类型</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 变量类型  ts属于强类型，声明的时候必须告诉程序，这是个什么类型，js属于弱类型。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// undefined</span></span><br><span class="line"><span class="keyword">let</span> undeFined:any;</span><br><span class="line"><span class="built_in">console</span>.log(undeFined);</span><br><span class="line"></span><br><span class="line"><span class="comment">// string</span></span><br><span class="line"><span class="keyword">let</span> stringVariable:string = <span class="string">'我是string variable'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(stringVariable);</span><br><span class="line"></span><br><span class="line"><span class="comment">// number</span></span><br><span class="line"><span class="keyword">let</span> numberVariable:number = <span class="number">8888</span>;</span><br><span class="line"><span class="built_in">console</span>.log(numberVariable);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Boolean</span></span><br><span class="line"><span class="keyword">let</span> booleanVariable:<span class="built_in">Boolean</span> = <span class="literal">true</span>;</span><br><span class="line"><span class="built_in">console</span>.log(booleanVariable);</span><br><span class="line"></span><br><span class="line"><span class="comment">// enum 枚举类型，用于一个类的对象是有限且固定的，比如男人，女人，中性人，一般使用大写命名</span></span><br><span class="line">enum PEOPLE&#123;man=<span class="string">'男人'</span>,woman=<span class="string">'女人'</span>,genderBender=<span class="string">'中性人'</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(PEOPLE.man);</span><br><span class="line"></span><br><span class="line"><span class="comment">// any 任意类型  我们js习惯了弱类型语言，这个类型就是允许你随意改变变量的类型</span></span><br><span class="line"><span class="keyword">let</span> anyVariable:any = <span class="number">888</span>;</span><br><span class="line">anyVariable = <span class="literal">true</span>;</span><br><span class="line">anyVariable = <span class="string">'anyVariable从数字888变为布尔true最后变成了字符串类型,'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(anyVariable);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Array</span></span><br><span class="line"><span class="keyword">let</span> arrayVariable = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line"><span class="built_in">console</span>.log(arrayVariable);</span><br><span class="line"></span><br><span class="line"><span class="comment">// null </span></span><br><span class="line"><span class="keyword">let</span> nullVariable = <span class="literal">null</span>;</span><br><span class="line"><span class="built_in">console</span>.log(nullVariable);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// undefined</span></span><br><span class="line"><span class="comment">// 我是string variable</span></span><br><span class="line"><span class="comment">// 8888</span></span><br><span class="line"><span class="comment">// true</span></span><br><span class="line"><span class="comment">// 男人</span></span><br><span class="line"><span class="comment">// anyVariable从数字888变为布尔true最后变成了字</span></span><br><span class="line"><span class="comment">// 符串类型,</span></span><br><span class="line"><span class="comment">// [ 1, 2, 3, 4, 5 ]</span></span><br><span class="line"><span class="comment">// null</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-函数"><a href="#4-函数" class="headerlink" title="4.函数"></a>4.函数</h3><p>形参：函数方法中声明的参数<br>实参：函数调用时候传递进去的值</p>
+<h4 id="定义一个函数"><a href="#定义一个函数" class="headerlink" title="定义一个函数"></a>定义一个函数</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">searchSmallSister</span>(<span class="params">age:number</span>):<span class="title">string</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'sxiaobi找了一个'</span>+age+<span class="string">'岁的小姐姐'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> result:string = searchSmallSister(<span class="number">28</span>);</span><br><span class="line"><span class="built_in">console</span>.log(result,<span class="string">'我是基本定义函数 parasm:number'</span>);</span><br><span class="line"><span class="comment">// sxiaobi找了一个28岁的小姐姐 我是基本定义函数 parasm:number</span></span><br></pre></td></tr></table></figure>
+<h5 id="有可选参数的函数"><a href="#有可选参数的函数" class="headerlink" title="有可选参数的函数"></a>有可选参数的函数</h5><p>params?:string<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 可选参数的函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">searchSmallGirl</span>(<span class="params">age:number,stature?:number</span>):<span class="title">string</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'sxiaobi找了一个'</span> + age + <span class="string">'岁'</span> + stature+<span class="string">'cm的小姐姐'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> girlResult:string = searchSmallGirl(<span class="number">20</span>,<span class="number">178</span>);</span><br><span class="line"><span class="built_in">console</span>.log(girlResult,<span class="string">'我是可选参数身高 params?:number的小姐姐'</span>);</span><br><span class="line"><span class="comment">// sxiaobi找了一个20岁178cm的小姐姐 我是可选参数身高 params?:number的小姐姐</span></span><br></pre></td></tr></table></figure></p>
+<h5 id="有默认值的函数"><a href="#有默认值的函数" class="headerlink" title="有默认值的函数"></a>有默认值的函数</h5><p>params:string=’小姐姐’<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">searchYoungLaday</span>(<span class="params">age: number = <span class="number">20</span>, stature: number = <span class="number">170</span>,thorax:string=<span class="string">'34D'</span></span>):<span class="title">string</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">`sxiaobi找了一个<span class="subst">$&#123;age&#125;</span>岁<span class="subst">$&#123;stature&#125;</span>cm<span class="subst">$&#123;thorax&#125;</span>的小姐姐`</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> youngLaday:string = searchYoungLaday();</span><br><span class="line"><span class="built_in">console</span>.log(youngLaday,<span class="string">'我是默认参数 params:string="34D"的小姐姐'</span>);</span><br><span class="line"><span class="comment">// sxiaobi找了一个20岁170cm34D的小姐姐 我是默认参数 params:string="34D"的小姐姐</span></span><br></pre></td></tr></table></figure></p>
+<h5 id="有剩余参数的函数"><a href="#有剩余参数的函数" class="headerlink" title="有剩余参数的函数"></a>有剩余参数的函数</h5><p>…params:string[]<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 有剩余参数的函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">searchSmallWoman</span>(<span class="params">...age:string[]</span>):<span class="title">string</span></span>&#123;</span><br><span class="line">    <span class="keyword">let</span> yy:string = <span class="string">'找了一个'</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> index <span class="keyword">in</span> age)&#123;</span><br><span class="line">        <span class="keyword">let</span> indexT: any = index;</span><br><span class="line">        yy = yy + age[indexT];</span><br><span class="line">        <span class="keyword">if</span> ( indexT &lt; age.length<span class="number">-1</span>)&#123;</span><br><span class="line">            yy = yy+ <span class="string">'、'</span>; </span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">`sxiaobi<span class="subst">$&#123;yy&#125;</span>的小姐姐`</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> smallWoman:string = searchSmallWoman(<span class="string">'20岁'</span>,<span class="string">'175cm'</span>,<span class="string">'34D'</span>,<span class="string">'上海陆家嘴'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(smallWoman,<span class="string">'我是有剩余参数的 ...params:string[]'</span>)</span><br><span class="line"><span class="comment">// sxiaobi找了一个20岁、175cm、34D、上海陆家嘴的小姐姐 我是有剩余参数的 ...params:string[]</span></span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://sywsywsyw.github.io/sxiaobiblog/2020/04/03/ME-工具/工具-VScode使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -3436,163 +3625,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://sywsywsyw.github.io/sxiaobiblog/2018/03/01/ME-笔记/正则笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="孙小笔">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avator.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="孙小笔">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/01/ME-笔记/正则笔记/" itemprop="url">正则笔记</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-01T00:00:00+08:00">
-                2018-03-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/环境框架语言/" itemprop="url" rel="index">
-                    <span itemprop="name">环境框架语言</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2018/03/01/ME-笔记/正则笔记/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://sywsywsyw.github.io/sxiaobiblog/2018/03/01/ME-笔记/正则笔记/" class="cy_cmt_count" data-xid="2018/03/01/ME-笔记/正则笔记/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <hr>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/01/ME-笔记/正则笔记/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -3644,7 +3676,7 @@
             
               <a href="/archives">
             
-                <span class="site-state-item-count">71</span>
+                <span class="site-state-item-count">72</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
