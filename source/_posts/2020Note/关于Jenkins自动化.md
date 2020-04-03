@@ -5,6 +5,8 @@ tags: note
 categories: 2020Note
 ---
 
+笨鸟贤妃，用了两天终于搞好了jenkins+coding的vue项目自动化打包。
+
 #### 1.windows下的安装。
 下载官网实在太慢了<https://jenkins.io/zh/download/>
 通过三方链接进行下载 <https://mirrors.tuna.tsinghua.edu.cn/jenkins/windows/>
@@ -40,9 +42,28 @@ C:\Program Files (x86)\Jenkins\secrets\initialAdminPassword
 如果用admin账号，初始密码在这里 cat /Users/chenpeisong/.jenkins/secrets/initialAdminPassword
 
 #### 8. jenkins自动化部署vue
+
+https://e.coding.net/s18334787934/jenkinsdemo.git
+cd /var/jenkins_home/workspace/test #进入test项目目录
+```
+npm install chromedriver --chromedriver_cdnurl=http://cdn.npm.taobao.org/dist/chromedriver
+npm install
+npm run build
+cd dist
+rm -rf test.tar.gz #删除上次打包生成的压缩文件
+tar -zcvf test.tar.gz * #把生成的项目打包成test方便传输到远程服务器
+cd ../
+```
 <https://blog.csdn.net/jonsonler/article/details/81317352>
 <https://blog.csdn.net/ansu2009/article/details/83584796>
 
 
 #### 9.使用 Jenkins 构建 Coding 项目
 <https://blog.csdn.net/zxb730916/article/details/80913579>
+
+#### 10.本机Jenkins实现外网访问 外网访问内网Jenkins  用于设置coding WebHook
+需要下载java环境
+<https://www.cnblogs.com/wisdom-projects/p/11184983.html>
+本机访问链接<http://holer.org:65530/job/test/configure>
+
+
