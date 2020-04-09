@@ -5,6 +5,8 @@ tags: note
 categories: 2020Note
 ---
 
+
+
 typescript 是javascript的超集，是一种编程语言
 
 ### 1. typescript和javascript的区别
@@ -164,6 +166,65 @@ let smallWoman:string = searchSmallWoman('20岁','175cm','34D','上海陆家嘴'
 console.log(smallWoman,'我是有剩余参数的 ...params:string[]')
 // sxiaobi找了一个20岁、175cm、34D、上海陆家嘴的小姐姐 我是有剩余参数的 ...params:string[]
 ```
+
+#### 三种函数的定义方法
+
+##### 函数声明法
+```js
+function add(one: number, two: number): number {
+    return one + two;
+}
+console.log(add(1, 2));
+```
+##### 函数表达式法
+```js
+var plus = function (one: number, two: number): number {
+    return one + two;
+}
+console.log(plus(1, 2));
+```
+##### 箭头函数
+```js
+var sum = (one: number, two: number): number => {
+    return one + two;
+}
+console.log(sum(1, 2));
+```
+
+#### 引用类型 Array String Date RegExp
+
+##### 数组
+```js
+// 数组
+// 字面量赋值法
+let arr1:number[] = [1,2,3];
+let arr2:Array<string> = ['a','b','c'];
+
+// 构造函数赋值法 new
+let arr3:number[] = new Array(1,2,3,4);
+console.log(arr1,arr2,arr3);
+// [ 1, 2, 3 ] [ 'a', 'b', 'c' ] [ 1, 2, 3, 4 ]
+```
+##### 字符串
+```js
+// 字符串
+let string1:string = 'sxiaobi';
+let string2:String = new String('sxiaobi');
+console.log(string1, string2);
+// sxiaobi [String: 'sxiaobi']
+```
+##### 
+```js
+// 日期
+// 不传递参数
+let date:Date = new Date();
+// 传递一个数字
+let dateNumber:Date = new Date(1000);
+let dateString:Date = new Date('2019/09/07 05:06:30');
+console.log(date, dateNumber, dateString);
+// 2020-04-09T09:41:10.681Z 1970-01-01T00:00:01.000Z 2019-09-06T21:06:30.000Z
+```
+
 
 
 
