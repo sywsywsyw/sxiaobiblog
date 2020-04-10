@@ -18,6 +18,9 @@ $ taro convert
 npm run dev:h5
 ```
 ==注意，转换完之后运行会提示`.temp`文件有好多报错，不要在这个里面改错误，要去`src`目录下面更改，因为`.temp`是临时文件夹，因为这个问题折腾了一下午。==
+
+<!-- more -->
+
 #### 2.遇到的报错
 ###### 2.1 An identifier or keyword cannot immediately follow a numeric literal
 报错的意思是标识符以数字开头，这是因为js是弱类型的语言当发现第一个数字是就自动转化为数字类型的但是其中还含有字符所以报了错，'

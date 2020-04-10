@@ -5,9 +5,6 @@ tags: note
 categories: 2020Note
 ---
 
-
-
-
 typescript 是javascript的超集，是一种编程语言
 
 ### 1. typescript和javascript的区别
@@ -22,6 +19,8 @@ typescript 是javascript的超集，是一种编程语言
 为什么要学习typescript?
 
 > vue、React、ng、都推荐使用typescript。
+
+<!-- more -->
 
 ### 2. 开发环境的安装
 ```bash
