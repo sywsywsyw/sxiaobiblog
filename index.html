@@ -487,6 +487,193 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://sywsywsyw.github.io/sxiaobiblog/2020/04/21/2020Note/React学习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="孙小笔">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="孙小笔">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/21/2020Note/React学习/" itemprop="url">ES6笔记</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-21T00:00:00+08:00">
+                2020-04-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/2020Note/" itemprop="url" rel="index">
+                    <span itemprop="name">2020Note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2020/04/21/2020Note/React学习/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://sywsywsyw.github.io/sxiaobiblog/2020/04/21/2020Note/React学习/" class="cy_cmt_count" data-xid="2020/04/21/2020Note/React学习/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="React三大体系"><a href="#React三大体系" class="headerlink" title="React三大体系"></a>React三大体系</h3><p><img src="https://img-blog.csdnimg.cn/20200413114354587.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzE1MjM4OTc5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="React搭建"><a href="#React搭建" class="headerlink" title="React搭建"></a>React搭建</h3><ul>
+<li>安装node</li>
+<li>Node中文网址：<a href>http://nodejs.cn/</a> (建议你在这里下载，速度会快很多)</li>
+<li><p>安装<code>create-react-app</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g create-react-app</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>create-react-app</code>新建demo1  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create-react-app demo1</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Inside that directory, you can run several commands:</span><br><span class="line">  npm start</span><br><span class="line">    Starts the development server.</span><br><span class="line">  npm run build</span><br><span class="line">    Bundles the app into static files <span class="keyword">for</span> production.</span><br><span class="line">  npm <span class="built_in">test</span></span><br><span class="line">    Starts the <span class="built_in">test</span> runner.</span><br><span class="line">  npm run eject</span><br><span class="line">    Removes this tool and copies build dependencies, configuration files</span><br><span class="line">    and scripts into the app directory. If you <span class="keyword">do</span> this, you can’t go back!</span><br><span class="line">We suggest that you begin by typing:</span><br><span class="line">  <span class="built_in">cd</span> demo1</span><br><span class="line">  npm start</span><br><span class="line">Happy hacking!</span><br></pre></td></tr></table></figure>
+<h3 id="目录基本介绍"><a href="#目录基本介绍" class="headerlink" title="目录基本介绍"></a>目录基本介绍</h3><ul>
+<li><p>index.js 入口文件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> serviceWorker <span class="keyword">from</span> <span class="string">'./serviceWorker'</span>; <span class="comment">// 用于PWA</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>public  &gt; manifest.js 用于PWA</p>
+</li>
+</ul>
+<h3 id="HellowWorld和组件"><a href="#HellowWorld和组件" class="headerlink" title="HellowWorld和组件"></a>HellowWorld和组件</h3><ul>
+<li><p>进入src新建index.js入口文件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;  </span><br><span class="line"><span class="keyword">import</span> ReactDom <span class="keyword">from</span> <span class="string">'react-dom'</span>;</span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./app'</span>;</span><br><span class="line"></span><br><span class="line">ReactDom.render(&lt;App /&gt;,document.getElementById('root'));</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编写App组件 进入src新建 app.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React,&#123;Component&#125; <span class="keyword">from</span> <span class="string">'react'</span>; <span class="comment">// &#123;Component&#125; 解构赋值 等同于  const Component = React.Component</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span></span>&#123;</span><br><span class="line">    render()&#123;</span><br><span class="line">        <span class="keyword">return</span>(</span><br><span class="line">            &lt;div&gt;Hello 子小&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        )</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">export default App;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="JSX语法简单介绍"><a href="#JSX语法简单介绍" class="headerlink" title="JSX语法简单介绍"></a>JSX语法简单介绍</h3><p>JSX就是 Javascript 和 XML 的组合 是react定义的，可以方便的利用HTML语法来创建虚拟DOM，，可以方便的利用HTML语法来创建虚拟DOM，<br>通俗理解为 遇到 <code>&lt;</code> 解析 为html，遇到<code>{</code>解析为js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React,&#123;Component&#125; <span class="keyword">from</span> <span class="string">'react'</span>; <span class="comment">// &#123;Component&#125; 解构赋值 等同于  const Component = React.Component</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span></span>&#123;</span><br><span class="line">    render()&#123;</span><br><span class="line">        <span class="keyword">return</span>(</span><br><span class="line">            &lt;ul className=<span class="string">"list"</span>&gt;</span><br><span class="line">                &lt;li className=<span class="string">"item"</span>&gt;我是子小&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">                &lt;li className="item"&gt;我喜欢前端&lt;/</span>li&gt;</span><br><span class="line">                &lt;li className=<span class="string">"item"</span>&gt;不喜欢产品&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">            &lt;/u</span>l&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App;</span><br></pre></td></tr></table></figure></p>
+<p>==jsx的class必须写成className==</p>
+<p>reacts使用js创建html标签<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React,&#123;Component&#125; <span class="keyword">from</span> <span class="string">'react'</span>; <span class="comment">// &#123;Component&#125; 解构赋值 等同于  const Component = React.Component</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span></span>&#123;</span><br><span class="line">    render()&#123;</span><br><span class="line">        <span class="keyword">var</span> item1 = React.createElement(<span class="string">'li'</span>, <span class="literal">null</span>, <span class="string">'我是子小'</span>);</span><br><span class="line">        <span class="keyword">var</span> item2 = React.createElement(<span class="string">'li'</span>, <span class="literal">null</span>, <span class="string">'我喜欢前端'</span>);</span><br><span class="line">        <span class="keyword">var</span> list = React.createElement(<span class="string">'ul'</span>, &#123; <span class="attr">className</span>: <span class="string">'list'</span> &#125;, [item1, item2]);</span><br><span class="line">        <span class="keyword">return</span>[list]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App;</span><br></pre></td></tr></table></figure></p>
+<h3 id="子小爱好菜单"><a href="#子小爱好菜单" class="headerlink" title="子小爱好菜单"></a>子小爱好菜单</h3><p>新建一个 <code>Like.js</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component,Fragment &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Like</span> <span class="keyword">extends</span> <span class="title">Component</span></span>&#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span>(</span><br><span class="line">            &lt;Fragment&gt;</span><br><span class="line">            &lt;div className=<span class="string">"likewrap"</span>&gt;</span><br><span class="line">                &lt;h4&gt;子小的爱好&lt;<span class="regexp">/h4&gt;</span></span><br><span class="line"><span class="regexp">                &lt;div className="lw-contentwrap"&gt;</span></span><br><span class="line"><span class="regexp">                    &lt;input type="text" className="lwc-input"/</span>&gt;</span><br><span class="line">                    &lt;button className=<span class="string">"lwc-button"</span>&gt;增加&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">                &lt;/</span>div&gt;</span><br><span class="line">                &lt;ul className=<span class="string">"lw-list"</span>&gt;</span><br><span class="line">                    &lt;li className=<span class="string">"lw-item"</span>&gt;吃饭&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">                    &lt;li className="lw-item"&gt;喝饮料&lt;/</span>li&gt;</span><br><span class="line">                    &lt;li className=<span class="string">"lw-item"</span>&gt;玩游戏&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">                    &lt;li className="lw-item"&gt;宅家&lt;/</span>li&gt;</span><br><span class="line">                &lt;<span class="regexp">/ul&gt;</span></span><br><span class="line"><span class="regexp">            &lt;/</span>div&gt;</span><br><span class="line">            &lt;<span class="regexp">/Fragment&gt;</span></span><br><span class="line"><span class="regexp">        )</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">export default Like;</span></span><br></pre></td></tr></table></figure></p>
+<p>==<code>Fragment</code>标签用来包裹元素，类似于vue的template标签==</p>
+<blockquote>
+<p>加上最外层的DIV，组件就是完全正常的，但是你的布局就偏不需要这个最外层的标签怎么办?比如我们在作Flex布局的时候,外层还真的不能有包裹元素。这种矛盾其实React16已经有所考虑了，为我们准备了<fragment>标签。</fragment></p>
+</blockquote>
+<h3 id="input的赋值绑定"><a href="#input的赋值绑定" class="headerlink" title="input的赋值绑定"></a>input的赋值绑定</h3>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://sywsywsyw.github.io/sxiaobiblog/2020/04/16/2020Note/微信小程序7.0、抓包安卓、反编译小程序/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -802,176 +989,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://sywsywsyw.github.io/sxiaobiblog/2020/04/03/2020Note/TypeScript笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="孙小笔">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avator.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="孙小笔">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/03/2020Note/TypeScript笔记/" itemprop="url">TypeScript笔记</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-03T17:30:15+08:00">
-                2020-04-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/2020Note/" itemprop="url" rel="index">
-                    <span itemprop="name">2020Note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2020/04/03/2020Note/TypeScript笔记/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://sywsywsyw.github.io/sxiaobiblog/2020/04/03/2020Note/TypeScript笔记/" class="cy_cmt_count" data-xid="2020/04/03/2020Note/TypeScript笔记/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>typescript 是javascript的超集，是一种编程语言</p>
-<h3 id="1-typescript和javascript的区别"><a href="#1-typescript和javascript的区别" class="headerlink" title="1. typescript和javascript的区别"></a>1. typescript和javascript的区别</h3><ul>
-<li>更适合大型应用程序</li>
-<li>js的超集，类似于less,sass,  最终会转为javascript</li>
-<li>跨平台（浏览器，操作系统linux,mac）且开源</li>
-<li>开始于js,终止于js.上手成本低，易于学习</li>
-<li>重用js,可以引入js流行的库  echarts</li>
-<li>typescript 类、接口、模块，更易于组件的编写和维护</li>
-<li>ts是强类型，js是弱类型。</li>
-</ul>
-<p>为什么要学习typescript?</p>
-<blockquote>
-<p>vue、React、ng、都推荐使用typescript。</p>
-</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/04/03/2020Note/TypeScript笔记/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://sywsywsyw.github.io/sxiaobiblog/2020/04/03/ME-工具/工具-VScode使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1130,7 +1147,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://sywsywsyw.github.io/sxiaobiblog/2020/04/03/2020Note/vue百度地图使用默认信息框，默认标注/">
+    <link itemprop="mainEntityOfPage" href="http://sywsywsyw.github.io/sxiaobiblog/2020/04/03/2020Note/TypeScript笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="孙小笔">
@@ -1149,7 +1166,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/04/03/2020Note/vue百度地图使用默认信息框，默认标注/" itemprop="url">vue百度地图使用默认信息框，默认标注</a></h2>
+                <a class="post-title-link" href="/2020/04/03/2020Note/TypeScript笔记/" itemprop="url">TypeScript笔记</a></h2>
         
 
         <div class="post-meta">
@@ -1161,7 +1178,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-03T10:24:19+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-03T00:00:00+08:00">
                 2020-04-03
               </time>
             
@@ -1203,8 +1220,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2020/04/03/2020Note/vue百度地图使用默认信息框，默认标注/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://sywsywsyw.github.io/sxiaobiblog/2020/04/03/2020Note/vue百度地图使用默认信息框，默认标注/" class="cy_cmt_count" data-xid="2020/04/03/2020Note/vue百度地图使用默认信息框，默认标注/" itemprop="commentsCount"></span>
+                <a href="/2020/04/03/2020Note/TypeScript笔记/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://sywsywsyw.github.io/sxiaobiblog/2020/04/03/2020Note/TypeScript笔记/" class="cy_cmt_count" data-xid="2020/04/03/2020Note/TypeScript笔记/" itemprop="commentsCount"></span>
                 </a>
               
             
@@ -1233,10 +1250,23 @@
 
       
         
-          <h3 id="项目需求："><a href="#项目需求：" class="headerlink" title="项目需求："></a>项目需求：</h3><p>点击marker会默认弹出一个窗口，我想不点击直接弹出，怎么搞？企业联系我们地址，百度地图页面一打开默认显示标注提示框如图<br><img src="https://img-blog.csdnimg.cn/20200315212323555.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzE1MjM4OTc5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+          <p>typescript 是javascript的超集，是一种编程语言</p>
+<h3 id="1-typescript和javascript的区别"><a href="#1-typescript和javascript的区别" class="headerlink" title="1. typescript和javascript的区别"></a>1. typescript和javascript的区别</h3><ul>
+<li>更适合大型应用程序</li>
+<li>js的超集，类似于less,sass,  最终会转为javascript</li>
+<li>跨平台（浏览器，操作系统linux,mac）且开源</li>
+<li>开始于js,终止于js.上手成本低，易于学习</li>
+<li>重用js,可以引入js流行的库  echarts</li>
+<li>typescript 类、接口、模块，更易于组件的编写和维护</li>
+<li>ts是强类型，js是弱类型。</li>
+</ul>
+<p>为什么要学习typescript?</p>
+<blockquote>
+<p>vue、React、ng、都推荐使用typescript。</p>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/04/03/2020Note/vue百度地图使用默认信息框，默认标注/#more" rel="contents">
+            <a class="btn" href="/2020/04/03/2020Note/TypeScript笔记/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1287,7 +1317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://sywsywsyw.github.io/sxiaobiblog/2020/04/03/2020Note/vuecli3项目prerender-spa-plugin预渲染/">
+    <link itemprop="mainEntityOfPage" href="http://sywsywsyw.github.io/sxiaobiblog/2020/03/27/2020Note/vuecli3项目prerender-spa-plugin预渲染/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="孙小笔">
@@ -1306,7 +1336,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/04/03/2020Note/vuecli3项目prerender-spa-plugin预渲染/" itemprop="url">vuecli3项目prerender-spa-plugin预渲染</a></h2>
+                <a class="post-title-link" href="/2020/03/27/2020Note/vuecli3项目prerender-spa-plugin预渲染/" itemprop="url">vuecli3项目prerender-spa-plugin预渲染</a></h2>
         
 
         <div class="post-meta">
@@ -1318,8 +1348,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-03T10:24:19+08:00">
-                2020-04-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-27T00:00:00+08:00">
+                2020-03-27
               </time>
             
 
@@ -1360,8 +1390,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2020/04/03/2020Note/vuecli3项目prerender-spa-plugin预渲染/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://sywsywsyw.github.io/sxiaobiblog/2020/04/03/2020Note/vuecli3项目prerender-spa-plugin预渲染/" class="cy_cmt_count" data-xid="2020/04/03/2020Note/vuecli3项目prerender-spa-plugin预渲染/" itemprop="commentsCount"></span>
+                <a href="/2020/03/27/2020Note/vuecli3项目prerender-spa-plugin预渲染/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://sywsywsyw.github.io/sxiaobiblog/2020/03/27/2020Note/vuecli3项目prerender-spa-plugin预渲染/" class="cy_cmt_count" data-xid="2020/03/27/2020Note/vuecli3项目prerender-spa-plugin预渲染/" itemprop="commentsCount"></span>
                 </a>
               
             
@@ -1394,7 +1424,7 @@
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install prerender-spa-plugin --save</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/04/03/2020Note/vuecli3项目prerender-spa-plugin预渲染/#more" rel="contents">
+            <a class="btn" href="/2020/03/27/2020Note/vuecli3项目prerender-spa-plugin预渲染/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1445,7 +1475,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://sywsywsyw.github.io/sxiaobiblog/2020/04/03/2020Note/uni-app的使用/">
+    <link itemprop="mainEntityOfPage" href="http://sywsywsyw.github.io/sxiaobiblog/2020/03/26/2020Note/uni-app的使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="孙小笔">
@@ -1464,7 +1494,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/04/03/2020Note/uni-app的使用/" itemprop="url">uni-app的使用</a></h2>
+                <a class="post-title-link" href="/2020/03/26/2020Note/uni-app的使用/" itemprop="url">uni-app的使用</a></h2>
         
 
         <div class="post-meta">
@@ -1476,8 +1506,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-03T10:24:19+08:00">
-                2020-04-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-26T00:00:00+08:00">
+                2020-03-26
               </time>
             
 
@@ -1518,8 +1548,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2020/04/03/2020Note/uni-app的使用/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://sywsywsyw.github.io/sxiaobiblog/2020/04/03/2020Note/uni-app的使用/" class="cy_cmt_count" data-xid="2020/04/03/2020Note/uni-app的使用/" itemprop="commentsCount"></span>
+                <a href="/2020/03/26/2020Note/uni-app的使用/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://sywsywsyw.github.io/sxiaobiblog/2020/03/26/2020Note/uni-app的使用/" class="cy_cmt_count" data-xid="2020/03/26/2020Note/uni-app的使用/" itemprop="commentsCount"></span>
                 </a>
               
             
@@ -1552,168 +1582,7 @@
 <h3 id="开始介绍"><a href="#开始介绍" class="headerlink" title="开始介绍 "></a><a href="https://uniapp.dcloud.io/quickstart?id=%e8%bf%90%e8%a1%8cuni-app" target="_blank" rel="noopener">开始介绍 </a></h3>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/04/03/2020Note/uni-app的使用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://sywsywsyw.github.io/sxiaobiblog/2020/04/03/2020Note/ES6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="孙小笔">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avator.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="孙小笔">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/03/2020Note/ES6/" itemprop="url">ES6笔记</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-03T10:24:19+08:00">
-                2020-04-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/2020Note/" itemprop="url" rel="index">
-                    <span itemprop="name">2020Note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2020/04/03/2020Note/ES6/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://sywsywsyw.github.io/sxiaobiblog/2020/04/03/2020Note/ES6/" class="cy_cmt_count" data-xid="2020/04/03/2020Note/ES6/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="1-var、const、let的区别"><a href="#1-var、const、let的区别" class="headerlink" title="1. var、const、let的区别"></a>1. var、const、let的区别</h4><ul>
-<li>var 全局变量</li>
-<li>let  局部变量</li>
-<li>const 常量 一般用于属性名，用于从常量命名开始的那一刻就不想让改变的属性名。</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/04/03/2020Note/ES6/#more" rel="contents">
+            <a class="btn" href="/2020/03/26/2020Note/uni-app的使用/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -2030,6 +1899,324 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/03/20/ME-JS,JQ/JS-json/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://sywsywsyw.github.io/sxiaobiblog/2020/03/18/2020Note/ES6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="孙小笔">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="孙小笔">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/03/18/2020Note/ES6/" itemprop="url">ES6笔记</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-18T00:00:00+08:00">
+                2020-03-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/2020Note/" itemprop="url" rel="index">
+                    <span itemprop="name">2020Note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2020/03/18/2020Note/ES6/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://sywsywsyw.github.io/sxiaobiblog/2020/03/18/2020Note/ES6/" class="cy_cmt_count" data-xid="2020/03/18/2020Note/ES6/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="1-var、const、let的区别"><a href="#1-var、const、let的区别" class="headerlink" title="1. var、const、let的区别"></a>1. var、const、let的区别</h4><ul>
+<li>var 全局变量</li>
+<li>let  局部变量</li>
+<li>const 常量 一般用于属性名，用于从常量命名开始的那一刻就不想让改变的属性名。</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/03/18/2020Note/ES6/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://sywsywsyw.github.io/sxiaobiblog/2020/03/15/2020Note/vue百度地图使用默认信息框，默认标注/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="孙小笔">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="孙小笔">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/03/15/2020Note/vue百度地图使用默认信息框，默认标注/" itemprop="url">vue百度地图使用默认信息框，默认标注</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-15T00:00:00+08:00">
+                2020-03-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/2020Note/" itemprop="url" rel="index">
+                    <span itemprop="name">2020Note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2020/03/15/2020Note/vue百度地图使用默认信息框，默认标注/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://sywsywsyw.github.io/sxiaobiblog/2020/03/15/2020Note/vue百度地图使用默认信息框，默认标注/" class="cy_cmt_count" data-xid="2020/03/15/2020Note/vue百度地图使用默认信息框，默认标注/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="项目需求："><a href="#项目需求：" class="headerlink" title="项目需求："></a>项目需求：</h3><p>点击marker会默认弹出一个窗口，我想不点击直接弹出，怎么搞？企业联系我们地址，百度地图页面一打开默认显示标注提示框如图<br><img src="https://img-blog.csdnimg.cn/20200315212323555.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzE1MjM4OTc5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/03/15/2020Note/vue百度地图使用默认信息框，默认标注/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -3449,163 +3636,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://sywsywsyw.github.io/sxiaobiblog/2018/03/01/ME-笔记/js日常笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="孙小笔">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avator.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="孙小笔">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/01/ME-笔记/js日常笔记/" itemprop="url">js日常笔记</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-01T00:00:00+08:00">
-                2018-03-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JS-JQ/" itemprop="url" rel="index">
-                    <span itemprop="name">JS/JQ</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2018/03/01/ME-笔记/js日常笔记/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://sywsywsyw.github.io/sxiaobiblog/2018/03/01/ME-笔记/js日常笔记/" class="cy_cmt_count" data-xid="2018/03/01/ME-笔记/js日常笔记/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <hr>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/01/ME-笔记/js日常笔记/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -3657,7 +3687,7 @@
             
               <a href="/archives">
             
-                <span class="site-state-item-count">74</span>
+                <span class="site-state-item-count">75</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
