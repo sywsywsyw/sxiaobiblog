@@ -1,6 +1,6 @@
 ---
 title: ES6笔记
-date: 2020年3月18日 21点21分
+date: 2020-03-18
 tags: note
 categories: 2020Note
 ---

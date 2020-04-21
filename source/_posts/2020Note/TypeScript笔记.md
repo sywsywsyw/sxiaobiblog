@@ -1,6 +1,6 @@
 ---
 title: TypeScript笔记
-date: 2020年4月3日 21点21分
+date: 2020-04-03
 tags: note
 categories: 2020Note
 ---

@@ -1,6 +1,6 @@
 ---
 title: vuecli3项目prerender-spa-plugin预渲染
-date: 2020年3月27日 12点56分
+date: 2020-03-27
 tags: note
 categories: 2020Note
 ---

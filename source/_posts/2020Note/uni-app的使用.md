@@ -1,6 +1,6 @@
 ---
 title: uni-app的使用
-date: 2020年3月26日 18点24分
+date: 2020-03-26
 tags: note
 categories: 2020Note
 ---

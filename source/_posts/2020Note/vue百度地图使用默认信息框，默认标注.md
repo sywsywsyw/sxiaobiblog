@@ -1,6 +1,6 @@
 ---
 title: vue百度地图使用默认信息框，默认标注
-date: 2020年3月15日 21点35分
+date: 2020-03-15
 tags: note
 categories: 2020Note
 ---
