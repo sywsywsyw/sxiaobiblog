@@ -385,7 +385,7 @@ export default (WrappedComponent) => {
   return hocComponent
 };
 ```
-#### component组件拆分
+### component组件拆分
 新建`likeItem.js`组件
 ```js
 import React, { Component } from 'react';
@@ -403,4 +403,35 @@ export default class componentName extends Component {
 ```js
 import LikeItem from './LikeItem'
 <LikeItem></LikeItem>
+```
+### 父子传值
+父组件
+```js
+{
+     this.state.list.map((item, index) => {
+            return <LikeItem content={item} key={index} index={index} deleteItem{this.deleteItem.bind(this)}></LikeItem>
+      })
+}
+```
+子组件
+```js
+import React, { Component } from 'react';
+
+export default class componentName extends Component {
+  constructor(props) {
+    super(props)
+    this.handleClick = this.handleClick.bind(this)
+  }
+  handleClick(){
+    console.log('点击了子组件的列表')
+    // this.props.index
+    console.log(this.props.index)
+    this.props.deleteItem(this.props.index)
+  }
+  render() {
+    return (
+      <div onClick={this.handleClick}> {this.props.content} 我是LikeItem组件 </div>
+    );
+  }
+}
 ```
