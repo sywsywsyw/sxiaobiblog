@@ -1,5 +1,5 @@
 ---
-title: ES6笔记
+title: React笔记
 date: 2020-04-21
 tags: note
 categories: 2020Note
@@ -14,6 +14,9 @@ categories: 2020Note
 ```bash
 npm install -g create-react-app
 ```
+
+<!-- more -->
+
 * `create-react-app`新建demo1  
 ```bash
 create-react-app demo1
