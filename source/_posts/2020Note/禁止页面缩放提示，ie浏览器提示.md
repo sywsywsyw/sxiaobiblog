@@ -6,8 +6,8 @@ categories: 2020Note
 ---
 使用了新技术总会有兼容性问题，一般公司不考虑兼容性问题，但是还是出现诸如样式错乱、无法支持ie、缩放浏览器或屏幕设置比率非100%下的网页错位，作为开发者需要给出友好的提示，提高用户体验。
 
-### 演示地址：[https://sywsywsyw.github.io/noie-nozoom/]()
-### 源码：[https://github.com/sywsywsyw/noie-nozoom]()
+### 演示地址：[https://sywsywsyw.github.io/noie-nozoom/](https://sywsywsyw.github.io/noie-nozoom/)
+### 源码：[https://github.com/sywsywsyw/noie-nozoom](https://github.com/sywsywsyw/noie-nozoom)
 
 ==兼容ie8、不支持以下版本==
 ==兼容ie需要再服务器环境下打开== （可以使用http-server,live-server热更新服务）
@@ -813,7 +813,7 @@ categories: 2020Note
 				width: 477 / zoom100Val,
 				height: 412 / zoom100Val,
 				marginLeft: 237 / zoom100Val,
-				marginTop: 206 / zoom100Val,
+				marginTop: 206 / zoom100Val
 			}
 			console.log(zoomBigVal, zoomSmallVal, zoom100Val)
 			console.log(zoomCotentVal)

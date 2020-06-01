@@ -17,7 +17,7 @@ categories: JS/JQ
 function getQueryString(name) {  
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");  
     var r = window.location.search.substr(1).match(reg);  
-    if (r != null) return unescape(r[2]); return null;  
+    if (r != null) return decodeURI(r[2]); return null;  
 }  
 var app = getQueryString("app");  
 console.log(app);
@@ -30,7 +30,7 @@ function GetRequest() {
         var str = url.substr(1);   
         strs = str.split("&");   
         for(var i = 0; i < strs.length; i ++) {  
-            theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);   
+            theRequest[strs[i].split("=")[0]]=decodeURI(strs[i].split("=")[1]);   
         }   
     }   
     return theRequest;   
